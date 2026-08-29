@@ -1,0 +1,105 @@
+<mxfile host="65bd71144e" modified="2026-08-29T02:17:00.000Z" version="26.0.0">
+    <diagram id="c4_c1" name="C1 — Vista de Contexto del Sistema">
+        <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <!-- ═══════════ HEADER ═══════════ -->
+                <mxCell id="c1_hdr" value="" style="rounded=1;fillColor=#1e3a8a;strokeColor=#1e3a8a;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1520" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="c1_hdrtxt" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px; color: #ffffff;&quot;&gt;C4 NIVEL 1 — VISTA DE CONTEXTO DEL SISTEMA: PLATAFORMA DIGITAL BAN100&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 11px; color: #cbd5e1;&quot;&gt;Actores, Sistema en Alcance y Sistemas Externos — Modelo C4 (Simon Brown) | Taller 3 Arquitectura Empresarial — Universidad de La Sabana&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="20" width="1500" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════ LEGEND ═══════════ -->
+                <mxCell id="leg_box" value="" style="rounded=1;fillColor=#f8fafc;strokeColor=#cbd5e1;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="90" width="1520" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg_txt" value="&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;&lt;b&gt;Leyenda C1:&lt;/b&gt;  🟣 Persona / Actor (#e0e7ff)  |  🔵 Sistema en Alcance (#08427b)  |  ⬜ Sistema Externo (#f1f5f9 / borde doble)  |  → Relación etiquetada (verbo + intercambio + protocolo)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="90" width="1500" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════ ACTORES (PERSONAS) — LEFT COLUMN ═══════════ -->
+                <mxCell id="actor_pen" value="&lt;b&gt;Pensionados y Empleados&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Persona]&lt;/font&gt;&lt;br/&gt;Solicitan créditos de libranza, consultan saldos y realizan transferencias Bre-B." style="shape=mxgraph.flowchart.user_input;whiteSpace=wrap;fillColor=#e0e7ff;strokeColor=#4338ca;fontSize=10;html=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="200" width="260" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_mic" value="&lt;b&gt;Microempresarios e Independientes&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Persona]&lt;/font&gt;&lt;br/&gt;Acceden a microcrédito productivo y servicios de ahorro digital." style="shape=mxgraph.flowchart.user_input;whiteSpace=wrap;fillColor=#e0e7ff;strokeColor=#4338ca;fontSize=10;html=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="380" width="260" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_inv" value="&lt;b&gt;Inversionistas CDT&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Persona]&lt;/font&gt;&lt;br/&gt;Constituyen y renuevan CDTs digitales por App, Web o WhatsApp." style="shape=mxgraph.flowchart.user_input;whiteSpace=wrap;fillColor=#e0e7ff;strokeColor=#4338ca;fontSize=10;html=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="560" width="260" height="100" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════ SISTEMA EN ALCANCE — CENTER ═══════════ -->
+                <mxCell id="sys_ban100" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px; color: #ffffff;&quot;&gt;Plataforma Digital Ban100&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 11px; color: #bfdbfe;&quot;&gt;[Sistema en Alcance]&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 10px; color: #e0f2fe;&quot;&gt;Plataforma bancaria omnicanal que gestiona originación de créditos de libranza, microcrédito, CDTs digitales, cuentas de depósito y pagos inmediatos Bre-B (ISO 20022). Incluye API Gateway, Core Bancario desacoplado en microservicios, MDM con visión 360° del cliente y SOC antifraude con IA predictiva.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427b;strokeColor=#073b6e;fontColor=#ffffff;shadow=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="280" width="400" height="260" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════ SISTEMAS EXTERNOS — RIGHT COLUMN ═══════════ -->
+                <mxCell id="ext_truora" value="&lt;b&gt;Aliado: Truora S.A.S.&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Biometría facial, liveness (FIDO), OCR de cédulas, firma electrónica Ley 527 y estampado cronológico." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="150" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_breb" value="&lt;b&gt;Banco de la República (Bre-B)&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Directorio Central de Llaves y cámara de pagos inmediatos 24/7 bajo ISO 20022." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="280" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_pagad" value="&lt;b&gt;Pagadurías Institucionales&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Entidades públicas y fondos: validación de cupos de descuento y capacidad de libranza." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="410" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_deceval" value="&lt;b&gt;Deceval&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Depósito Centralizado de Valores: custodia de pagarés desmaterializados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="540" width="280" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_btg" value="&lt;b&gt;BTG Pactual &amp;amp; Titularizadora&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Titularización de cartera de libranzas (&amp;gt;\$500kM COP)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="660" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_resp" value="&lt;b&gt;ResponsAbility Investments AG&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Fondeo internacional para líneas de microfinanzas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="770" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_sfc" value="&lt;b&gt;Superintendencia Financiera (SFC)&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Supervisión, auditoría y cumplimiento Circular 008 de 2023." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#b91c1c;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="880" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_whatsapp" value="&lt;b&gt;WhatsApp Business API&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 9px; color: #6b7280;&quot;&gt;[Sistema Externo]&lt;/font&gt;&lt;br/&gt;Canal conversacional para autogestión financiera del cliente." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=10;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="640" width="280" height="80" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════ EDGES: ACTORS → SYSTEM ═══════════ -->
+                <mxCell id="e_a1" value="Solicita libranzas, consulta saldos y realiza transferencias Bre-B (HTTPS / App Móvil y Web)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4338ca;fontSize=9;" parent="1" source="actor_pen" target="sys_ban100" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_a2" value="Solicita microcrédito y ahorro digital (HTTPS / App Móvil y Web)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4338ca;fontSize=9;" parent="1" source="actor_mic" target="sys_ban100" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_a3" value="Constituye y renueva CDTs digitales (HTTPS / App, Web, WhatsApp)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#4338ca;fontSize=9;" parent="1" source="actor_inv" target="sys_ban100" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════ EDGES: SYSTEM → EXTERNAL SYSTEMS ═══════════ -->
+                <mxCell id="e_s1" value="Valida identidad biométrica, OCR y firma electrónica (API REST / HTTPS)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#0284c7;strokeWidth=2;fontSize=9;" parent="1" source="sys_ban100" target="ext_truora" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s2" value="Registra llaves y ejecuta transferencias inmediatas (ISO 20022 / pacs.008, pacs.002)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#16a34a;strokeWidth=2;fontSize=9;" parent="1" source="sys_ban100" target="ext_breb" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s3" value="Consulta cupo disponible y valida convenios (API REST / Web Services)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#d97706;fontSize=9;" parent="1" source="sys_ban100" target="ext_pagad" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s4" value="Registra y custodia pagarés desmaterializados (API REST)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#7e22ce;fontSize=9;" parent="1" source="sys_ban100" target="ext_deceval" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s5" value="Cede cartera y títulos para titularización (API REST)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#7e22ce;fontSize=9;" parent="1" source="sys_ban100" target="ext_btg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s6" value="Recibe fondeo para líneas de microcrédito (Wire / SWIFT)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#64748b;fontSize=9;" parent="1" source="ext_resp" target="sys_ban100" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s7" value="Transmite pistas de auditoría e incidentes de seguridad (API regulatoria)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b91c1c;fontSize=9;" parent="1" source="sys_ban100" target="ext_sfc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s8" value="Envía flujos conversacionales de autogestión (WhatsApp Business API / Webhook)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#16a34a;fontSize=9;" parent="1" source="sys_ban100" target="ext_whatsapp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,127 @@
+<mxfile host="65bd71144e">
+    <diagram id="t0_vis" name="Visión Arquitectura Ban100">
+        <mxGraphModel dx="1144" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="hdr_box" value="" style="rounded=1;fillColor=#1e3a8a;strokeColor=#1e3a8a;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1320" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hdr_txt" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px; color: #ffffff;&quot;&gt;BAN100 — MARCO DE ARQUITECTURA EMPRESARIAL (MRAE v3.0 MinTIC)&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 11px; color: #cbd5e1;&quot;&gt;Transformación Digital Estratégica: Inclusión Financiera, Pagos Inmediatos Bre-B, Nube Híbrida y Circular Externa 008/2023 SFC&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="20" width="1300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="prin_bar" value="" style="rounded=1;fillColor=#f8fafc;strokeColor=#cbd5e1;dashed=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="90" width="1320" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="prin_txt" value="&lt;b&gt;Principios Rectores AE:&lt;/b&gt; 1. Alineación Estratégica Misional  |  2. Seguridad y Privacidad por Diseño (Zero Trust)  |  3. Interoperabilidad Abierta (ISO 20022 &amp;amp; REST)  |  4. Escalabilidad y Disponibilidad 24/7/365 (99.99%)" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#334155;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="90" width="1300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1_box" value="1. DOMINIO INSTITUCIONAL (MISIONAL)" style="swimlane;startSize=30;fillColor=#e0e7ff;strokeColor=#4338ca;fontColor=#312e81;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="150" width="250" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1_c1" value="&lt;b&gt;Objetivo Misional:&lt;/b&gt;&lt;br/&gt;Inclusión financiera en 900+ municipios. Cobertura a 250.000+ clientes." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#c7d2fe;fontSize=10;align=left;spacing=6;html=1;" parent="d1_box" vertex="1">
+                    <mxGeometry x="10" y="40" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1_c2" value="&lt;b&gt;Portafolio de Productos:&lt;/b&gt;&lt;br/&gt;• Crédito de Libranza&lt;br/&gt;• Microcrédito Productivo&lt;br/&gt;• CDT Digital (Captación)&lt;br/&gt;• Cuentas de Depósito" style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#c7d2fe;fontSize=10;align=left;spacing=6;html=1;" parent="d1_box" vertex="1">
+                    <mxGeometry x="10" y="115" width="230" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1_c3" value="&lt;b&gt;Alianzas Estratégicas:&lt;/b&gt;&lt;br/&gt;• Truora (Biometría y Firma)&lt;br/&gt;• BTG Pactual (Titularización)&lt;br/&gt;• ResponsAbility (Microfinanzas)&lt;br/&gt;• Asobancaria (Protocolo Verde)" style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#c7d2fe;fontSize=10;align=left;spacing=6;html=1;" parent="d1_box" vertex="1">
+                    <mxGeometry x="10" y="210" width="230" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1_c4" value="&lt;b&gt;Madurez y Procesos:&lt;/b&gt;&lt;br/&gt;Originación digital end-to-end, firma desmaterializada Ley 527, renovación ágil de CDTs." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#c7d2fe;fontSize=10;align=left;spacing=6;html=1;" parent="d1_box" vertex="1">
+                    <mxGeometry x="10" y="305" width="230" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="d1_c5" value="&lt;b&gt;Gobernanza:&lt;/b&gt;&lt;br/&gt;Comité Directivo de AE (Presidencia + VP TI + VP Riesgos)" style="rounded=1;whiteSpace=wrap;fillColor=#eef2ff;strokeColor=#6366f1;fontSize=10;align=center;html=1;fontStyle=1;" parent="d1_box" vertex="1">
+                    <mxGeometry x="10" y="390" width="230" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2_box" value="2. DOMINIO DE INFORMACIÓN" style="swimlane;startSize=30;fillColor=#dbeafe;strokeColor=#2563eb;fontColor=#1e40af;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="305" y="150" width="250" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2_c1" value="&lt;b&gt;Gobierno de Datos:&lt;/b&gt;&lt;br/&gt;Master Data Management (MDM) con Visión 360° de Clientes y Productos." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bfdbfe;fontSize=10;align=left;spacing=6;html=1;" parent="d2_box" vertex="1">
+                    <mxGeometry x="10" y="40" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2_c2" value="&lt;b&gt;Estándar ISO 20022:&lt;/b&gt;&lt;br/&gt;Mensajería estructurada para pagos inmediatos e interoperabilidad bancaria." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bfdbfe;fontSize=10;align=left;spacing=6;html=1;" parent="d2_box" vertex="1">
+                    <mxGeometry x="10" y="115" width="230" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2_c3" value="&lt;b&gt;Directorio de &#39;Llaves&#39; Bre-B:&lt;/b&gt;&lt;br/&gt;Catálogo institucional de Llaves (Celular, Cédula, Email, Código)." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bfdbfe;fontSize=10;align=left;spacing=6;html=1;" parent="d2_box" vertex="1">
+                    <mxGeometry x="10" y="195" width="230" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2_c4" value="&lt;b&gt;Procesamiento en Tiempo Real:&lt;/b&gt;&lt;br/&gt;Event Streaming y Lakehouse para reemplazar el batch nocturno." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bfdbfe;fontSize=10;align=left;spacing=6;html=1;" parent="d2_box" vertex="1">
+                    <mxGeometry x="10" y="275" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d2_c5" value="&lt;b&gt;Calidad y Linaje:&lt;/b&gt;&lt;br/&gt;Políticas de integridad, trazabilidad y retención de datos SFC." style="rounded=1;whiteSpace=wrap;fillColor=#eff6ff;strokeColor=#3b82f6;fontSize=10;align=center;html=1;fontStyle=1;" parent="d2_box" vertex="1">
+                    <mxGeometry x="10" y="350" width="230" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3_box" value="3. SISTEMAS DE INFORMACIÓN" style="swimlane;startSize=30;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#0369a1;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="150" width="260" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3_c1" value="&lt;b&gt;Omnicanalidad Digital:&lt;/b&gt;&lt;br/&gt;• App Móvil Ban100 (con Bre-B)&lt;br/&gt;• Portal Transaccional Web&lt;br/&gt;• WhatsApp Bot (Truora)" style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bae6fd;fontSize=10;align=left;spacing=6;html=1;" parent="d3_box" vertex="1">
+                    <mxGeometry x="10" y="40" width="240" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3_c2" value="&lt;b&gt;API Gateway Institucional:&lt;/b&gt;&lt;br/&gt;Gestión unificada, mTLS, rate limiting y exposición de servicios Open Banking." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bae6fd;fontSize=10;align=left;spacing=6;html=1;" parent="d3_box" vertex="1">
+                    <mxGeometry x="10" y="125" width="240" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3_c3" value="&lt;b&gt;Capa de Microservicios:&lt;/b&gt;&lt;br/&gt;• Originación Libranza &amp;amp; Scoring&lt;br/&gt;• CDT Digital &amp;amp; Renovación&lt;br/&gt;• Módulo Bre-B &amp;amp; Códigos QR&lt;br/&gt;• Validador Pagadurías" style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bae6fd;fontSize=10;align=left;spacing=6;html=1;" parent="d3_box" vertex="1">
+                    <mxGeometry x="10" y="200" width="240" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3_c4" value="&lt;b&gt;Core Bancario Desacoplado:&lt;/b&gt;&lt;br/&gt;Servicios transaccionales de cuentas, cartera y captaciones en alta disponibilidad." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#bae6fd;fontSize=10;align=left;spacing=6;html=1;" parent="d3_box" vertex="1">
+                    <mxGeometry x="10" y="305" width="240" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d3_c5" value="&lt;b&gt;Integraciones API REST:&lt;/b&gt;&lt;br/&gt;Truora, Deceval, BanRep Bre-B, Titularizadora BTG." style="rounded=1;whiteSpace=wrap;fillColor=#f0f9ff;strokeColor=#0ea5e9;fontSize=10;align=center;html=1;fontStyle=1;" parent="d3_box" vertex="1">
+                    <mxGeometry x="10" y="380" width="240" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4_box" value="4. DOMINIO TECNOLÓGICO&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#ccfbf1;strokeColor=#0d9488;fontColor=#115e59;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="845" y="150" width="250" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4_c1" value="&lt;b&gt;Nube Híbrida Multi-Región:&lt;/b&gt;&lt;br/&gt;Arquitectura distribuida elástica con contingencia activa-activa." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#99f6e4;fontSize=10;align=left;spacing=6;html=1;" parent="d4_box" vertex="1">
+                    <mxGeometry x="10" y="40" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4_c2" value="&lt;b&gt;Contenedores &amp;amp; Orquestación:&lt;/b&gt;&lt;br/&gt;Kubernetes (K8s) con auto-escalado automático ante picos transaccionales." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#99f6e4;fontSize=10;align=left;spacing=6;html=1;" parent="d4_box" vertex="1">
+                    <mxGeometry x="10" y="115" width="230" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4_c3" value="&lt;b&gt;Disponibilidad 99.99%:&lt;/b&gt;&lt;br/&gt;SLA continuo 24/7/365, cero ventanas de inactividad por mantenimiento." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#99f6e4;fontSize=10;align=left;spacing=6;html=1;" parent="d4_box" vertex="1">
+                    <mxGeometry x="10" y="195" width="230" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4_c4" value="&lt;b&gt;Comunicaciones &amp;amp; Red:&lt;/b&gt;&lt;br/&gt;Enlaces dedicados, VPN IPsec seguras y CDN de baja latencia a nivel nacional." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#99f6e4;fontSize=10;align=left;spacing=6;html=1;" parent="d4_box" vertex="1">
+                    <mxGeometry x="10" y="275" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d4_c5" value="&lt;b&gt;Resiliencia &amp;amp; DRP:&lt;/b&gt;&lt;br/&gt;RTO &amp;lt; 5 min, RPO = 0 para pagos Bre-B." style="rounded=1;whiteSpace=wrap;fillColor=#f0fdfa;strokeColor=#14b8a6;fontSize=10;align=center;html=1;fontStyle=1;" parent="d4_box" vertex="1">
+                    <mxGeometry x="10" y="350" width="230" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5_box" value="&lt;b&gt;5. DOMINIO DE SEGURIDAD&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#fee2e2;strokeColor=#dc2626;fontColor=#991b1b;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="150" width="250" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5_c1" value="&lt;b&gt;Modelo Zero Trust:&lt;/b&gt;&lt;br/&gt;Principio de &#39;Nunca confiar, siempre verificar&#39; en todas las capas y APIs." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#fecaca;fontSize=10;align=left;spacing=6;html=1;" parent="d5_box" vertex="1">
+                    <mxGeometry x="10" y="40" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5_c2" value="&lt;b&gt;Autenticación Reforzada (MFA):&lt;/b&gt;&lt;br/&gt;MFA adaptativo basado en contexto de riesgo y biometría Truora." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#fecaca;fontSize=10;align=left;spacing=6;html=1;" parent="d5_box" vertex="1">
+                    <mxGeometry x="10" y="115" width="230" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5_c3" value="&lt;b&gt;SOC 24/7 con IA Predictiva:&lt;/b&gt;&lt;br/&gt;Monitoreo en tiempo real y detección antifraude sobre pasarelas y canales." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#fecaca;fontSize=10;align=left;spacing=6;html=1;" parent="d5_box" vertex="1">
+                    <mxGeometry x="10" y="195" width="230" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5_c4" value="&lt;b&gt;Cumplimiento CE 008/2023 SFC:&lt;/b&gt;&lt;br/&gt;Control interno, cifrado E2E TLS 1.3/AES-256 y auditoría inmutable." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#fecaca;fontSize=10;align=left;spacing=6;html=1;" parent="d5_box" vertex="1">
+                    <mxGeometry x="10" y="280" width="230" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="d5_c5" value="&lt;b&gt;Protección de Datos:&lt;/b&gt;&lt;br/&gt;Ley 1581 y Ley 527 (Firma Digital)." style="rounded=1;whiteSpace=wrap;fillColor=#fef2f2;strokeColor=#ef4444;fontSize=10;align=center;html=1;fontStyle=1;" parent="d5_box" vertex="1">
+                    <mxGeometry x="10" y="360" width="230" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="t_box" value="" style="rounded=1;fillColor=#f1f5f9;strokeColor=#64748b;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="645" width="1320" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="t_lbl" value="&lt;b&gt;DIMENSIONES DE GOBIERNO, GESTIÓN Y APROPIACIÓN (MARCO MinTIC MRAE v3.0)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1e293b;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="650" width="1300" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="t_c1" value="&lt;b&gt;Uso y Apropiación de AE:&lt;/b&gt;&lt;br/&gt;• Gestión del cambio organizacional en oficinas y canales.&lt;br/&gt;• Cultura de arquitectura y diseño ágil.&lt;br/&gt;• Capacitación de equipos en ISO 20022 y Microservicios.&lt;br/&gt;• Evolución de madurez AE de 1.5 a &amp;gt; 4.0 / 5.0." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#cbd5e1;fontSize=10;align=left;spacing=6;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="680" width="410" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="t_c2" value="&lt;b&gt;MGGTI (Gobierno y Gestión de TI):&lt;/b&gt;&lt;br/&gt;• Tablero de KPIs estratégicos (Time-to-Market, SLA 99.99%).&lt;br/&gt;• Comité de Seguridad de la Información y Cumplimiento SFC.&lt;br/&gt;• Políticas institucionales de interoperabilidad y datos.&lt;br/&gt;• Auditoría continua de pasarelas y terceros." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#cbd5e1;fontSize=10;align=left;spacing=6;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="495" y="680" width="410" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="t_c3" value="&lt;b&gt;MGPTI (Gestión de Proyectos de TI):&lt;/b&gt;&lt;br/&gt;• Hoja de ruta estructurada en 3 Horizontes (H1, H2, H3).&lt;br/&gt;• Metodología híbrida ágil (Scrum/DevSecOps).&lt;br/&gt;• Control presupuestal y articulación con BTG y ResponsAbility.&lt;br/&gt;• Monitoreo de entregables y valor de negocio." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#cbd5e1;fontSize=10;align=left;spacing=6;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="680" width="410" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

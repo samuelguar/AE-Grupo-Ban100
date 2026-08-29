@@ -1,0 +1,149 @@
+<mxfile host="65bd71144e">
+    <diagram id="t1_bpmn" name="BPMN Originación Libranza">
+        <mxGraphModel dx="1144" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bpmn_hdr" value="" style="rounded=1;fillColor=#1e293b;strokeColor=#0f172a;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1320" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="bpmn_hdrtxt" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px; color: #ffffff;&quot;&gt;PROCESO BPMN 2.0: ORIGINACIÓN DIGITAL DE CRÉDITO DE LIBRANZA BAN100&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 11px; color: #94a3b8;&quot;&gt;Integración Automatizada con Truora (Biometría y Firma Ley 527), Motor de Pagadurías y Desembolso Bre-B&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="20" width="1300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="pool1" value="Originación Digital de Libranza" style="swimlane;startSize=30;fillColor=#ffffff;strokeColor=#475569;fontColor=#0f172a;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="80" width="1320" height="1100" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane_usr" value="Pensionado / Cliente" style="swimlane;horizontal=0;startSize=25;fillColor=#f8fafc;strokeColor=#94a3b8;fontColor=#334155;rounded=0;" parent="pool1" vertex="1">
+                    <mxGeometry x="30" width="1290" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_start" value="Solicitud de&lt;br/&gt;Libranza" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=10;" parent="lane_usr" vertex="1">
+                    <mxGeometry x="40" y="35" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_u1" value="Ingresar datos,&lt;br/&gt;pagaduría y monto" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;html=1;" parent="lane_usr" vertex="1">
+                    <mxGeometry x="130" y="35" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_u2" value="Capturar selfie y&lt;br/&gt;foto de cédula" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;html=1;" parent="lane_usr" vertex="1">
+                    <mxGeometry x="290" y="37.5" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_u3" value="Revisar condiciones&lt;br/&gt;y firmar pagaré" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;html=1;" parent="lane_usr" vertex="1">
+                    <mxGeometry x="870" y="35" width="130" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_end_ok" value="Crédito Desembolsado&lt;br/&gt;y Notificado" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;fontSize=10;fontStyle=1;" parent="lane_usr" vertex="1">
+                    <mxGeometry x="1190" y="35" width="65" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane_can" value="Canal Digital / WhatsApp" style="swimlane;horizontal=0;startSize=25;fillColor=#f0fdf4;strokeColor=#86efac;fontColor=#166534;rounded=0;" parent="pool1" vertex="1">
+                    <mxGeometry x="30" y="160" width="1290" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_c1" value="Desplegar interfaz&lt;br/&gt;conversacional" style="rounded=1;whiteSpace=wrap;fillColor=#dcfce7;strokeColor=#86efac;fontSize=10;html=1;" parent="lane_can" vertex="1">
+                    <mxGeometry x="130" y="35" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_c2" value="Presentar oferta preaprobada&lt;br/&gt;y pagaré desmaterializado" style="rounded=1;whiteSpace=wrap;fillColor=#dcfce7;strokeColor=#86efac;fontSize=10;html=1;" parent="lane_can" vertex="1">
+                    <mxGeometry x="740" y="35" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_c3" value="Enviar comprobante&lt;br/&gt;y recibo digital" style="rounded=1;whiteSpace=wrap;fillColor=#dcfce7;strokeColor=#86efac;fontSize=10;html=1;" parent="lane_can" vertex="1">
+                    <mxGeometry x="1100" y="35" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane_tru" value="Plataforma Truora (Biometría &amp;amp; Firma)" style="swimlane;horizontal=0;startSize=25;fillColor=#eff6ff;strokeColor=#93c5fd;fontColor=#1e40af;rounded=0;" parent="pool1" vertex="1" collapsed="1">
+                    <mxGeometry x="30" y="320" width="40" height="260" as="geometry">
+                        <mxRectangle x="30" y="320" width="1290" height="200" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bp_t1" value="Validar biometría facial&lt;br/&gt;y OCR documento" style="rounded=1;whiteSpace=wrap;fillColor=#dbeafe;strokeColor=#93c5fd;fontSize=10;html=1;" parent="lane_tru" vertex="1">
+                    <mxGeometry x="480" y="35" width="130" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_gw1" value="¿Identidad&lt;br/&gt;Válida?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="lane_tru" vertex="1">
+                    <mxGeometry x="630" y="35" width="75" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_end_rej1" value="Rechazo por&lt;br/&gt;Identidad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#ef4444;strokeWidth=3;fontSize=9;" parent="lane_tru" vertex="1">
+                    <mxGeometry x="635" y="95" width="65" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_t2" value="Estampar firma electrónica&lt;br/&gt;y sellado de tiempo" style="rounded=1;whiteSpace=wrap;fillColor=#dbeafe;strokeColor=#93c5fd;fontSize=10;html=1;" parent="lane_tru" vertex="1">
+                    <mxGeometry x="970" y="35" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane_mot" value="Motor Reglas &amp;amp; Pagadurías (Ban100)" style="swimlane;horizontal=0;startSize=25;fillColor=#fefce8;strokeColor=#fde047;fontColor=#854d0e;rounded=0;" parent="pool1" vertex="1">
+                    <mxGeometry x="30" y="580" width="1290" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_m1" value="Consultar convenio con&lt;br/&gt;pagaduría y cupo disponible" style="rounded=1;whiteSpace=wrap;fillColor=#fef08a;strokeColor=#ca8a04;fontSize=10;html=1;" parent="lane_mot" vertex="1">
+                    <mxGeometry x="520" y="35" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_gw2" value="¿Cupo y&lt;br/&gt;Scoring OK?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" parent="lane_mot" vertex="1">
+                    <mxGeometry x="772.5" y="32.5" width="75" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_end_rej2" value="Rechazo por&lt;br/&gt;Capacidad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#ef4444;strokeWidth=3;fontSize=9;" parent="lane_mot" vertex="1">
+                    <mxGeometry x="777.5" y="150" width="65" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef8" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="lane_mot" source="bp_m1" target="bp_gw2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef9" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#ef4444;fontColor=#dc2626;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="lane_mot" source="bp_gw2" target="bp_end_rej2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef7" value="Sí" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;fontColor=#16a34a;fontSize=9;" parent="pool1" source="bp_gw1" target="bp_m1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="620" y="480"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ef10" value="Sí" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;fontColor=#16a34a;fontSize=9;" parent="pool1" source="bp_gw2" target="bp_c2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef1" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_start" target="bp_u1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef2" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_u1" target="bp_c1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef3" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_c1" target="bp_u2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef4" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_u2" target="bp_t1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="520" y="143"/>
+                            <mxPoint x="520" y="440"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ef5" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_t1" target="bp_gw1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef6" value="No" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#ef4444;fontColor=#dc2626;fontSize=9;" parent="1" source="bp_gw1" target="bp_end_rej1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef11" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_c2" target="bp_u3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef12" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_u3" target="bp_t2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="600" y="143"/>
+                            <mxPoint x="600" y="480"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ef13" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_t2" target="bp_k1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef15" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_k2" target="bp_c3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef16" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="1" source="bp_c3" target="bp_end_ok" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane_cor" value="Core Bancario &amp;amp; Bre-B (Ban100)" style="swimlane;horizontal=0;startSize=25;fillColor=#faf5ff;strokeColor=#d8b4fe;fontColor=#6b21a8;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="940" width="1290" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_k1" value="Crear obligación en Core y&lt;br/&gt;registrar pagaré en Deceval" style="rounded=1;whiteSpace=wrap;fillColor=#f3e8ff;strokeColor=#c084fc;fontSize=10;html=1;" parent="lane_cor" vertex="1">
+                    <mxGeometry x="930" y="35" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bp_k2" value="Desembolso Inmediato&lt;br/&gt;vía Bre-B (ISO 20022)" style="rounded=1;whiteSpace=wrap;fillColor=#e9d5ff;strokeColor=#9333ea;fontSize=10;html=1;fontStyle=1;" parent="lane_cor" vertex="1">
+                    <mxGeometry x="1120" y="35" width="140" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef14" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#334155;" parent="lane_cor" source="bp_k1" target="bp_k2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

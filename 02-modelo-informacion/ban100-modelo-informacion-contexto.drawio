@@ -1,0 +1,153 @@
+<mxfile host="65bd71144e">
+    <diagram id="t2_erd" name="Modelo Entidad-Relación (ERD)">
+        <mxGraphModel dx="953" dy="1266" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="750" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="erd_hdr" value="" style="rounded=1;fillColor=#1e1b4b;strokeColor=#312e81;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1320" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="erd_hdrtxt" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px; color: #ffffff;&quot;&gt;MODELO ENTIDAD-RELACIÓN (ERD): DOMINIO DE INFORMACIÓN &amp;amp; ECOSISTEMA BRE-B&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 11px; color: #c7d2fe;&quot;&gt;Estructura Lógica de Datos Maestros (MDM), Productos Misionales, Mensajería ISO 20022 y Logs de Seguridad SFC&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="20" width="1300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cli" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;CLIENTE (Master Data)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;•&amp;nbsp;&lt;b style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;PK id_cliente: BIGINT&lt;/b&gt;&lt;div&gt;&lt;div&gt;• tipo_documento: VARCHAR(5)&lt;br&gt;• numero_documento: VARCHAR(20)&lt;br&gt;• nombres: VARCHAR(100)&lt;br&gt;• apellidos: VARCHAR(100)&lt;br&gt;• segmento: ENUM(Pensionado, Empleado, Micro)&lt;br&gt;• scoring_crediticio: INT&lt;br&gt;• email_contacto: VARCHAR(120)&lt;br&gt;• telefono_movil: VARCHAR(20)&lt;br&gt;• estado_vinculacion: VARCHAR(20)&lt;/div&gt;&lt;/div&gt;" style="shape=table;startSize=25;fillColor=#e0e7ff;strokeColor=#4338ca;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="90" width="260" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cta" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent;&quot;&gt;CUENTA_DEPOSITO&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;• &lt;b&gt;PK id_cuenta: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cliente: BIGINT&lt;/b&gt;&lt;br&gt;• numero_cuenta: VARCHAR(30)&lt;br&gt;• tipo_cuenta: ENUM(Ahorros, Corriente)&lt;br&gt;• saldo_disponible: DECIMAL(18,2)&lt;br&gt;• saldo_canje: DECIMAL(18,2)&lt;br&gt;• estado: ENUM(Activa, Bloqueada)&lt;br&gt;• habilitada_bre_b: BOOLEAN" style="shape=table;startSize=25;fillColor=#dbeafe;strokeColor=#1d4ed8;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="90" width="270" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_lla" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;LLAVE_BRE_B (Directorio)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;• &lt;b&gt;PK id_llave: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cliente: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cuenta: BIGINT&lt;/b&gt;&lt;br&gt;• tipo_llave: ENUM(CELULAR, CEDULA, EMAIL, ALFANUM)&lt;br&gt;• valor_llave: VARCHAR(100)&lt;br&gt;• estado_registro: ENUM(Activa, Inactiva)&lt;br&gt;• fecha_registro: TIMESTAMP&lt;br&gt;• sincronizado_banrep: BOOLEAN&lt;/div&gt;" style="shape=table;startSize=25;fillColor=#dcfce7;strokeColor=#15803d;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="90" width="310" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_trx" value="&lt;b&gt;TRANSACCION_BRE_B (ISO 20022)&lt;/b&gt;&lt;br/&gt;&lt;hr/&gt;• &lt;b&gt;PK id_transaccion: UUID&lt;/b&gt;&lt;br/&gt;• &lt;b&gt;FK id_cuenta_origen: BIGINT&lt;/b&gt;&lt;br/&gt;• llave_origen: VARCHAR(100)&lt;br/&gt;• llave_destino: VARCHAR(100)&lt;br/&gt;• entidad_receptora_id: VARCHAR(20)&lt;br/&gt;• monto_cop: DECIMAL(18,2)&lt;br/&gt;• monto_uvb: DECIMAL(10,2)&lt;br/&gt;• payload_iso20022: JSON&lt;br/&gt;• codigo_qr_hash: VARCHAR(256)&lt;br/&gt;• estado_transferencia: VARCHAR(20)&lt;br/&gt;• latencia_ms: INT&lt;br/&gt;• timestamp_operacion: TIMESTAMP" style="shape=table;startSize=25;fillColor=#dcfce7;strokeColor=#15803d;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="90" width="270" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_pag" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;CONVENIO_PAGADURIA&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;• &lt;/span&gt;&lt;b style=&quot;color: rgb(192, 192, 192); background-color: transparent;&quot;&gt;PK id_convenio: BIGINT&lt;/b&gt;&lt;/div&gt;&lt;div&gt;• nit_entidad: VARCHAR(20)&lt;br&gt;• razon_social: VARCHAR(150)&lt;br&gt;• tipo_entidad: ENUM(Publica, Privada, Fondo)&lt;br&gt;• cupo_global_aprobado: DECIMAL(18,2)&lt;br&gt;• cupo_utilizado: DECIMAL(18,2)&lt;br&gt;• canal_consulta_api: VARCHAR(255)&lt;br&gt;• estado_convenio: VARCHAR(20)&lt;/div&gt;" style="shape=table;startSize=25;fillColor=#fef3c7;strokeColor=#d97706;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="360" width="270" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_lib" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;CREDITO_LIBRANZA&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;• &lt;b&gt;PK id_credito: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cliente: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_convenio: BIGINT&lt;/b&gt;&lt;br&gt;• monto_solicitado: DECIMAL(18,2)&lt;br&gt;• plazo_meses: INT&lt;br&gt;• tasa_interes_ea: DECIMAL(5,2)&lt;br&gt;• cuota_mensual: DECIMAL(18,2)&lt;br&gt;• id_pagare_deceval: VARCHAR(50)&lt;br&gt;• hash_firma_truora: VARCHAR(256)&lt;br&gt;• estado_libranza: VARCHAR(20)&lt;/div&gt;" style="shape=table;startSize=25;fillColor=#fef3c7;strokeColor=#d97706;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="360" width="280" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cdt" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;CDT_DIGITAL&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;• &lt;b&gt;PK id_cdt: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cliente: BIGINT&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cuenta_debito: BIGINT&lt;/b&gt;&lt;br&gt;• monto_constitucion: DECIMAL(18,2)&lt;br&gt;• plazo_dias: INT&lt;br&gt;• tasa_retorno_ea: DECIMAL(5,2)&lt;br&gt;• fecha_vencimiento: DATE&lt;br&gt;• renovacion_automatica: BOOLEAN&lt;br&gt;• canal_origen: ENUM(Web, App, WhatsApp)&lt;br&gt;• estado_titulo: VARCHAR(20)&lt;/div&gt;" style="shape=table;startSize=25;fillColor=#ede9fe;strokeColor=#7e22ce;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="360" width="300" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_log" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;LOG_AUDITORIA_SEGURIDAD (SFC 008)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;• &lt;b&gt;PK id_log: UUID&lt;/b&gt;&lt;br&gt;• &lt;b&gt;FK id_cliente: BIGINT&lt;/b&gt;&lt;br&gt;• direccion_ip_origen: VARCHAR(45)&lt;br&gt;• identificador_dispositivo: VARCHAR(100)&lt;br&gt;• factor_mfa_empleado: VARCHAR(50)&lt;br&gt;• score_riesgo_transaccional: DECIMAL(5,2)&lt;br&gt;• accion_ejecutada: VARCHAR(100)&lt;br&gt;• resultado_operacion: VARCHAR(20)&lt;br&gt;• hash_inmutable_bloque: VARCHAR(256)&lt;br&gt;• timestamp_evento: TIMESTAMP&lt;/div&gt;" style="shape=table;startSize=25;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=10;align=left;spacing=4;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="390" width="300" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_1" value="posee (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#4338ca;" parent="1" source="e_cli" target="e_cta" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_2" value="registra (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#15803d;" parent="1" source="e_cli" target="e_lla" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_3" value="asocia a (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#1d4ed8;" parent="1" source="e_cta" target="e_lla" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_4" value="origina (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#15803d;" parent="1" source="e_cta" target="e_trx" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_5" value="solicita (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#d97706;" parent="1" source="e_cli" target="e_lib" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_6" value="avala (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#d97706;" parent="1" source="e_pag" target="e_lib" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_7" value="constituye (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#7e22ce;" parent="1" source="e_cli" target="e_cdt" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="re_8" value="audita (1:N)" style="edgeStyle=entityRelationEdgeStyle;html=1;startArrow=ERone;endArrow=ERmany;strokeColor=#dc2626;" parent="1" source="e_cli" target="e_log" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="t2_ctx" name="Diagrama de Contexto de Negocio">
+        <mxGraphModel dx="1422" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="820" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ctx_hdr" value="" style="rounded=1;fillColor=#0369a1;strokeColor=#0284c7;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="1320" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctx_hdrtxt" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px; color: #ffffff;&quot;&gt;DIAGRAMA DE CONTEXTO DE NEGOCIO Y ECOSISTEMA DE INTEROPERABILIDAD BAN100&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 11px; color: #e0f2fe;&quot;&gt;Delimitación del Límite Organizacional, Actores Externos, Entidades Reguladoras y Aliados Tecnológicos&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="20" width="1300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_box" value="&lt;b&gt;LÍMITE ORGANIZACIONAL: BAN100&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#f8fafc;strokeColor=#0284c7;strokeWidth=2;dashed=0;fontColor=#0369a1;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="90" width="640" height="680" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c1" value="&lt;b&gt;Canales Digitales Ban100&lt;/b&gt;&lt;br/&gt;(App Móvil, Web, WhatsApp Bot)" style="rounded=1;whiteSpace=wrap;fillColor=#dbeafe;strokeColor=#3b82f6;fontSize=10;html=1;fontStyle=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="30" y="45" width="260" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c2" value="&lt;b&gt;API Gateway Institucional&lt;/b&gt;&lt;br/&gt;(Seguridad, Throttling, mTLS)" style="rounded=1;whiteSpace=wrap;fillColor=#fee2e2;strokeColor=#ef4444;fontSize=10;html=1;fontStyle=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="350" y="45" width="260" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c3" value="&lt;b&gt;Motor de Reglas y Scoring&lt;/b&gt;&lt;br/&gt;(Validación Convenios y Riesgo)" style="rounded=1;whiteSpace=wrap;fillColor=#fef08a;strokeColor=#ca8a04;fontSize=10;html=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="30" y="140" width="260" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c4" value="&lt;b&gt;Módulo Bre-B &amp;amp; ISO 20022&lt;/b&gt;&lt;br/&gt;(Gestor Llaves, QR &amp;amp; Pagos)" style="rounded=1;whiteSpace=wrap;fillColor=#dcfce7;strokeColor=#22c55e;fontSize=10;html=1;fontStyle=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="350" y="140" width="260" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c5" value="&lt;b&gt;Core Bancario Desacoplado&lt;/b&gt;&lt;br/&gt;(Cuentas, Cartera, Captaciones)" style="rounded=1;whiteSpace=wrap;fillColor=#ede9fe;strokeColor=#8b5cf6;fontSize=10;html=1;fontStyle=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="30" y="235" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c6" value="&lt;b&gt;Master Data Management (MDM)&lt;/b&gt;&lt;br/&gt;(Visión 360° de Clientes y Datos)" style="rounded=1;whiteSpace=wrap;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=10;html=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="350" y="235" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bnd_c7" value="&lt;b&gt;SOC &amp;amp; Monitoreo Antifraude IA&lt;/b&gt;&lt;br/&gt;(Cumplimiento Circular 008 SFC)" style="rounded=1;whiteSpace=wrap;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=10;html=1;fontStyle=1;" parent="bnd_box" vertex="1">
+                    <mxGeometry x="190" y="335" width="260" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_cli" value="&lt;b&gt;Clientes Pensionados y Empleados&lt;/b&gt;&lt;br/&gt;Solicitud de libranza, transacciones." style="shape=mxgraph.flowchart.user_input;whiteSpace=wrap;fillColor=#e0e7ff;strokeColor=#6366f1;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="100" width="280" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_mic" value="&lt;b&gt;Microempresarios e Independientes&lt;/b&gt;&lt;br/&gt;Acceso a microcrédito y ahorro." style="shape=mxgraph.flowchart.user_input;whiteSpace=wrap;fillColor=#e0e7ff;strokeColor=#6366f1;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="200" width="280" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_inv" value="&lt;b&gt;Inversionistas CDT&lt;/b&gt;&lt;br/&gt;Apertura y renovación digital de CDT." style="shape=mxgraph.flowchart.user_input;whiteSpace=wrap;fillColor=#e0e7ff;strokeColor=#6366f1;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="300" width="280" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_pag" value="&lt;b&gt;Pagadurías Institucionales&lt;/b&gt;&lt;br/&gt;Entidades públicas y fondos con convenio." style="shape=table;whiteSpace=wrap;fillColor=#fef3c7;strokeColor=#d97706;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="410" width="280" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_res" value="&lt;b&gt;ResponsAbility Investments AG&lt;/b&gt;&lt;br/&gt;Fondeo internacional para microfinanzas." style="rounded=1;whiteSpace=wrap;fillColor=#f1f5f9;strokeColor=#64748b;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="520" width="280" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_tru" value="&lt;b&gt;Aliado: Truora S.A.S.&lt;/b&gt;&lt;br/&gt;Biometría facial, validación cédulas,&lt;br/&gt;firma electrónica Ley 527 y WhatsApp." style="rounded=1;whiteSpace=wrap;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=10;html=1;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="100" width="270" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_bre" value="&lt;b&gt;Banco de la República (Bre-B)&lt;/b&gt;&lt;br/&gt;Directorio central de Llaves,&lt;br/&gt;cámara de pagos inmediatos 24/7." style="rounded=1;whiteSpace=wrap;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=10;html=1;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="215" width="270" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_btg" value="&lt;b&gt;BTG Pactual &amp;amp; Titularizadora&lt;/b&gt;&lt;br/&gt;Titularización de libranzas (&amp;gt;$500kM)&lt;br/&gt;y custodia desmaterializada." style="rounded=1;whiteSpace=wrap;fillColor=#f3e8ff;strokeColor=#7e22ce;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="330" width="270" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_sfc" value="&lt;b&gt;Superintendencia Financiera (SFC)&lt;/b&gt;&lt;br/&gt;Supervisión, auditoría y cumplimiento&lt;br/&gt;Circular Externa 008 de 2023." style="rounded=1;whiteSpace=wrap;fillColor=#fee2e2;strokeColor=#b91c1c;fontSize=10;html=1;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="440" width="270" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_aso" value="&lt;b&gt;Asobancaria / MinTrabajo&lt;/b&gt;&lt;br/&gt;Protocolo Verde y Sello Equipares." style="rounded=1;whiteSpace=wrap;fillColor=#f8fafc;strokeColor=#94a3b8;fontSize=10;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="550" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c1" value="Solicitudes y autogestión" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#4338ca;fontSize=9;" parent="1" edge="1" source="ext_cli" target="bnd_c1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c2" value="Validación biometría &amp;amp; firma" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0284c7;strokeWidth=2;fontSize=9;" parent="1" edge="1" source="bnd_c2" target="ext_tru">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c3" value="Pagos inmediatos ISO 20022" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#16a34a;strokeWidth=2;fontSize=9;" parent="1" edge="1" source="bnd_c4" target="ext_bre">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c4" value="Consulta cupos libranza" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d97706;fontSize=9;" parent="1" edge="1" source="ext_pag" target="bnd_c3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c5" value="Cesión de cartera y pagarés" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#7e22ce;fontSize=9;" parent="1" edge="1" source="bnd_c5" target="ext_btg">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c6" value="Reportes regulatorios &amp;amp; auditoría" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b91c1c;fontSize=9;" parent="1" edge="1" source="bnd_c7" target="ext_sfc">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ce_c7" value="Líneas de crédito micro" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#64748b;fontSize=9;" parent="1" edge="1" source="ext_res" target="bnd_c5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
