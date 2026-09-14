@@ -1,10 +1,8 @@
 # 📄 Informe Técnico del Taller 4: Mapa de Infraestructura y Diagnóstico Técnico
 
-## 🔖 Nombre del Taller
 **Taller 4 — Mapa de Infraestructura y Diagnóstico Técnico: Caso Ban100**
 *Dominio Tecnológico del MAE (MRAE v3.0 MinTIC): Arquitectura de Nube Híbrida Multi-Región, Microservicios y Ciberseguridad Zero Trust*
 
-## 👥 Integrantes del Equipo
 - **Santiago Barrera Rueda**
 - **Krish Purmessur Moros**
 - **Samuel Guerrero Arcos**
@@ -15,7 +13,7 @@
 
 ---
 
-## 🧠 1. Descripción General del Trabajo
+## 1. Descripción General del Trabajo
 
 El objetivo de este taller consistió en construir el **mapa lógico y físico de la infraestructura tecnológica** de Ban100 (estado objetivo TO-BE) y realizar un **diagnóstico técnico priorizado** de debilidades, cuellos de botella y oportunidades de mejora, siguiendo la metodología en 5 pasos del curso.
 
@@ -25,7 +23,7 @@ El mapa de infraestructura captura tanto los componentes que ya se encuentran op
 
 ---
 
-## 🔧 2. Proceso de Desarrollo (Metodología en 5 Pasos)
+## 2. Proceso de Desarrollo (Metodología en 5 Pasos)
 
 ### Paso 1 — Identificar Componentes de Infraestructura
 
@@ -118,7 +116,7 @@ A partir del análisis de redundancia se identificaron los riesgos críticos que
 
 ---
 
-## ⚠️ 3. Tabla de Diagnóstico Técnico Priorizado
+## 3. Tabla de Diagnóstico Técnico Priorizado
 
 | # | Componente en Riesgo | Riesgo Diagnosticado | Categoría | Impacto si Ocurre | Prioridad | Mitigación Propuesta |
 |---|---|---|---|---|---|---|
@@ -130,7 +128,7 @@ A partir del análisis de redundancia se identificaron los riesgos críticos que
 
 ---
 
-## 🧩 4. Análisis del Modelo Propuesto
+## 4. Análisis del Modelo Propuesto
 
 ### Estructura y Zonas del Mapa
 
@@ -160,7 +158,7 @@ El mapa refleja directamente los objetivos estratégicos formulados en la Ficha 
 
 ---
 
-## 📈 5. Diagrama Final Entregado
+## 5. Diagrama Final Entregado
 
 - **Archivo editable:** [`mapa-final.drawio`](mapa-final.drawio)
 - **Instrucciones de apertura:** Puede abrirse directamente en VS Code utilizando la extensión `hediet.vscode-drawio` o en el entorno web [app.diagrams.net](https://app.diagrams.net/).
@@ -168,7 +166,7 @@ El mapa refleja directamente los objetivos estratégicos formulados en la Ficha 
 
 ---
 
-## 📋 6. Tabla de Componentes de Infraestructura
+## 6. Tabla de Componentes de Infraestructura
 
 | Componente | Zona | Tipo | Redundancia | Responsable |
 |---|---|---|---|---|
@@ -203,7 +201,7 @@ El mapa refleja directamente los objetivos estratégicos formulados en la Ficha 
 
 ---
 
-## 🔍 7. Investigación Complementaria
+## 7. Investigación Complementaria
 
 ### Tema Investigado:
 *Buenas Prácticas de Arquitectura de Infraestructura en Banca: Nube Híbrida Multi-Región, Resiliencia Activa-Activa y Patrón Strangler Fig para Migración de Core Bancario.*
@@ -218,7 +216,7 @@ Finalmente, la adopción del modelo de seguridad **Zero Trust** ("nunca confiar,
 
 ---
 
-## 🏛️ 8. Vista ArchiMate Equivalente (Capa de Tecnología)
+## 8. Vista ArchiMate Equivalente (Capa de Tecnología)
 
 ```mermaid
 flowchart TD
@@ -256,7 +254,7 @@ El balanceador, el Core Legacy y la DB transaccional aparecen marcados como ries
 
 ---
 
-## 📚 9. Referencias
+## 9. Referencias
 
 - [1] Fowler, M. *Strangler Fig Application*. martinfowler.com, 2004. https://martinfowler.com/bliki/StranglerFigApplication.html
 - [2] Microsoft Azure. *Multi-region deployment for high availability*. Azure Architecture Center, 2024. https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/multi-region

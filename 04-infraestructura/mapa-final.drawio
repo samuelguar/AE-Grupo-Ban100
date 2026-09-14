@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ban100_diag" name="Ban100 Infrastructure">
-        <mxGraphModel dx="1430" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+        <mxGraphModel dx="1271" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -81,8 +81,6 @@
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="400" y="150"/>
-                            <mxPoint x="400" y="255"/>
-                            <mxPoint x="385" y="255"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -228,7 +226,8 @@
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="220" y="590"/>
-                            <mxPoint x="1490" y="590"/>
+                            <mxPoint x="1560" y="590"/>
+                            <mxPoint x="1560" y="890"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -238,29 +237,32 @@
                             <mxPoint x="370" y="460"/>
                             <mxPoint x="910" y="460"/>
                             <mxPoint x="910" y="750"/>
-                            <mxPoint x="1190" y="750"/>
+                            <mxPoint x="1120" y="750"/>
+                            <mxPoint x="1120" y="840"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="e_core_deceval" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;" parent="1" source="z3_8" target="z7_3" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1160" y="720"/>
+                            <mxPoint x="1130" y="720"/>
+                            <mxPoint x="1130" y="940"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="e_core_btg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;" parent="1" source="z3_8" target="z7_4" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1200" y="720"/>
+                            <mxPoint x="1110" y="720"/>
+                            <mxPoint x="1110" y="990"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="e_api_soc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;dashed=1;" parent="1" source="z3_1" target="z6_1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="395" y="710"/>
-                            <mxPoint x="30" y="710"/>
+                            <mxPoint x="395" y="670"/>
+                            <mxPoint x="30" y="670"/>
                             <mxPoint x="30" y="1010"/>
                         </Array>
                     </mxGeometry>

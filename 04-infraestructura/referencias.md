@@ -1,11 +1,11 @@
 # 📚 Referencias Bibliográficas del Taller
 
-## 🔖 Taller
+## Taller
 _Taller 4 - Mapa de Infraestructura y Diagnóstico Técnico: Caso Ban100_
 
 ---
 
-## 📚 Referencias Utilizadas
+## Referencias Utilizadas
 
 1. Fowler, M. *Strangler Fig Application*. martinfowler.com, 2004. [Enlace](https://martinfowler.com/bliki/StranglerFigApplication.html). Fecha de consulta: 05/09/2026.
    > Referencia fundamental sobre el patrón de migración incremental de sistemas monolíticos a microservicios, aplicado al Core Bancario Legacy de Ban100.
@@ -39,7 +39,7 @@ _Taller 4 - Mapa de Infraestructura y Diagnóstico Técnico: Caso Ban100_
 
 ---
 
-## 📌 Recomendaciones
+## Recomendaciones
 
 - Se utilizó formato IEEE para las citas bibliográficas.
 - Las fuentes normativas colombianas (SFC y Banco de la República) se referenciaron directamente desde las circulares oficiales.

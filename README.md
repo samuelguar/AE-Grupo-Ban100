@@ -1,141 +1,76 @@
-# 🛠️ Cómo Armar el Repositorio del Proyecto con el Cliente Real
+# Arquitectura Empresarial — Ban100
 
-Esta guía es para el **equipo**, no para un taller específico: explica cómo organizar en un solo repositorio de GitHub todo el trabajo de la Parte 2 ("Aplicación al Cliente Real") de los 10 talleres del curso, de modo que el resultado final sea algo que **el cliente pueda usar**, no solo una carpeta de entregables académicos.
-
----
-
-## 1. Dos audiencias, un repositorio
-
-El repositorio de su proyecto lo van a leer dos tipos de personas muy distintas:
-
-- **El área de negocio del cliente** — quiere entender rápido cuál era el problema, qué se propone y cómo se implementa. No necesita (ni quiere) leer 10 informes técnicos para llegar a esa respuesta.
-- **El docente y ustedes mismos** — necesitan ver el detalle completo, taller por taller, para verificar la trazabilidad y el rigor del análisis.
-
-Por eso el repositorio tiene una estructura de dos capas: un **README raíz liviano y de negocio** en la puerta de entrada, y el detalle técnico organizado por carpetas debajo, para quien quiera profundizar. Nadie del área de negocio debería tener que abrir la carpeta `05-seguridad-stride/` para entender qué se les está proponiendo — para eso está el resumen ejecutivo.
+**Cliente:** Ban100 (Establecimiento Bancario Comercial, antes Credifinanciera S.A.)  
+**Equipo:** Santiago Barrera Rueda · Krish Purmessur Moros · Samuel Guerrero Arcos  
+**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana  
 
 ---
 
-## 2. Un repositorio por equipo, con una carpeta por taller
+## 📌 En una frase
 
-Cada equipo crea **un solo repositorio** (no diez) para su cliente real, nombrado así: `AREM-EquipoX-NombreCliente` (ej. `AREM-Equipo3-FundacionSaludViva`). Dentro, una carpeta por taller — solo con lo de la Parte 2 (Aplicación al Cliente Real); lo de la Parte 1 (caso de clase) se queda en los repos de taller, no aquí.
-
-```text
-AREM-EquipoX-NombreCliente/
-├── README.md                          # ⭐ Punto de entrada — ver plantilla en este repo
-├── resumen-ejecutivo.md               # Copia del Taller 9 — lo primero que debe leer el cliente
-├── 00-preliminary-vision/
-│   ├── ficha-caracterizacion.md
-│   ├── vision.md
-│   └── referencias.md
-├── 01-bpmn/
-│   ├── modelo-final.drawio
-│   ├── informe.md
-│   └── referencias.md
-├── 02-modelo-informacion/
-│   ├── modelo-final-er.drawio
-│   ├── diagrama-contexto-final.drawio
-│   ├── informe.md
-│   └── referencias.md
-├── 03-arquitectura-c4/
-│   ├── c1-contexto-final.drawio
-│   ├── c2-contenedores-final.drawio
-│   ├── informe.md
-│   └── referencias.md
-├── 04-infraestructura/
-│   ├── mapa-final.drawio
-│   ├── informe.md
-│   └── referencias.md
-├── 05-seguridad-stride/
-│   ├── tabla-stride-cliente.xlsx
-│   ├── informe.md
-│   └── referencias.md
-├── 06-normatividad/
-│   ├── checklist-cliente.xlsx
-│   ├── informe.md
-│   └── referencias.md
-├── 07-opportunities-solutions/
-│   ├── to-be-aplicaciones-final.drawio
-│   ├── to-be-tecnologia-final.drawio
-│   ├── matriz-brechas.xlsx
-│   ├── informe.md
-│   └── referencias.md
-├── 08-integracion-vistas/
-│   ├── tablero-integrado-cliente.drawio
-│   ├── informe.md
-│   └── referencias.md
-└── 09-presentacion-final/
-    ├── presentacion.pdf
-    ├── matriz-evaluacion.xlsx
-    ├── plan-implementacion.md
-    ├── plan-gobernanza.md
-    ├── procedimiento-cambios.md
-    ├── vistas-finales/
-    └── reflexiones/
-```
-
-Cada carpeta usa las plantillas del repo del taller correspondiente — cópielas de `plantillas/` de cada `AREM-Taller_N_...` a la carpeta de aquí y llénelas con el trabajo del cliente real.
+Transformamos la plataforma de servicios financieros de Ban100 para que la solicitud y desembolso de créditos de libranza pase de 3 a 5 días a menos de 15 minutos, habilitamos pagos inmediatos 24/7 con el ecosistema Bre-B sin caídas de servicio, y blindamos los datos y la identidad de más de 250.000 clientes pensionados y microempresarios.
 
 ---
 
-## 3. Cómo fluye la información entre carpetas (trazabilidad)
+## 🩺 El problema
 
-Cada carpeta no es un ejercicio aislado: usa lo que produjo la anterior. Si dos carpetas se contradicen, algo quedó mal — revisen esta tabla antes de dar por cerrado un corte.
-
-| De → A | Qué se traslada |
-|---|---|
-| 00 → 01 | Un proceso de "Procesos clave del negocio" de la Ficha se convierte en el proceso a modelar en BPMN |
-| 00 → 02 | El contexto del negocio (sistemas y actores mencionados en la Ficha) informa el ERD y el diagrama de contexto |
-| 01, 02 → 03 | Los procesos y entidades ya modelados delimitan qué sistema se documenta en C1/C2 |
-| 03 → 04 | Los contenedores del C2 aparecen como componentes en el mapa de infraestructura |
-| 03, 04 → 05 | Los componentes y flujos de C4/infraestructura son el objeto del análisis STRIDE |
-| 00, 02 → 06 | Los datos sensibles identificados en la Ficha y el ERD se evalúan contra el checklist normativo |
-| 03, 04, 05, 06 → 07 | Los riesgos y brechas de C4, infraestructura, STRIDE y normatividad se consolidan en el TO-BE |
-| 00–07 → 08 | Todas las vistas (AS-IS y TO-BE) se integran en un solo tablero coherente |
-| 00–08 → 09 | Todo se condensa en la narrativa de 4 actos, el plan de implementación, la gobernanza y el resumen ejecutivo |
+Hoy Ban100 atiende a más de 250.000 clientes en 900 municipios de Colombia, pero enfrenta cuatro barreras operativas críticas:
+1. **Trámites lentos en libranzas:** La originación de créditos depende de validaciones manuales y papeleo con convenios de pagadurías, tardando entre 3 y 5 días hábiles en desembolsar.
+2. **Información fragmentada:** Los datos de los clientes viven en silos separados por producto (crédito, cuentas, CDTs), sin una visión unificada 360° en tiempo real.
+3. **Sistemas rígidos que frenan la innovación:** El sistema bancario transaccional principal exige procesos por lotes nocturnos (con 12 horas de desfase en saldos), lo que choca con la inmediatez que exige el nuevo sistema de pagos 24/7 Bre-B del Banco de la República.
+4. **Riesgos de seguridad y exigencias normativas:** La dispersión tecnológica y el perfil vulnerable de los clientes (adultos mayores pensionados) exigen reforzar los controles contra suplantaciones de identidad y asegurar el cumplimiento de las circulares de ciberseguridad de la Superintendencia Financiera de Colombia y de protección de datos de la SIC.
 
 ---
 
-## 4. Cronograma del semestre (confirmado)
+## 💡 Lo que proponemos
 
-El curso se dicta los sábados. Con el Taller 7 (Opportunities & Solutions) insertado entre Normatividad y Presentación Final, el mapeo original del enunciado ("Corte 2 = Aplicaciones + Tecnológica + Opportunities & Solutions") se recalibró así: el TO-BE (07) se corrió después de Seguridad (05) y Normatividad (06), porque necesita las brechas de ambos para tener sentido. Calendario confirmado 2026-II:
+Una arquitectura empresarial moderna, ágil y segura enfocada en el crecimiento del negocio:
 
-| # | Sábado | Taller / actividad |
-|---|---|---|
-| 1 | 25/07 | Taller 0 — Preliminary y Architecture Vision |
-| 2 | 01/08 | Taller 1 — BPMN |
-| 3 | 08/08 | Taller 2 — Modelo de Información |
-| 4 | 15/08 | Cierre y ajustes Corte 1 |
-| 5 | 22/08 | 🟢 **Sustentación Corte 1** (`00`, `01`, `02`) |
-| 6 | 29/08 | Taller 3 — Arquitectura C4 |
-| 7 | 05/09 | Taller 4 — Infraestructura |
-| 8 | 12/09 | Taller 5 — STRIDE |
-| 9 | 19/09 | Taller 6 — Normatividad |
-| 10 | 26/09 | Cierre y ajustes Corte 2 |
-| 11 | 03/10 | 🟢 **Sustentación Corte 2** (`03`, `04`, `05`, `06`) |
-| 12 | 10/10 | Taller 7 — Opportunities & Solutions |
-| — | ~~17/10~~ | Semana de receso — sin clase |
-| 13 | 24/10 | Taller 8 — Integración de Vistas |
-| 14 | 31/10 | Taller 9 — Presentación Final (preparación) |
-| 15 | 07/11 | Cierre Corte 3 / Ensayo |
-| 16 | 14/11 | 🟢 **Presentación Final con el cliente/negocio** (`07`, `08`, `09`) |
-
-Cada corte queda con al menos un sábado libre de contenido nuevo antes de sustentar (15/08, 26/09). El cierre final queda con un solo sábado de colchón (07/11) en vez de dos, porque el 17/10 no hay clase — sigue alcanzando para los 3 talleres restantes sin romper el orden de dependencias, pero ya sin margen extra: si se corre otra fecha en esta ventana, revisar de nuevo.
+- **Originación de libranzas 100% digital en minutos:** Integrar biometría facial pasiva y firma electrónica legalmente válida para que un pensionado solicite y reciba su crédito en menos de 15 minutos desde su celular o WhatsApp, sin pisar una oficina.
+- **Pagos inmediatos 24/7/365 sin interrupciones:** Conectar a Ban100 con el riel nacional Bre-B mediante una infraestructura en nube de alta disponibilidad (Bogotá–Medellín), garantizando transferencias en menos de 3 segundos con disponibilidad del 99.99%.
+- **Saldos y visión del cliente en tiempo real:** Eliminar los lotes nocturnos mediante sincronización continua de datos, permitiendo consultar saldos y movimientos al instante en cualquier canal.
+- **Blindaje integral de identidad y datos personales:** Implementar autenticación reforzada contra fraudes y suplantaciones digitales, enmascaramiento de información sensible de mesadas pensionales y un módulo de autoservicio para que los clientes gestionen sus derechos de privacidad.
+- **Hoja de ruta gradual y de bajo riesgo:** Un plan de modernización en 3 horizontes (inmediato, mediano y largo plazo) que transforma la tecnología por etapas, asegurando continuidad operativa sin traumatismos para los clientes actuales.
 
 ---
 
-## 5. Cómo compartir el repositorio
+## 🗺️ Cómo se implementa
 
-- Agregue al docente como colaborador del repositorio, o déjelo público (igual que los repos de taller).
-- Comparta el link por el canal que ya usa el curso (Aula Virtual / correo) — no hace falta una organización de GitHub aparte.
-
----
-
-## 6. Plantilla del README raíz (la puerta de entrada para el cliente)
-
-Copie [`plantilla_readme_equipo.md`](plantilla_readme_equipo.md) como `README.md` en la raíz de su repositorio y complétela. Es lo primero — y para muchos lectores del área de negocio, lo único — que van a leer.
+Para conocer los beneficios cuantitativos, las fases de ejecución en tres horizontes (H1 Quick Wins, H2 Ciberseguridad y Datos, H3 Modernización del Core) y los tiempos estimados, consulte el **[Resumen Ejecutivo](resumen-ejecutivo.md)**, diseñado especialmente para la alta dirección y los líderes de negocio.
 
 ---
 
-## ✅ Licencia
+## 📂 Si quiere ver el detalle técnico completo
 
-Este repositorio es de uso académico bajo licencia MIT. Hace parte del curso de Arquitectura Empresarial - Universidad de La Sabana.
+Todo el análisis, modelos visuales y diagnósticos que sustentan esta propuesta están documentados taller por taller, siguiendo los estándares internacionales de arquitectura (MRAE v3.0 MinTIC, TOGAF ADM, C4 Model y STRIDE):
+
+| Carpeta | Qué contiene | Estado |
+|---|---|:---:|
+| [`00-preliminary-vision/`](./00-preliminary-vision/) | Ficha de caracterización institucional, dolores de negocio y visión estratégica | **Completo** |
+| [`01-bpmn/`](./01-bpmn/) | Modelado BPMN 2.0 del proceso misional de originación y desembolso digital de libranza | **Completo** |
+| [`02-modelo-informacion/`](./02-modelo-informacion/) | Estructura de datos (ERD), catálogo de llaves Bre-B y diagrama de contexto organizacional | **Completo** |
+| [`03-arquitectura-c4/`](./03-arquitectura-c4/) | Arquitectura de sistemas en modelo C4 (Contexto C1 y Contenedores C2 con 19 componentes) | **Completo** |
+| [`04-infraestructura/`](./04-infraestructura/) | Mapa de infraestructura en nube híbrida multi-región y diagnóstico de 5 riesgos técnicos | **Completo** |
+| [`05-seguridad-stride/`](./05-seguridad-stride/) | Análisis de amenazas de ciberseguridad STRIDE y diseño de arquitectura Zero Trust | **Completo** |
+| [`06-normatividad/`](./06-normatividad/) | Diagnóstico de cumplimiento legal (Circular 008 SFC, Ley 1581 Habeas Data, ISO 27001) | **Completo** |
+| [`07-opportunities-solutions/`](./07-opportunities-solutions/) | Arquitectura objetivo (TO-BE), matriz de 20 brechas y hoja de ruta en 3 horizontes | **Completo** |
+| [`08-integracion-vistas/`](./08-integracion-vistas/) | Tablero integrado multicapa (5 capas conectadas de punta a punta con 0 huérfanos) | **Completo** |
+| [`09-presentacion-final/`](./09-presentacion-final/) | Presentación ejecutiva, paquetes de trabajo, gobernanza y sustentación final | ⏳ *Pendiente* |
+
+---
+
+## 👥 Contacto del Equipo
+
+Para dudas o consultas sobre esta propuesta de Arquitectura Empresarial:
+
+- **Santiago Barrera Rueda** — `santiagobarrue@unisabana.edu.co`
+- **Krish Purmessur Moros** — `krishpumo@unisabana.edu.co`
+- **Samuel Guerrero Arcos** — `samuelguar@unisabana.edu.co`
+
+*Facultad de Ingeniería — Universidad de La Sabana*
+
+---
+
+## 📄 Licencia
+
+Este repositorio es de uso académico bajo licencia MIT. Desarrollado para el curso de Arquitectura Empresarial (AREM) — Universidad de La Sabana (2026).
