@@ -2,7 +2,7 @@
 
 **Cliente:** Ban100 (Establecimiento Bancario Comercial, antes Credifinanciera S.A.)  
 **Equipo:** Santiago Barrera Rueda · Krish Purmessur Moros · Samuel Guerrero Arcos  
-**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana  
+**Curso:**Arquitectura Empresarial — Universidad de La Sabana    
 
 ---
 
@@ -73,4 +73,4 @@ Para dudas o consultas sobre esta propuesta de Arquitectura Empresarial:
 
 ## 📄 Licencia
 
-Este repositorio es de uso académico bajo licencia MIT. Desarrollado para el curso de Arquitectura Empresarial (AREM) — Universidad de La Sabana (2026).
+Este repositorio es de uso académico bajo licencia MIT. Desarrollado para el curso deArquitectura Empresarial — Universidad de La Sabana   (2026).

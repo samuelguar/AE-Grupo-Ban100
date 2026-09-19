@@ -60,4 +60,4 @@ _Taller 6 — Checklist de Cumplimiento Normativo: Caso Ban100_
 
 ---
 
-_Este archivo forma parte integral de la entrega académica del Taller 6 en el curso de Arquitectura Empresarial (AREM) — Universidad de La Sabana._
+_Este archivo forma parte integral de la entrega académica del Taller 6 en el curso deArquitectura Empresarial — Universidad de La Sabana  ._

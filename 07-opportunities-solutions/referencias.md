@@ -3,7 +3,7 @@
 **Taller 7 — Opportunities & Solutions: Diseño del TO-BE y Análisis de Brechas**  
 *Caso de Estudio: Ban100 (Establecimiento Bancario Comercial)*  
 **Equipo de Trabajo:** Santiago Barrera Rueda, Krish Purmessur Moros, Samuel Guerrero Arcos  
-**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana  
+**Curso:**Arquitectura Empresarial — Universidad de La Sabana    
 **Fecha:** 12 de Septiembre de 2026  
 
 ---

@@ -2,7 +2,7 @@
 
 ## Equipo: Ban100 — Grupo de Arquitectura Empresarial
 
-**Asignatura:** Arquitectura Empresarial (AREM) — Universidad de La Sabana  
+**Asignatura:**Arquitectura Empresarial — Universidad de La Sabana    
 **Integrantes:** Santiago Barrera Rueda, Krish Purmessur Moros, Samuel Guerrero Arcos  
 **Fecha de entrega:** Agosto 2026  
 **Marco metodológico:** MRAE v3.0 MinTIC + TOGAF ADM  

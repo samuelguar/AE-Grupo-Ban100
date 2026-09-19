@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="t0_vis" name="Visión Arquitectura Ban100">
-        <mxGraphModel dx="1144" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+        <mxGraphModel dx="1152" dy="625" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -70,7 +70,7 @@
                 <mxCell id="d3_c5" value="&lt;b&gt;Integraciones API REST:&lt;/b&gt;&lt;br/&gt;Truora, Deceval, BanRep Bre-B, Titularizadora BTG." style="rounded=1;whiteSpace=wrap;fillColor=#f0f9ff;strokeColor=#0ea5e9;fontSize=10;align=center;html=1;fontStyle=1;" parent="d3_box" vertex="1">
                     <mxGeometry x="10" y="380" width="240" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="d4_box" value="4. DOMINIO TECNOLÓGICO&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#ccfbf1;strokeColor=#0d9488;fontColor=#115e59;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                <mxCell id="d4_box" value="4. DOMINIO TECNOLÓGICO" style="swimlane;startSize=30;fillColor=#ccfbf1;strokeColor=#0d9488;fontColor=#115e59;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="845" y="150" width="250" height="480" as="geometry"/>
                 </mxCell>
                 <mxCell id="d4_c1" value="&lt;b&gt;Nube Híbrida Multi-Región:&lt;/b&gt;&lt;br/&gt;Arquitectura distribuida elástica con contingencia activa-activa." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#99f6e4;fontSize=10;align=left;spacing=6;html=1;" parent="d4_box" vertex="1">
@@ -88,7 +88,7 @@
                 <mxCell id="d4_c5" value="&lt;b&gt;Resiliencia &amp;amp; DRP:&lt;/b&gt;&lt;br/&gt;RTO &amp;lt; 5 min, RPO = 0 para pagos Bre-B." style="rounded=1;whiteSpace=wrap;fillColor=#f0fdfa;strokeColor=#14b8a6;fontSize=10;align=center;html=1;fontStyle=1;" parent="d4_box" vertex="1">
                     <mxGeometry x="10" y="350" width="230" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="d5_box" value="&lt;b&gt;5. DOMINIO DE SEGURIDAD&lt;/b&gt;" style="swimlane;startSize=30;fillColor=#fee2e2;strokeColor=#dc2626;fontColor=#991b1b;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
+                <mxCell id="d5_box" value="5. DOMINIO DE SEGURIDAD" style="swimlane;startSize=30;fillColor=#fee2e2;strokeColor=#dc2626;fontColor=#991b1b;fontSize=12;fontStyle=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="1110" y="150" width="250" height="480" as="geometry"/>
                 </mxCell>
                 <mxCell id="d5_c1" value="&lt;b&gt;Modelo Zero Trust:&lt;/b&gt;&lt;br/&gt;Principio de &#39;Nunca confiar, siempre verificar&#39; en todas las capas y APIs." style="rounded=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#fecaca;fontSize=10;align=left;spacing=6;html=1;" parent="d5_box" vertex="1">

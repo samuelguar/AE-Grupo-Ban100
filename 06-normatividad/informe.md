@@ -8,7 +8,7 @@
 - **Samuel Guerrero Arcos**
 
 **Fecha de Entrega:** 12 de Septiembre de 2026  
-**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana  
+**Curso:**Arquitectura Empresarial — Universidad de La Sabana    
 **Libro de Matriz Oficial (Excel):** [`checklist-cliente.xlsx`](checklist-cliente.xlsx)  
 **Documento de Fuentes y Normativa:** [`referencias.md`](referencias.md)
 
@@ -264,4 +264,4 @@ Para consultar la totalidad del soporte documental, legal, regulatorio y metodol
 
 ---
 
-_Este informe técnico hace parte integral de la entrega del Taller 6 del curso de Arquitectura Empresarial (AREM) — Facultad de Ingeniería, Universidad de La Sabana._
+_Este informe técnico hace parte integral de la entrega del Taller 6 del curso de Arquitectura Empresarial  — Facultad de Ingeniería, Universidad de La Sabana._

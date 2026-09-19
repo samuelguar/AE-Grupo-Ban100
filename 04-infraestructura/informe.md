@@ -8,7 +8,7 @@
 - **Samuel Guerrero Arcos**
 
 **Fecha:** 5 de Septiembre de 2026
-**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana
+**Curso:**Arquitectura Empresarial — Universidad de La Sabana  
 **Entregable del Diagrama:** [`mapa-final.drawio`](mapa-final.drawio)
 
 ---

@@ -8,8 +8,8 @@
 - **Samuel Guerrero Arcos**
 
 **Fecha:** 12 de Septiembre de 2026  
-**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana  
-**Docente:** César Vega  
+**Curso:** Arquitectura Empresarial — Universidad de La Sabana  
+**Docente:** Cesar Augusto Vega  
 **Entregable Oficial:** Actividad de Mejora de Arquitectura (Fase E: Opportunities & Solutions — TOGAF ADM / MRAE v3.0 MinTIC)
 
 ---
@@ -242,4 +242,4 @@ Los siguientes entregables complementan y soportan técnicamente este informe:
 
 ---
 
-_Este documento hace parte de la entrega oficial del Taller 7 (Opportunities & Solutions) del curso Arquitectura Empresarial (AREM) — Universidad de La Sabana._
+_Este documento hace parte de la entrega oficial del Taller 7 (Opportunities & Solutions) del cursoArquitectura Empresarial — Universidad de La Sabana  ._
