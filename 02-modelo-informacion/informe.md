@@ -1,22 +1,22 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 2 - Modelo de Información (ERD) y Diagrama de Contexto de Negocio_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se construyó el modelo de información del flujo de **originación, recaudo B2G y titularización de libranza** (ERD en tercera forma normal con 8 entidades) y el **diagrama de contexto de negocio** que sitúa a Ban100 frente a sus actores y sistemas externos. Ambos derivan del proceso BPMN del Taller 1: cada dato que cruza un carril aparece como atributo o como flujo etiquetado.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 **ERD.** (1) Entidades a partir de los datos del BPMN (cliente, solicitud, crédito, pagaré, pagaduría, convenio, descuento y emisión); (2) atributos y clave primaria subrayada (`PK`) más claves foráneas (`FK`); (3) relaciones nombradas con un verbo; (4) cardinalidad `1:1` o `1:N` en cada extremo. **Contexto.** (1) Actores y sistemas externos; (2) límite organizacional con cuatro sistemas internos; (3) flujos; (4) etiquetado de cada flujo con el dato intercambiado y borde punteado para terceros.
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 ### A. Modelo entidad-relación (3FN)
 | Relación | Verbo | Cardinalidad |
 |---|---|---|
@@ -34,16 +34,16 @@ Se construyó el modelo de información del flujo de **originación, recaudo B2G
 - **Trazabilidad con el negocio.** `tiempo_aprobacion_min` en `SOLICITUD_LIBRANZA` permite medir la meta de < 15 minutos; `cluster_mrae_1_2_3` y `grupo_mrae_t1_t5` clasifican a cada pagaduría según el MRAE; `hash_sha256_ley527` y `timestamp_firma_electronica` soportan el no repudio (Ley 527 de 1999).
 
 ### B. Diagrama de contexto
-- **Límite:** *Ban100 S.A. (Bancien S.A.)* con *Canales Digitales y Ban-I Bot*, *Motor de Originación y Scoring*, *Cliente 360 MDM* y *Core Bancario y Cartera*.
+- **Límite:** *Ban100 S.A.* con *Canales Digitales y Ban-I Bot*, *Motor de Originación y Scoring*, *Cliente 360 MDM* y *Core Bancario y Cartera*.
 - **Actores:** Pensionado / Empleado Público, Microempresario, Oficial de Cumplimiento / Analista Operativo.
 - **Sistemas externos (borde punteado):** Pagadurías Públicas Nacionales y Territoriales, Truora Biometría y Firma, Centrales de Riesgo TransUnion/DataCrédito, SFC / RNVE-SIMEV y Bre-B Banco de la República.
 - **Supuestos.** El Oficial de Cumplimiento interactúa con el Cliente 360 para revisar alertas SARLAFT; los descuentos de nómina retornan por la misma interfaz de las pagadurías.
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 - [Ver ERD en draw.io](./modelo-final-er.drawio)
 - [Ver Diagrama de Contexto en draw.io](./diagrama-contexto-final.drawio)
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -60,7 +60,7 @@ Se construyó el modelo de información del flujo de **originación, recaudo B2G
 | Cliente 360 MDM | Sistema interno | Repositorio maestro del cliente | Datos |
 | Core Bancario y Cartera | Sistema interno | Sistema transaccional de cartera y desembolso | TI |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 Gobierno de datos (DAMA-DMBOK) y homologación con los lineamientos de información del MRAE v3.0.
 
@@ -77,7 +77,7 @@ Homologación MRAE: `MAE.LI.AI.01` (catálogo de flujos: los 12 flujos del diagr
 | Sistema externo punteado | Application Service (externo) |
 | Flujo etiquetado | Flow / Access |
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

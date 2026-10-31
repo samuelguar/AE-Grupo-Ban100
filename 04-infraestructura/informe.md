@@ -1,26 +1,26 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 4 - Infraestructura: Mapa Híbrido AS-IS, diagnóstico de riesgos y modelo matemático MRAE del plazo B2G_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos 
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se representó la infraestructura **híbrida AS-IS** de la plataforma digital de libranza (nube pública Kubernetes, centro de datos On-Premise en Bogotá, SOC 24/7 y conectividad con pagadurías), se marcaron en rojo `⚠️` los tres riesgos diagnosticados y se incorporó el **modelo matemático del MinTIC** (`MRAE.ADM.01`) para estimar el plazo de adopción de las contrapartes B2G.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 1. **Componentes** de cinco zonas: clientes y canales, borde y seguridad, nube pública, centro de datos On-Premise y ecosistema externo B2G.
 2. **Agrupación** por zona (contenedores punteados): *Zona 1: Clientes y Canales (965–1.000+ Municipios)*, *Zona 2: Borde y Seguridad (WAF / Balanceador / SOC 24/7)*, *Zona 3: Nube Pública (Clúster Kubernetes — Servicios Digitales)*, *Zona 4: Centro de Datos On-Premise Bogotá (Core Bancario y MDM)* y *Zona 5: Ecosistema Externo B2G (Pagadurías G1-G5 y Proveedores)*.
 3. **Conexiones** con el protocolo de cada enlace y dirección del tráfico.
 4. **Redundancia** indicada en cada componente (`Instancia única` o `Cluster HA Activo-Pasivo`).
 5. **Diagnóstico** de tres riesgos (rojo `#c0392b` con `⚠️`) clasificados por categoría.
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 ### Diagnóstico de riesgos
 | Componente | Riesgo diagnosticado | Categoría | Impacto si ocurre | Prioridad |
 |---|---|---|---|---|
@@ -38,10 +38,10 @@ Se representó la infraestructura **híbrida AS-IS** de la plataforma digital de
 | Cliente 360 MDM | **Instancia única** (On-Premise) |
 | Oficinas físicas (10) | **Instancia única** por oficina |
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 [Ver mapa de infraestructura AS-IS en draw.io](./mapa-final.drawio)
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -52,7 +52,7 @@ Se representó la infraestructura **híbrida AS-IS** de la plataforma digital de
 | Core Bancario / Cliente 360 MDM | Nodo On-Premise | Sistemas centrales en Bogotá | TI |
 | Pagadurías G1–G2 / G3–G5 | Externo | Contraparte B2G con integración estandarizable o asíncrona | Convenios B2G |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 Modelo MinTIC de plazos por grupo de entidades (`MRAE.ADM.01`) y su implicación B2G para Ban100.
 
@@ -94,7 +94,7 @@ RK4 avanza con $k_1 = f(t, P)$, $k_2 = f(t + h/2,\ P + hk_1/2)$, $k_3 = f(t + h/
 ### Vista ArchiMate equivalente
 Zona = Node (agrupación); componente = Node / Device; riesgo = Gap en el Taller 7 (R1 → Gap 1, R2 → Gap 2, R3 → Gap 3).
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

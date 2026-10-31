@@ -1,13 +1,13 @@
-# 📚 Referencias Bibliográficas del Taller
+# Referencias Bibliográficas del Taller
 
 Fuentes consultadas para el desarrollo del taller (componente técnico, normativo e investigación complementaria). Formato APA adaptado a recursos técnicos y normativos.
 
-## 🔖 Taller
+## Taller
 _Taller 4 - Infraestructura_
 
 ---
 
-## 📚 Referencias utilizadas
+## Referencias utilizadas
 
 1. Butcher, J. C. *Numerical Methods for Ordinary Differential Equations* (3.ª ed.). Wiley, 2016.
 2. Dunn, J. C. (1974). Well-separated clusters and optimal fuzzy partitions. *Journal of Cybernetics, 4*(1), 95–104.

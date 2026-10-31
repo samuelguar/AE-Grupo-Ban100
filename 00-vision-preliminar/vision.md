@@ -1,10 +1,10 @@
 # 📄 Documento de Visión de Arquitectura
 
-## 🔖 Cliente
+## Cliente
 **Ban100 S.A. (Bancien S.A.)** — establecimiento bancario comercial, NIT `900.200.960-9`, Bogotá D.C.
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda (santiagobarru@unisabana.edu.co)
 - Krish Purmessur Moros (krishpumo@unisabana.edu.co)
 - Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
 

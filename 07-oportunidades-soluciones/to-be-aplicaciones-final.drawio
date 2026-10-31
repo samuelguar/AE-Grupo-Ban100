@@ -1,0 +1,249 @@
+<mxfile host="65bd71144e">
+    <diagram id="c2tobe" name="C2 TO-BE — Contenedores Ban100 (extiende el C2 AS-IS)">
+        <mxGraphModel dx="524" dy="334" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2700" pageHeight="1700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title_10" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;fontFamily=Helvetica;" value="&lt;b&gt;C2 TO-BE — Extensión del C2 AS-IS (Taller 3): 🆕 = adición TO-BE · nombres del AS-IS conservados&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="36" width="2300" x="40" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="bound" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;fillColor=#fafcff;strokeColor=#438dd5;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#438dd5;fontFamily=Helvetica;" value="Plataforma Digital de Libranza y Banca Inclusiva Ban100 [Límite del sistema]" vertex="1">
+                    <mxGeometry height="1330" width="1500" x="440" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="sv" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Sucursal Virtual Responsive&lt;/b&gt;&lt;br&gt;[SPA Web HTTPS]" vertex="1">
+                    <mxGeometry height="90" width="320" x="40" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="app" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;App Móvil Ban100&lt;/b&gt;&lt;br&gt;[iOS / Android]" vertex="1">
+                    <mxGeometry height="90" width="320" x="400" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="bot" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Ban-I Bot Libranza&lt;/b&gt;&lt;br&gt;[Asistente Conversacional Omnicanal]" vertex="1">
+                    <mxGeometry height="90" width="320" x="760" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="rev" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Módulo de Revocatoria y Supresión Ley 1581&lt;/b&gt;&lt;br&gt;[Servicio Web · autogestión del titular]" vertex="1">
+                    <mxGeometry height="90" width="320" x="1120" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="waf" parent="bound" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6b6b6b;strokeColor=#444444;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Balanceador y WAF&lt;/b&gt;&lt;br&gt;[Infraestructura · Cluster HA Activo-Pasivo]" vertex="1">
+                    <mxGeometry height="70" width="1040" x="40" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="dual" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Borde Dual-Stack IPv6/IPv4&lt;/b&gt;&lt;br&gt;(MGGTI.LI.ST.14)" vertex="1">
+                    <mxGeometry height="70" width="320" x="1120" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw1" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;[Kong / Reverse Proxy TLS 1.3]" vertex="1">
+                    <mxGeometry height="80" width="950" x="80" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw2" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;API Gateway Redundante&lt;/b&gt;&lt;br&gt;Activo-Activo" vertex="1">
+                    <mxGeometry height="80" width="320" x="1120" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="dlp" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Guardrails DLP&lt;/b&gt;&lt;br&gt;[Anonimización de PII antes del LLM]" vertex="1">
+                    <mxGeometry height="110" width="290" x="40" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="orq" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Orquestador Agéntico Ban-I Bot&lt;/b&gt;&lt;br&gt;[Agente + 4 herramientas · Patrón de Sistemas Agénticos]" vertex="1">
+                    <mxGeometry height="110" width="320" x="400" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="pay" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Módulo de Pagos en Línea y Actualización de Datos&lt;/b&gt;&lt;br&gt;[Servicio Web]" vertex="1">
+                    <mxGeometry height="110" width="320" x="760" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="mus" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;μS Originación y Scoring&lt;/b&gt;&lt;br&gt;[Microservicio en Kubernetes]" vertex="1">
+                    <mxGeometry height="500" width="320" x="1120" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="hitl" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Aprobación Humana&lt;/b&gt;&lt;br&gt;[Human-in-the-Loop · consola de analista]" vertex="1">
+                    <mxGeometry height="90" width="320" x="400" y="660" as="geometry"/>
+                </mxCell>
+                <mxCell id="mdm" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Cliente 360 MDM&lt;/b&gt;&lt;br&gt;[Repositorio Maestro de Datos]" vertex="1">
+                    <mxGeometry height="90" width="300" x="760" y="660" as="geometry"/>
+                </mxCell>
+                <mxCell id="ada" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#e8f5ee;strokeColor=#2e8b57;strokeWidth=2;verticalAlign=top;fontColor=#1b5e3a;fontSize=12;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Adaptador B2G de Dos Velocidades&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="200" width="640" x="400" y="810" as="geometry"/>
+                </mxCell>
+                <mxCell id="n1a" parent="ada" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Vía rápida G1–G2&lt;/b&gt;&lt;br&gt;[Conector X-Road / Lenguaje Común MGGTI.LI.GI.05]" vertex="1">
+                    <mxGeometry height="120" width="280" x="20" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="n1b" parent="ada" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Vía asíncrona G3–G5&lt;/b&gt;&lt;br&gt;[Motor RPA/ETL + Cola de Mensajería + Portal Web de Autogestión]" vertex="1">
+                    <mxGeometry height="120" width="280" x="340" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="bus" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e8b57;strokeColor=#1b5e3a;fontColor=#ffffff;fontSize=11;fontStyle=1;fontFamily=Helvetica;" value="🆕 &lt;b&gt;Bus de Eventos y Sincronización CDC&lt;/b&gt;&lt;br&gt;(&amp;lt; 500 ms) con Circuit Breaker" vertex="1">
+                    <mxGeometry height="80" width="320" x="1120" y="1050" as="geometry"/>
+                </mxCell>
+                <mxCell id="core" parent="bound" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Core Bancario Transaccional&lt;/b&gt;&lt;br&gt;[Sistema Central On-Premise]" vertex="1">
+                    <mxGeometry height="110" width="320" x="1120" y="1170" as="geometry"/>
+                </mxCell>
+                <mxCell id="pa" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Analista de Operaciones y Pagadurías&lt;/b&gt;&lt;br&gt;[Persona]" vertex="1">
+                    <mxGeometry height="110" width="320" x="480" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pp" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Pensionado / Empleado Público&lt;/b&gt;&lt;br&gt;[Persona]" vertex="1">
+                    <mxGeometry height="110" width="320" x="840" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="pm" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Microempresario / Ahorrador CDT&lt;/b&gt;&lt;br&gt;[Persona]" vertex="1">
+                    <mxGeometry height="110" width="320" x="1200" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="llm" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;Proveedor de LLM Empresarial&lt;/b&gt;&lt;br&gt;[Sistema externo]" vertex="1">
+                    <mxGeometry height="110" width="340" x="40" y="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="xg12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;Pagadurías Públicas G1–G2&lt;/b&gt;&lt;br&gt;[Sistema externo · Nacional y Territorial]" vertex="1">
+                    <mxGeometry height="80" width="340" x="40" y="1240" as="geometry"/>
+                </mxCell>
+                <mxCell id="xg35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;Pagadurías Públicas G3–G5&lt;/b&gt;&lt;br&gt;[Sistema externo · Territorial]" vertex="1">
+                    <mxGeometry height="80" width="340" x="40" y="1350" as="geometry"/>
+                </mxCell>
+                <mxCell id="xt" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;Truora (Biometría y Firma)&lt;/b&gt;&lt;br&gt;[Sistema externo]" vertex="1">
+                    <mxGeometry height="70" width="340" x="1980" y="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="xc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;Centrales de Riesgo TransUnion/DataCrédito&lt;/b&gt;&lt;br&gt;[Sistema externo]" vertex="1">
+                    <mxGeometry height="70" width="340" x="1980" y="860" as="geometry"/>
+                </mxCell>
+                <mxCell id="xs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;SFC / RNVE-SIMEV&lt;/b&gt;&lt;br&gt;[Sistema externo]" vertex="1">
+                    <mxGeometry height="50" width="340" x="1980" y="1410" as="geometry"/>
+                </mxCell>
+                <mxCell id="xb" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;fontFamily=Helvetica;" value="&lt;b&gt;Bre-B (Banco de la República)&lt;/b&gt;&lt;br&gt;[Sistema externo]" vertex="1">
+                    <mxGeometry height="40" width="340" x="1980" y="1490" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_10" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;fontFamily=Helvetica;" value="Leyenda: 🆕 verde #2e8b57 = adición TO-BE (Gaps G1–G6) · azul #438dd5 = contenedor AS-IS conservado · gris = infraestructura / externo" vertex="1">
+                    <mxGeometry height="30" width="2000" x="40" y="1620" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1" edge="1" parent="1" source="pa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="sv" value="consulta convenios y pagos [HTTPS]">
+                    <mxGeometry relative="1" x="0.3846" y="10" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a2" edge="1" parent="1" source="pp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="app" value="solicita libranza [HTTPS]">
+                    <mxGeometry relative="1" x="0.2308" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3" edge="1" parent="1" source="pm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="bot" value="consulta y solicita productos [HTTPS / WhatsApp]">
+                    <mxGeometry relative="1" x="0.0769" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b1" edge="1" parent="1" source="sv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.1538;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="waf" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b2" edge="1" parent="1" source="app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="waf" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b3" edge="1" parent="1" source="bot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.8462;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="waf" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b4" edge="1" parent="1" source="rev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="dual" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b5" edge="1" parent="1" source="waf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.4952;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="gw1" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b6" edge="1" parent="1" source="dual" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="gw2" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b7" edge="1" parent="1" source="gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;startArrow=open;startSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="gw2" value="réplica A-A">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b8" edge="1" parent="1" source="gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.8579;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.4219;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="pay" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b9" edge="1" parent="1" source="gw1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5053;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="orq" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b10" edge="1" parent="1" source="gw2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="mus" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b11" edge="1" parent="1" source="orq" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="dlp" value="contexto&lt;br&gt;con PII">
+                    <mxGeometry relative="1" x="-0.1429" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b12" edge="1" parent="1" source="dlp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="llm" value="HTTPS/JSON REST&lt;br&gt;(anonimizado)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b13" edge="1" parent="1" source="orq" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="hitl" value="acciones de alto impacto">
+                    <mxGeometry relative="1" x="-0.2" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b14" edge="1" parent="1" source="pay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.4688;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="mdm" value="JDBC/TLS">
+                    <mxGeometry relative="1" x="-0.2" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b15" edge="1" parent="1" source="mus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.0000;exitY=0.4100;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="mdm" value="JDBC/TLS">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b16" edge="1" parent="1" source="mus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.0000;exitY=0.8100;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.4750;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="ada" value="solicitud&lt;br&gt;de cupo y&lt;br&gt;visación">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b17" edge="1" parent="1" source="n1a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="xg12" value="X-Road / REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="1010" y="1280"/>
+                            <mxPoint x="400" y="1280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b18" edge="1" parent="1" source="n1b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="xg35" value="SFTP/Batch · portal web">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="1320" y="1390"/>
+                            <mxPoint x="400" y="1390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b19" edge="1" parent="1" source="mus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="bus" value="eventos de crédito">
+                    <mxGeometry relative="1" x="-0.2" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b20" edge="1" parent="1" source="bus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="core" value="CDC &amp;lt; 500 ms · Circuit Breaker">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b21" edge="1" parent="1" source="mus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.0700;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="xt" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b22" edge="1" parent="1" source="mus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.3100;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="xc" value="SOAP/XML">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b23" edge="1" parent="1" source="core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.2273;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="xs" value="SFTP/Batch">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b24" edge="1" parent="1" source="core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.8636;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3750;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="xb" value="HTTPS/JSON REST">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

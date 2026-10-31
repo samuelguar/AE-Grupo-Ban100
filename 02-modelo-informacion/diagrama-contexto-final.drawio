@@ -1,92 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
-  <diagram id="contexto" name="Diagrama de Contexto de Negocio Ban100">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="900" math="0" shadow="0">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="title_5" value="&lt;b&gt;Diagrama de Contexto de Negocio — Ban100 S.A. (Bancien S.A.)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="1500" height="36" as="geometry"/>
-        </mxCell>
-        <mxCell id="limite" value="Ban100 S.A. (Bancien S.A.) — Límite organizacional" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#f7faff;strokeColor=#1168bd;strokeWidth=3;verticalAlign=top;align=left;spacingLeft=12;fontStyle=1;fontSize=13;fontColor=#1168bd;" vertex="1" parent="1">
-          <mxGeometry x="420" y="70" width="880" height="740" as="geometry"/>
-        </mxCell>
-        <mxCell id="s_can" value="&lt;b&gt;Canales Digitales y Ban-I Bot&lt;/b&gt;&lt;br&gt;App móvil · Sucursal Virtual · WhatsApp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;" vertex="1" parent="limite">
-          <mxGeometry x="30" y="60" width="340" height="270" as="geometry"/>
-        </mxCell>
-        <mxCell id="s_mot" value="&lt;b&gt;Motor de Originación y Scoring&lt;/b&gt;&lt;br&gt;μS en Kubernetes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;" vertex="1" parent="limite">
-          <mxGeometry x="510" y="60" width="340" height="270" as="geometry"/>
-        </mxCell>
-        <mxCell id="s_mdm" value="&lt;b&gt;Cliente 360 MDM&lt;/b&gt;&lt;br&gt;Repositorio maestro de datos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;" vertex="1" parent="limite">
-          <mxGeometry x="30" y="410" width="340" height="270" as="geometry"/>
-        </mxCell>
-        <mxCell id="s_core" value="&lt;b&gt;Core Bancario y Cartera&lt;/b&gt;&lt;br&gt;Sistema central On-Premise" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;" vertex="1" parent="limite">
-          <mxGeometry x="510" y="410" width="340" height="270" as="geometry"/>
-        </mxCell>
-        <mxCell id="a_pen" value="&lt;b&gt;Pensionado / Empleado Público&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="60" y="130" width="280" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="a_mic" value="&lt;b&gt;Microempresario&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="60" y="250" width="280" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="a_ofc" value="&lt;b&gt;Oficial de Cumplimiento / Analista Operativo&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="60" y="540" width="280" height="90" as="geometry"/>
-        </mxCell>
-        <mxCell id="x_pag" value="&lt;b&gt;Pagadurías Públicas Nacionales y Territoriales&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="130" width="340" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="x_tru" value="&lt;b&gt;Truora Biometría y Firma&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="230" width="340" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="x_cen" value="&lt;b&gt;Centrales de Riesgo TransUnion/DataCrédito&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="330" width="340" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="x_sfc" value="&lt;b&gt;SFC / RNVE-SIMEV&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="480" width="340" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="x_bre" value="&lt;b&gt;Bre-B Banco de la República&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1420" y="580" width="340" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="note_5" value="Borde punteado = sistema externo. Los descuentos de nómina/mesada retornan por la misma interfaz de Pagadurías." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="420" y="830" width="880" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="c1" value="solicitud de libranza, selfie y documento" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.1481;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_pen" target="s_can">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c2" value="solicitud de microcrédito / apertura de CDT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5926;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_mic" target="s_can">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c3" value="solicitud validada" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_can" target="s_mot">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c4" value="actualización de datos del cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_can" target="s_mdm">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c5" value="crédito aprobado para desembolso" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_mot" target="s_core">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c6" value="cliente maestro para cartera" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_mdm" target="s_core">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c7" value="revisión de alertas SARLAFT y excepciones" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3889;entryDx=0;entryDy=0;" edge="1" parent="1" source="a_ofc" target="s_mdm">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c8" value="consulta de cupo y visación de libranza" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.1296;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_mot" target="x_pag">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c9" value="validación biométrica y firma electrónica" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_mot" target="x_tru">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c10" value="consulta de historial crediticio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.8704;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_mot" target="x_cen">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c11" value="reportes regulatorios y emisiones de valores" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.1296;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_core" target="x_sfc">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="c12" value="órdenes de pago inmediato y desembolso" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_core" target="x_bre">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="contexto" name="Diagrama de Contexto de Negocio Ban100">
+        <mxGraphModel dx="655" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title_5" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;fontFamily=Helvetica;" value="&lt;b&gt;Diagrama de Contexto de Negocio — Ban100 S.A.&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="36" width="1500" x="40" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="limite" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#f7faff;strokeColor=#1168bd;strokeWidth=3;verticalAlign=top;align=left;spacingLeft=12;fontStyle=1;fontSize=13;fontColor=#1168bd;fontFamily=Helvetica;" value="Ban100 S.A. (Bancien S.A.) — Límite organizacional" vertex="1">
+                    <mxGeometry height="740" width="880" x="420" y="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="s_can" parent="limite" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Canales Digitales y Ban-I Bot&lt;/b&gt;&lt;br&gt;App móvil · Sucursal Virtual · WhatsApp" vertex="1">
+                    <mxGeometry height="270" width="340" x="30" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s_mot" parent="limite" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Motor de Originación y Scoring&lt;/b&gt;&lt;br&gt;μS en Kubernetes" vertex="1">
+                    <mxGeometry height="270" width="340" x="510" y="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s_mdm" parent="limite" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Cliente 360 MDM&lt;/b&gt;&lt;br&gt;Repositorio maestro de datos" vertex="1">
+                    <mxGeometry height="270" width="340" x="30" y="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="s_core" parent="limite" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontColor=#000000;fontSize=12;fontFamily=Helvetica;" value="&lt;b&gt;Core Bancario y Cartera&lt;/b&gt;&lt;br&gt;Sistema central On-Premise" vertex="1">
+                    <mxGeometry height="270" width="340" x="510" y="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_pen" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontFamily=Helvetica;" value="&lt;b&gt;Pensionado / Empleado Público&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="80" width="280" x="60" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_mic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontFamily=Helvetica;" value="&lt;b&gt;Microempresario&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="80" width="280" x="60" y="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_ofc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontFamily=Helvetica;" value="&lt;b&gt;Oficial de Cumplimiento / Analista Operativo&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="90" width="280" x="60" y="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_pag" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Pagadurías Públicas Nacionales y Territoriales&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="70" width="340" x="1420" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_tru" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Truora Biometría y Firma&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="70" width="340" x="1420" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_cen" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Centrales de Riesgo TransUnion/DataCrédito&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="70" width="340" x="1420" y="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_sfc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;SFC / RNVE-SIMEV&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="70" width="340" x="1420" y="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_bre" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;dashed=1;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;Bre-B Banco de la República&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="70" width="340" x="1420" y="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="note_5" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;fontFamily=Helvetica;" value="Borde punteado = sistema externo. Los descuentos de nómina/mesada retornan por la misma interfaz de Pagadurías." vertex="1">
+                    <mxGeometry height="30" width="880" x="420" y="830" as="geometry"/>
+                </mxCell>
+                <mxCell id="c1" edge="1" parent="1" source="a_pen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.1481;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_can" value="solicitud de&lt;br&gt;libranza, selfie&lt;br&gt;y documento">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c2" edge="1" parent="1" source="a_mic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5926;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_can" value="solicitud de&lt;br&gt;microcrédito /&lt;br&gt;apertura de CDT">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c3" edge="1" parent="1" source="s_can" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_mot" value="solicitud validada">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-11.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c4" edge="1" parent="1" source="s_can" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_mdm" value="actualización de datos del cliente">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c5" edge="1" parent="1" source="s_mot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_core" value="crédito aprobado para desembolso">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c6" edge="1" parent="1" source="s_mdm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_core" value="cliente maestro para&lt;br&gt;cartera">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c7" edge="1" parent="1" source="a_ofc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3889;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="s_mdm" value="revisión de&lt;br&gt;alertas SARLAFT&lt;br&gt;y excepciones">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c8" edge="1" parent="1" source="s_mot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.1296;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="x_pag" value="consulta de cupo y&lt;br&gt;visación de libranza">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c9" edge="1" parent="1" source="s_mot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="x_tru" value="validación biométrica y&lt;br&gt;firma electrónica">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c10" edge="1" parent="1" source="s_mot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.8704;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="x_cen" value="consulta de historial&lt;br&gt;crediticio">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c11" edge="1" parent="1" source="s_core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.1296;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="x_sfc" value="reportes regulatorios y&lt;br&gt;emisiones de valores">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="c12" edge="1" parent="1" source="s_core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="x_bre" value="órdenes de pago&lt;br&gt;inmediato y desembolso">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>

@@ -1,19 +1,19 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 1 - BPMN: Originación de Crédito de Libranza 100 % Digital y Visación B2G con Pagadurías_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.), NIT `900.200.960-9`
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se modeló en BPMN 2.0 el proceso misional de Ban100: la **originación de crédito de libranza 100 % digital** y su **visación con pagadurías públicas**. El 94 % de la colocación de Ban100 es libranza y el 98,3 % de ese segmento se coloca entre pensionados y empleados de gobierno; por eso el proceso incluye de forma explícita el carril de la pagaduría y la bifurcación entre integración estandarizada (Grupos MRAE 1–2) y vía asíncrona (Grupos 3–5). La meta del negocio es reducir el ciclo de **3–5 días a menos de 15 minutos**.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 Se siguieron los cinco pasos de la guía del taller:
 
 1. **Actores y carriles.** Cuatro carriles (`swimlane`): *Pensionado / Empleado Público (Estratos 1-3)*; *Canales Digitales Ban100 (Sucursal Virtual / App / Ban-I Bot)*; *Motor de Originación, Scoring y Biometría (μS + Truora + Core)*; *Pagaduría Pública (Nacional G1-G2 / Territorial G1-G5)*.
@@ -24,15 +24,15 @@ Se siguieron los cinco pasos de la guía del taller:
 
 Las decisiones de modelado se validaron contra la Ficha del Taller 0 (síntoma: *retraso de 3 a 5 días en la validación de cupos y la visación de libranzas con pagadurías territoriales de baja madurez digital*).
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 - **Estructura.** El hilo principal recorre los cuatro carriles: solicitud del cliente → simulación en el canal → consentimiento y biometría → validación con Truora y SARLAFT → scoring y Cliente 360 → visación en pagaduría → oferta y firma electrónica → desembolso, radicación y descuento de nómina/mesada.
 - **Cómo representa las necesidades del cliente.** La compuerta *¿Pagaduría tiene interoperabilidad API/X-Road (G1-G2) o requiere vía asíncrona (G3-G5)?* convierte la asimetría tecnológica de 850–880 municipios en una decisión explícita del proceso, que es el origen de la propuesta de integración de dos velocidades del Taller 7.
 - **Supuestos.** (a) La validación biométrica y la firma se ejecutan con Truora; (b) la consulta de listas SARLAFT ocurre antes del scoring; (c) los grupos MRAE de cada pagaduría se conocen por convenio (`grupo_mrae_t1_t5` en el ERD); (d) ambas vías de visación convergen en la consolidación del cupo.
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 [Ver diagrama en draw.io](./modelo-final.drawio)
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -48,7 +48,7 @@ Las decisiones de modelado se validaron contra la Ficha del Taller 0 (síntoma: 
 | Solicitud rechazada por identidad/riesgo | Evento de fin | Rechazo por biometría, SARLAFT o riesgo | Cumplimiento |
 | Solicitud desistida / sin cupo en pagaduría | Evento de fin | Sin cupo o sin firma | Canales |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 Buenas prácticas BPMN 2.0.2 y contraste con el caso base (agendamiento de citas) y con los lineamientos MRAE v3.0 de arquitectura institucional.
 
@@ -64,7 +64,7 @@ En el MRAE v3.0 este modelo alimenta el dominio de **Arquitectura Institucional*
 | Proceso completo | Business Process *Originación de Crédito de Libranza* | *realiza* el Goal *Originación 100% digital (< 15 min)* |
 | Carril *Canales Digitales* | Application Component | *sirve a* el proceso |
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

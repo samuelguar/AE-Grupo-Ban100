@@ -41,9 +41,9 @@ Todo el análisis que sustenta esta propuesta está documentado carpeta por carp
 | [`07-opportunities-solutions/`](./07-oportunidades-soluciones/) | La solución propuesta y las brechas que cierra |
 | [`08-integracion-vistas/`](./08-integracion-vistas/) | Cómo se conecta todo lo anterior en una sola arquitectura (0 elementos huérfanos) |
 
-## 👥 Contacto
+## Contacto
 
-- **Santiago Barrera Rueda** — `santiagobarrue@unisabana.edu.co`
+- **Santiago Barrera Rueda** — `santiagobarru@unisabana.edu.co`
 - **Krish Purmessur Moros** — `krishpumo@unisabana.edu.co`
 - **Samuel Guerrero Arcos** — `samuelguar@unisabana.edu.co`
 

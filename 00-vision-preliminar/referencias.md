@@ -1,13 +1,13 @@
-# 📚 Referencias Bibliográficas del Taller
+# Referencias Bibliográficas del Taller
 
 Fuentes consultadas para el desarrollo del taller (componente técnico, normativo e investigación complementaria). Formato APA adaptado a recursos técnicos y normativos.
 
-## 🔖 Taller
+## Taller
 _Taller 0 - Preliminary y Architecture Vision_
 
 ---
 
-## 📚 Referencias utilizadas
+## Referencias utilizadas
 
 1. Agencia Nacional de Contratación Pública — Colombia Compra Eficiente. *SECOP II — Contratos CO1.PCCNTR.6460767 y CO1.PCCNTR.4097470 (Gobernación del Caquetá)*. https://www.colombiacompra.gov.co/secop-ii. Fecha de consulta: 31/10/2026.
 2. Ban100 S.A. *Sitio institucional e informe de gestión y sostenibilidad 2024*. https://www.ban100.com.co/. Fecha de consulta: 31/10/2026.

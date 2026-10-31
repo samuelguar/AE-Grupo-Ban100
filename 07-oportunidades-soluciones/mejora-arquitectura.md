@@ -1,10 +1,10 @@
 # 📄 Mejora de Arquitectura (TO-BE) — Identificación y Priorización de Mejoras
 
-## 🔖 Cliente
-**Ban100 S.A. (Bancien S.A.)** — NIT `900.200.960-9`
+## Cliente
+**Ban100 S.A.** — NIT `900.200.960-9`
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda (santiagobarru@unisabana.edu.co)
 - Krish Purmessur Moros (krishpumo@unisabana.edu.co)
 - Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
 

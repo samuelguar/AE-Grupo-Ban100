@@ -1,24 +1,24 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 3 - Arquitectura C4: Contexto (C1) y Contenedores (C2) de la Plataforma Digital de Libranza y Banca Inclusiva Ban100_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se documentó la arquitectura de aplicaciones **AS-IS** con el modelo C4: el **C1** muestra la plataforma como una única caja con sus actores y sistemas externos, y el **C2** descompone esa caja en ocho contenedores propios, más la infraestructura de soporte, con la tecnología de cada contenedor y el protocolo de cada integración.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 1. **C1.** Tres personas (*Analista de Operaciones y Pagadurías*, *Pensionado / Empleado Público*, *Microempresario / Ahorrador CDT*); sistema en alcance `#08427b` como **caja única** sin contenedores internos; cinco sistemas externos en gris `#8a8a8a`: Pagadurías Públicas Nacionales y Territoriales, Truora, Centrales de Riesgo TransUnion/DataCrédito, SFC / RNVE-SIMEV y Bre-B.
 2. **C2.** Se descompuso la caja en contenedores `#438dd5` con tecnología entre corchetes, se agregó la infraestructura de soporte `#6b6b6b` (Balanceador y WAF, bases de datos) y se mantuvieron los actores y externos del C1.
 3. **Protocolos.** Cada flecha indica `HTTPS/JSON REST`, `SOAP/XML`, `SFTP/Batch` o `JDBC/TLS`; las integraciones con terceros se dibujan punteadas.
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 ### Contenedores del C2
 | Contenedor | Tecnología | Responsabilidad |
 |---|---|---|
@@ -50,11 +50,11 @@ Se documentó la arquitectura de aplicaciones **AS-IS** con el modelo C4: el **C
 - **Decisión 2.** La integración con pagadurías se dibuja como un único flujo `SFTP/Batch` porque hoy no existe un adaptador por tipo de pagaduría.
 - **Supuestos.** Los protocolos y la tecnología de infraestructura (motor relacional, Kong) provienen de la arquitectura documentada del equipo y de la línea base ArchiMate; no se probaron de forma activa.
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 - [Ver C1 en draw.io](./c1-contexto-final.drawio)
 - [Ver C2 en draw.io](./c2-contenedores-final.drawio)
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -66,7 +66,7 @@ Se documentó la arquitectura de aplicaciones **AS-IS** con el modelo C4: el **C
 | Base de Datos MDM / Base de Datos del Core | Infraestructura | Motores relacionales | Datos / TI |
 | Truora, Centrales de Riesgo, Pagadurías, SFC / RNVE-SIMEV, Bre-B | Sistema externo | Terceros con borde punteado | Contratos |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 Modelo C4 de Simon Brown y patrones de migración desde un Core monolítico (Strangler Fig).
 
@@ -78,7 +78,7 @@ Homologación MRAE v3.0: `MAE.LI.ASI.01` (arquitecturas de referencia: C4 como n
 ### Vista ArchiMate equivalente
 Contenedor C2 = Application Component; integración = Application Service / Flow; externo = Application Service (externo) con borde punteado.
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

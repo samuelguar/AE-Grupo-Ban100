@@ -1,93 +1,112 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
-  <diagram id="dfd" name="DFD Originación Digital y Desembolso de Libranza">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="title_9" value="&lt;b&gt;DFD — Originación Digital y Desembolso de Libranza (fronteras de confianza, elementos E/P/D y flujos F1–F10)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="1700" height="36" as="geometry"/>
-        </mxCell>
-        <mxCell id="zone_b1" value="Límite 1: Internet Público / Dispositivo del Pensionado" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="40" y="100" width="280" height="580" as="geometry"/>
-        </mxCell>
-        <mxCell id="zone_b2" value="Límite 2: DMZ y Nube Pública Kubernetes Ban100" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="380" y="100" width="620" height="580" as="geometry"/>
-        </mxCell>
-        <mxCell id="zone_b3" value="Límite 3: Red Interna On-Premise Core Bancario" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="100" width="640" height="580" as="geometry"/>
-        </mxCell>
-        <mxCell id="zone_b4" value="Límite Externo: APIs de Truora y Pagadurías Públicas" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="670" y="740" width="1030" height="220" as="geometry"/>
-        </mxCell>
-        <mxCell id="E1" value="&lt;b&gt;E1&lt;/b&gt;&lt;br&gt;Pensionado / Empleado Público&lt;br&gt;(app, web o WhatsApp)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="zone_b1">
-          <mxGeometry x="30" y="50" width="220" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="P1" value="&lt;b&gt;P1&lt;/b&gt;&lt;br&gt;Canales Digitales y Ban-I Bot" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="zone_b2">
-          <mxGeometry x="30" y="50" width="180" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="P2" value="&lt;b&gt;P2&lt;/b&gt;&lt;br&gt;API Gateway" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="zone_b2">
-          <mxGeometry x="390" y="50" width="180" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="P3" value="&lt;b&gt;P3&lt;/b&gt;&lt;br&gt;μS Originación y Scoring" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="zone_b2">
-          <mxGeometry x="390" y="230" width="180" height="300" as="geometry"/>
-        </mxCell>
-        <mxCell id="D2" value="&lt;b&gt;D2&lt;/b&gt;&lt;br&gt;Expediente de solicitud y Pagaré Digital" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="zone_b2">
-          <mxGeometry x="30" y="330" width="180" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="D1" value="&lt;b&gt;D1&lt;/b&gt;&lt;br&gt;Cliente 360 (MDM)" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="zone_b3">
-          <mxGeometry x="30" y="230" width="240" height="90" as="geometry"/>
-        </mxCell>
-        <mxCell id="P4" value="&lt;b&gt;P4&lt;/b&gt;&lt;br&gt;Core Bancario" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="zone_b3">
-          <mxGeometry x="30" y="380" width="200" height="150" as="geometry"/>
-        </mxCell>
-        <mxCell id="D3" value="&lt;b&gt;D3&lt;/b&gt;&lt;br&gt;Cartera de libranzas (Core)" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="zone_b3">
-          <mxGeometry x="360" y="400" width="240" height="90" as="geometry"/>
-        </mxCell>
-        <mxCell id="E2" value="&lt;b&gt;E2&lt;/b&gt;&lt;br&gt;Truora (biometría y firma)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="zone_b4">
-          <mxGeometry x="30" y="50" width="180" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="E3" value="&lt;b&gt;E3&lt;/b&gt;&lt;br&gt;Pagaduría Pública (G1–G5)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="zone_b4">
-          <mxGeometry x="420" y="50" width="200" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="legend_9" value="Leyenda: E = entidad externa · P = proceso · D = almacén de datos · F = flujo · línea roja punteada = frontera de confianza" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="40" y="1000" width="1500" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="F1" value="F1 · solicitud, selfie y documento (HTTPS)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="E1" target="P1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F2" value="F2 · solicitud canalizada (REST)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P1" target="P2">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F3" value="F3 · solicitud autenticada (REST)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P2" target="P3">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F4" value="F4 · imágenes biométricas y firma ⇄ resultado" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;startArrow=block;startFill=1;startSize=8;exitX=0.3056;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.6944;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P3" target="E2">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F5" value="F5 · consulta/actualización de perfil (JDBC/TLS)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.1500;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P3" target="D1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F6" value="F6 · consulta de cupo y visación ⇄ respuesta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;startArrow=block;startFill=1;startSize=8;dashed=1;exitX=0.8000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P3" target="E3">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="914" y="840"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="F7" value="F7 · expediente y pagaré firmado" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P3" target="D2">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F8" value="F8 · orden de desembolso y radicación (SOAP/XML)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.7500;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P3" target="P4">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F9" value="F9 · registro de crédito en cartera" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.4333;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P4" target="D3">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="F10" value="F10 · libranza radicada y descuento" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;dashed=1;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="P4" target="E3">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="dfd" name="DFD Originación Digital y Desembolso de Libranza">
+        <mxGraphModel dx="1881" dy="906" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title_9" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;fontFamily=Helvetica;" value="&lt;b&gt;DFD — Originación Digital y Desembolso de Libranza (fronteras de confianza, elementos E/P/D y flujos F1–F10)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="36" width="1700" x="40" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="zone_b1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;fontFamily=Helvetica;" value="Límite 1: Internet Público / Dispositivo del Pensionado" vertex="1">
+                    <mxGeometry height="580" width="280" x="40" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="E1" parent="zone_b1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;E1&lt;/b&gt;&lt;br&gt;Pensionado / Empleado Público&lt;br&gt;(app, web o WhatsApp)" vertex="1">
+                    <mxGeometry height="120" width="220" x="30" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="zone_b2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;fontFamily=Helvetica;" value="Límite 2: DMZ y Nube Pública Kubernetes Ban100" vertex="1">
+                    <mxGeometry height="580" width="620" x="380" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="P1" parent="zone_b2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;P1&lt;/b&gt;&lt;br&gt;Canales Digitales y Ban-I Bot" vertex="1">
+                    <mxGeometry height="120" width="180" x="30" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="P2" parent="zone_b2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;P2&lt;/b&gt;&lt;br&gt;API Gateway" vertex="1">
+                    <mxGeometry height="120" width="180" x="390" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="P3" parent="zone_b2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;P3&lt;/b&gt;&lt;br&gt;μS Originación y Scoring" vertex="1">
+                    <mxGeometry height="300" width="180" x="390" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="D2" parent="zone_b2" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;D2&lt;/b&gt;&lt;br&gt;Expediente de solicitud y Pagaré Digital" vertex="1">
+                    <mxGeometry height="100" width="180" x="30" y="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="zone_b3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;fontFamily=Helvetica;" value="Límite 3: Red Interna On-Premise Core Bancario" vertex="1">
+                    <mxGeometry height="580" width="640" x="1060" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="D1" parent="zone_b3" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;D1&lt;/b&gt;&lt;br&gt;Cliente 360 (MDM)" vertex="1">
+                    <mxGeometry height="90" width="240" x="30" y="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="P4" parent="zone_b3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;P4&lt;/b&gt;&lt;br&gt;Core Bancario" vertex="1">
+                    <mxGeometry height="150" width="200" x="30" y="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="D3" parent="zone_b3" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;D3&lt;/b&gt;&lt;br&gt;Cartera de libranzas (Core)" vertex="1">
+                    <mxGeometry height="90" width="240" x="360" y="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="zone_b4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;dashPattern=10 5;fillColor=none;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#c0392b;fontFamily=Helvetica;" value="Límite Externo: APIs de Truora y Pagadurías Públicas" vertex="1">
+                    <mxGeometry height="220" width="1030" x="670" y="740" as="geometry"/>
+                </mxCell>
+                <mxCell id="E2" parent="zone_b4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;E2&lt;/b&gt;&lt;br&gt;Truora (biometría y firma)" vertex="1">
+                    <mxGeometry height="100" width="180" x="30" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="E3" parent="zone_b4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontFamily=Helvetica;" value="&lt;b&gt;E3&lt;/b&gt;&lt;br&gt;Pagaduría Pública (G1–G5)" vertex="1">
+                    <mxGeometry height="100" width="200" x="420" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_9" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;fontFamily=Helvetica;" value="Leyenda: E = entidad externa · P = proceso · D = almacén de datos · F = flujo · línea roja punteada = frontera de confianza" vertex="1">
+                    <mxGeometry height="30" width="1500" x="40" y="1000" as="geometry"/>
+                </mxCell>
+                <mxCell id="F1" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="P1" value="F1 · solicitud,&lt;br&gt;selfie y documento&lt;br&gt;(HTTPS)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F2" edge="1" parent="1" source="P1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="P2" value="F2 · solicitud canalizada&lt;br&gt;(REST)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F3" edge="1" parent="1" source="P2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="P3" value="F3 · solicitud autenticada (REST)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F4" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;startArrow=block;startFill=1;startSize=8;exitX=0.3056;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.6944;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="E2" value="F4 · imágenes biométricas y firma ⇄ resultado">
+                    <mxGeometry relative="1" x="0.0745" y="-35" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F5" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.1500;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="D1" value="F5 ·&lt;br&gt;consulta/actualización&lt;br&gt;de perfil (JDBC/TLS)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F6" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;startArrow=block;startFill=1;startSize=8;dashed=1;exitX=0.8000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="E3" value="F6 · consulta de cupo y visación ⇄ respuesta">
+                    <mxGeometry relative="1" x="0.0364" y="30" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="1010" y="608.6"/>
+                            <mxPoint x="1010" y="840"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F7" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="D2" value="F7 · expediente y pagaré&lt;br&gt;firmado">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F8" edge="1" parent="1" source="P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.7500;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="P4" value="F8 · orden de&lt;br&gt;desembolso y&lt;br&gt;radicación (SOAP/XML)">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24.5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F9" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;exitX=1.0000;exitY=0.4333;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="D3" value="F9 · registro de&lt;br&gt;crédito en cartera">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-18" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F10" edge="1" parent="1" source="P4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=8;dashed=1;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" target="E3" value="F10 · libranza radicada y descuento">
+                    <mxGeometry relative="1" x="-0.125" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>

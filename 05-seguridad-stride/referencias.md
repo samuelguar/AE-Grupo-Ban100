@@ -1,13 +1,13 @@
-# 📚 Referencias Bibliográficas del Taller
+# Referencias Bibliográficas del Taller
 
 Fuentes consultadas para el desarrollo del taller (componente técnico, normativo e investigación complementaria). Formato APA adaptado a recursos técnicos y normativos.
 
-## 🔖 Taller
+## Taller
 _Taller 5 - Seguridad (STRIDE)_
 
 ---
 
-## 📚 Referencias utilizadas
+## Referencias utilizadas
 
 1. Congreso de la República de Colombia. *Ley Estatutaria 1581 de 2012 — Protección de datos personales*. Diario Oficial No. 48.587. http://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html. Fecha de consulta: 31/10/2026.
 2. International Organization for Standardization. *ISO/IEC 27001:2022 — Information security, cybersecurity and privacy protection — Information security management systems — Requirements*. https://www.iso.org/standard/27001. Fecha de consulta: 31/10/2026.

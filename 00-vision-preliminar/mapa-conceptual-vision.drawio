@@ -1,0 +1,115 @@
+<mxfile host="65bd71144e">
+    <diagram id="mapa-conceptual" name="Mapa conceptual de visión TO-BE Ban100">
+        <mxGraphModel dx="1738" dy="1208" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title_1" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" value="&lt;b&gt;Visión de Arquitectura TO-BE — Ban100 S.A.&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="40" width="1500" x="40" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_neg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#FFFFEE;strokeColor=#CCCC00;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#7A7A00;spacingTop=8;" value="Negocio: Inclusión Financiera y Libranza 100% Digital" vertex="1">
+                    <mxGeometry height="340" width="380" x="40" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_neg_i0" parent="dom_neg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=11;" value="«Capacidad»&lt;br&gt;&lt;b&gt;202.235 clientes de crédito (85 % estratos 1–3)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_neg_i1" parent="dom_neg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=11;" value="«Capacidad»&lt;br&gt;&lt;b&gt;94 % libranza · 98,3 % sector público/pensionados&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_neg_i2" parent="dom_neg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=11;" value="«Capacidad»&lt;br&gt;&lt;b&gt;5 líneas: libranza, microcrédito, consumo, ahorro, CDT&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_dat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#1F4799;spacingTop=8;" value="Datos: Cliente 360 MDM y Pagarés Desmaterializados" vertex="1">
+                    <mxGeometry height="340" width="380" x="480" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_dat_i0" parent="dom_dat" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=11;" value="«Componente»&lt;br&gt;&lt;b&gt;Cliente 360 (MDM)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_dat_i1" parent="dom_dat" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=11;" value="«Componente»&lt;br&gt;&lt;b&gt;Pagaré digital con firma electrónica (Ley 527/1999)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_dat_i2" parent="dom_dat" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=11;" value="«Componente»&lt;br&gt;&lt;b&gt;Cartera de libranza titularizable (AAA ESG)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_apl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#1F4799;spacingTop=8;" value="Aplicaciones: Ecosistema Omnicanal + Integración B2G Dos Velocidades" vertex="1">
+                    <mxGeometry height="340" width="380" x="920" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_apl_i0" parent="dom_apl" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=11;" value="«Componente»&lt;br&gt;&lt;b&gt;App · Sucursal Virtual · Ban-I Bot Libranza&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_apl_i1" parent="dom_apl" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=11;" value="«Componente»&lt;br&gt;&lt;b&gt;μS Originación y Scoring + API Gateway&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_apl_i2" parent="dom_apl" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=11;" value="«Componente»&lt;br&gt;&lt;b&gt;Adaptador B2G: X-Road/REST (G1–G2) y RPA/ETL (G3–G5)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_tec" parent="1" style="rounded=1;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2FFF2;strokeColor=#339933;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#1F6B1F;spacingTop=8;" value="Tecnología: Nube Híbrida K8s/On-Premise + SOC 24/7 + IPv6" vertex="1">
+                    <mxGeometry height="340" width="380" x="1360" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_tec_i0" parent="dom_tec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=11;" value="«Capacidad»&lt;br&gt;&lt;b&gt;Nube pública (Kubernetes) + Centro de datos On-Premise&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_tec_i1" parent="dom_tec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=11;" value="«Capacidad»&lt;br&gt;&lt;b&gt;SOC 24/7 · MSPI · CE 008/2023&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_tec_i2" parent="dom_tec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=11;" value="«Capacidad»&lt;br&gt;&lt;b&gt;Dual-Stack IPv6/IPv4 (MGGTI.LI.ST.14)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="45" width="340" x="20" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="obj1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontStyle=1;" value="O1 · Inclusión financiera en 1.000+ municipios&lt;br&gt;(90 % de los 1.101; red de 10 oficinas)" vertex="1">
+                    <mxGeometry height="90" width="380" x="40" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="obj2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontStyle=1;" value="O2 · Sostener calificación AAA ESG en titularizaciones&lt;br&gt;(programas hasta COP $1 billón)" vertex="1">
+                    <mxGeometry height="90" width="380" x="480" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="obj3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontStyle=1;" value="O3 · Originar libranza en &amp;lt; 15 min (hoy 3–5 días)&lt;br&gt;100 % digital con biometría y firma" vertex="1">
+                    <mxGeometry height="90" width="380" x="920" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="obj4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#000000;fontStyle=1;" value="O4 · Cumplir CE 008/2023 SFC, MSPI y Ley 1581&lt;br&gt;con operación resiliente" vertex="1">
+                    <mxGeometry height="90" width="380" x="1360" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="title_vec" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=14;fontColor=#6666CC;" value="&lt;b&gt;Vectores de convergencia con el MRAE v3.0 (Decreto 767 de 2022) — Ban100 no es sujeto obligado directo&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="30" width="1700" x="40" y="700" as="geometry"/>
+                </mxCell>
+                <mxCell id="vec1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccccff;strokeColor=#6666cc;fontSize=11;fontColor=#000000;fontSize=11;" value="V1 · Gobernanza como Grupo de Interés y PNID&lt;br&gt;(Art. 2.2.9.1.2.1 Decreto 1078/2015; PRI_04)" vertex="1">
+                    <mxGeometry height="100" width="380" x="40" y="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="vec2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccccff;strokeColor=#6666cc;fontSize=11;fontColor=#000000;fontSize=11;" value="V2 · Dependencia B2G por libranza&lt;br&gt;(SECOP II: CO1.PCCNTR.6460767 y CO1.PCCNTR.4097470)" vertex="1">
+                    <mxGeometry height="100" width="380" x="920" y="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="vec3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccccff;strokeColor=#6666cc;fontSize=11;fontColor=#000000;fontSize=11;" value="V3 · Homologación técnica frente a la SFC&lt;br&gt;(TOGAF, CMMI, ISO/IEC 27001 vía MSPI)" vertex="1">
+                    <mxGeometry height="100" width="380" x="1360" y="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_neg_dat" edge="1" parent="1" source="dom_neg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" target="dom_dat" value="alimenta datos del cliente">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_dat_apl" edge="1" parent="1" source="dom_dat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" target="dom_apl" value="consumido por servicios">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_apl_tec" edge="1" parent="1" source="dom_apl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" target="dom_tec" value="se despliega sobre">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_obj1" edge="1" parent="1" source="dom_neg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" target="obj1" value="habilita cobertura">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_obj2" edge="1" parent="1" source="dom_dat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" target="obj2" value="respalda la cartera cedida">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_obj3" edge="1" parent="1" source="dom_apl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" target="obj3" value="automatiza la originación">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_obj4" edge="1" parent="1" source="dom_tec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=block;endFill=1;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" target="obj4" value="soporta controles y continuidad">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_vec1" edge="1" parent="1" source="vec1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="obj1" value="interoperabilidad público-privada">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_vec2" edge="1" parent="1" source="vec2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="obj3" value="convenios con pagadurías">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_vec3" edge="1" parent="1" source="vec3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="obj4" value="marco de auditoría">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

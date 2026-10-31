@@ -1,13 +1,13 @@
-# 📚 Referencias Bibliográficas del Taller
+# Referencias Bibliográficas del Taller
 
 Fuentes consultadas para el desarrollo del taller (componente técnico, normativo e investigación complementaria). Formato APA adaptado a recursos técnicos y normativos.
 
-## 🔖 Taller
+## Taller
 _Taller 7 - Opportunities & Solutions_
 
 ---
 
-## 📚 Referencias utilizadas
+## Referencias utilizadas
 
 1. Congreso de la República de Colombia. *Ley Estatutaria 1581 de 2012 — Protección de datos personales*. Diario Oficial No. 48.587. http://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html. Fecha de consulta: 31/10/2026.
 2. Fowler, M. *Strangler Fig Application*. https://martinfowler.com/bliki/StranglerFigApplication.html. Fecha de consulta: 31/10/2026.

@@ -1,26 +1,26 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 8 - Integración de Vistas: Tablero integrado de 5 capas para Ban100_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se integraron las vistas de los Talleres 1 a 7 en un único tablero de **cinco capas** (Negocio, Aplicaciones, Información, Infraestructura, Seguridad y Cumplimiento) sobre el hilo conductor **Originación Digital de Libranza y Recaudo B2G**. El tablero reúne el AS-IS y las adiciones TO-BE del Taller 7 (marcadas con 🆕) y termina con una verificación explícita de que ningún elemento queda huérfano.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 1. **Capas.** Cinco bandas apiladas, una debajo de otra, con el color estándar de ArchiMate 3.2.
 2. **Elementos.** Se ubicó cada elemento de los talleres anteriores en su capa con **el mismo nombre** que en su entregable de origen (por ejemplo *μS Originación y Scoring*, *Cliente 360 (MDM)*, *Core Bancario*, *Nube Pública (Kubernetes)*).
 3. **Relaciones verticales** trazadas proceso por proceso, de punta a punta: proceso → aplicación → dato → infraestructura → control de seguridad.
 4. **Narrativa** del porqué de cada conexión y del taller que la originó.
 5. **Verificación de huérfanos** con la tabla de la sección siguiente.
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 ### Hilo conductor
 *Pensionado / Empleado Público* → **Canales Digitales y Ban-I Bot** → **API Gateway (Activo-Activo)** → **μS Originación y Scoring** → **Truora** (identidad y firma) y **Adaptador B2G de Dos Velocidades** → **Core Bancario** → *Descuento de Nómina* en la pagaduría.
 
@@ -66,10 +66,10 @@ Cada elemento debe tener al menos una conexión hacia arriba y una hacia abajo, 
 
 **Resultado:** 27 elementos verificados · **0 huérfanos**.
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 [Ver tablero integrado en draw.io](./tablero-integrado-cliente.drawio)
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -79,7 +79,7 @@ Cada elemento debe tener al menos una conexión hacia arriba y una hacia abajo, 
 | Capas de Aplicación, Información e Infraestructura | Capas | Componentes, datos y nodos de los Talleres 2, 3, 4 y 7 | TI |
 | Capa de Seguridad y Cumplimiento | Capa | Requisitos de los Talleres 5 y 6 | Seguridad y Cumplimiento |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 Documentación de vistas arquitectónicas con ArchiMate 3.2 y TOGAF 10 (ADM, fases B–D y vistas por stakeholder).
 
@@ -88,7 +88,7 @@ TOGAF organiza la arquitectura en dominios (negocio, datos, aplicaciones, tecnol
 
 **Reflexión crítica sobre la coherencia.** El tablero revela dos tensiones que ninguna vista aislada mostraba: (1) la mayoría de los requisitos de seguridad terminan anclados al borde y a la nube, mientras que el Core On-Premise solo recibe un control (acceso y segregación de funciones), lo que sugiere reforzar su monitoreo en la Fase 3; y (2) el dato *Convenio SECOP II* depende de un adaptador que solo existe en el TO-BE, es decir, hoy esa trazabilidad se hace de forma manual. Ambas se reflejan en los Work Packages WP2 y WP3.
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

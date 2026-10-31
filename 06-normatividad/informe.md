@@ -1,26 +1,26 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 6 - Normatividad: Cumplimiento regulatorio de Ban100 (SFC, SIC, MRAE v3.0)_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se evaluó el cumplimiento del flujo de originación de libranza frente a quince criterios de la Ley 1581 de 2012, la Ley 527 de 1999, la Circular Externa 008 de 2023 de la SFC, SARLAFT, ISO/IEC 27001:2022 y el MRAE v3.0 (Decreto 767 de 2022). En el checklist solo existen dos estados: **✅ Cumple** y **⚠️ Parcial**; cada parcial se traslada a la hoja *Brechas Identificadas* con su riesgo y su prioridad.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 1. Identificación de datos sensibles y de la normativa aplicable (tabla siguiente).
 2. Construcción del checklist por categoría (consentimiento, protección de datos, seguridad, ciberseguridad SFC, prevención de fugas, retención, roles, SARLAFT, firma electrónica, interoperabilidad MRAE y gobierno de AE).
 3. Evaluación con evidencia pública o documentada; no se hicieron pruebas activas.
 4. Documentación del riesgo legal u operativo de cada brecha.
 5. Priorización y recomendación correctiva concreta.
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 ### Datos sensibles y normativa aplicable
 | Dato / Proceso | Sensibilidad | Normativa aplicable |
 |---|---|---|
@@ -76,10 +76,10 @@ Convergencia por tres vectores: (1) **Grupo de Interés y PNID** (art. 2.2.9.1.2
 
 El diagnóstico por pilar corresponde al análisis del equipo con información pública; la calificación ítem por ítem requiere evidencia interna de Ban100.
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 Excel: [`checklist-cliente.xlsx`](./checklist-cliente.xlsx) (hojas `Checklist General` y `Brechas Identificadas`).
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -88,7 +88,7 @@ Excel: [`checklist-cliente.xlsx`](./checklist-cliente.xlsx) (hojas `Checklist Ge
 | MinTIC | Entidad rectora | MRAE v3.0 y Decreto 767 de 2022 | Arquitectura Empresarial |
 | Defensoría del Consumidor Financiero | Canal | Consultas y reclamos | Servicio al cliente |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 Normativa sectorial de la SFC y del MinTIC aplicable a una entidad financiera privada con dependencia de contratación pública.
 
@@ -98,7 +98,7 @@ La Circular Externa 008 de 2023 refuerza los requerimientos de seguridad de la i
 ### Vista ArchiMate equivalente
 Cada brecha es un *Constraint* o *Requirement* de Motivación que restringe a un proceso o aplicación y se convierte en un *Gap* en el Taller 7 (G5 y G6 → Gap 4; G1 → Gap 1; G2 → Gap 2; G3 y G4 → Gap 3).
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

@@ -1,13 +1,13 @@
-# 📚 Referencias Bibliográficas del Taller
+# Referencias Bibliográficas del Taller
 
 Fuentes consultadas para el desarrollo del taller (componente técnico, normativo e investigación complementaria). Formato APA adaptado a recursos técnicos y normativos.
 
-## 🔖 Taller
+## Taller
 _Taller 8 - Integración de Vistas_
 
 ---
 
-## 📚 Referencias utilizadas
+## Referencias utilizadas
 
 1. Brown, S. *The C4 model for visualising software architecture*. https://c4model.com/. Fecha de consulta: 31/10/2026.
 2. Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC). *Marco de Referencia de Arquitectura Empresarial (MRAE) v3.0*. https://www.mintic.gov.co/arquitecturati/630/w3-channel.html. Fecha de consulta: 31/10/2026.

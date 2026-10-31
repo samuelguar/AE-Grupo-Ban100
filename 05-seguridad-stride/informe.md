@@ -1,19 +1,19 @@
 # 📄 Informe Técnico del Taller
 
-## 🔖 Nombre del Taller
+## Nombre del Taller
 _Taller 5 - Seguridad: Modelado de amenazas STRIDE del flujo de Originación Digital y Desembolso de Libranza_
 
-## 👥 Integrantes del equipo
-- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
-- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
-- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
+## Integrantes del equipo
+- Santiago Barrera Rueda
+- Krish Purmessur Moros
+- Samuel Guerrero Arcos
 
-**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A. (Bancien S.A.)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · **Cliente:** Ban100 S.A.
 
-## 🧠 Descripción general del trabajo
+## Descripción general del trabajo
 Se modelaron las amenazas del flujo **Originación Digital y Desembolso de Libranza** con STRIDE: un diagrama de flujo de datos (DFD) con tres fronteras de confianza más un límite externo, ocho amenazas (T1–T8) que cubren las seis categorías, su priorización por impacto y probabilidad y el vínculo con el MRAE v3.0 y la Circular Externa 008 de 2023 de la SFC. Se añadió una sección sobre riesgos de sistemas agénticos (MITRE ATLAS) porque el TO-BE incorpora un asistente con modelo de lenguaje.
 
-## 🔧 Proceso de desarrollo
+## Proceso de desarrollo
 1. **DFD** del flujo con elementos numerados en correspondencia 1:1 con `tabla-stride-cliente.xlsx`.
 2. **Tabla de elementos** (entidades, procesos, almacenes y flujos).
 3. **STRIDE** aplicado a elementos concretos, no de forma genérica.
@@ -22,7 +22,7 @@ Se modelaron las amenazas del flujo **Originación Digital y Desembolso de Libra
 
 **Regla de oro cumplida:** la columna *Controles de Seguridad Existentes* se basa en **reconocimiento pasivo autorizado** (información pública del banco, documentación y arquitectura AS-IS). **No se ejecutó ninguna prueba activa** (inyección, manipulación de solicitudes o acceso no autorizado) contra sistemas reales de Ban100.
 
-## 🧩 Análisis del modelo propuesto
+## Análisis del modelo propuesto
 ### Elementos del DFD
 | ID | Elemento | Tipo |
 |---|---|---|
@@ -71,10 +71,10 @@ El detalle completo (descripción, escenario de ataque, impacto, probabilidad, c
 |---|---|---|---|
 | Cesta de otro usuario por IDOR (`/rest/basket/N`) | Information Disclosure (T4) | Verificar que el identificador del recurso pertenece a la sesión autenticada | Autorización por objeto y control de acceso por atributos en Cliente 360, con auditoría de consultas masivas |
 
-## 📈 Diagrama final entregado
+## Diagrama final entregado
 [Ver DFD en draw.io](./dfd-originacion-libranza.drawio) · Tabla: [`tabla-stride-cliente.xlsx`](./tabla-stride-cliente.xlsx)
 
-## 📋 Tabla de actores, entidades o componentes
+## Tabla de actores, entidades o componentes
 
 | Nombre del elemento | Tipo | Descripción | Responsable |
 |---|---|---|---|
@@ -84,7 +84,7 @@ El detalle completo (descripción, escenario de ataque, impacto, probabilidad, c
 | Líder del Core Bancario | Rol | Responde por T6 | TI |
 | Líder de Convenios B2G | Rol | Responde por T8 | Operaciones |
 
-## 🔍 Investigación complementaria
+## Investigación complementaria
 ### Tema investigado:
 STRIDE (Shostack, 2014), Zero Trust (NIST SP 800-207), OWASP Top 10 y riesgos de IA agéntica (MITRE ATLAS).
 
@@ -102,7 +102,7 @@ STRIDE clasifica amenazas por violación de una propiedad de seguridad (autentic
 ### Vista ArchiMate equivalente
 Cada mitigación es un *Requirement* en la capa de Motivación que *influye* sobre el componente que protege (por ejemplo, el filtro DLP sobre el Orquestador Agéntico).
 
-## 📚 Referencias
+## Referencias
 Ver [`referencias.md`](./referencias.md).
 
 ---

@@ -1,13 +1,13 @@
-# 📚 Referencias Bibliográficas del Taller
+# Referencias Bibliográficas del Taller
 
 Fuentes consultadas para el desarrollo del taller (componente técnico, normativo e investigación complementaria). Formato APA adaptado a recursos técnicos y normativos.
 
-## 🔖 Taller
+## Taller
 _Taller 3 - Arquitectura C4 (C1 y C2)_
 
 ---
 
-## 📚 Referencias utilizadas
+## Referencias utilizadas
 
 1. Ban100 S.A. *Sitio institucional e informe de gestión y sostenibilidad 2024*. https://www.ban100.com.co/. Fecha de consulta: 31/10/2026.
 2. Banco de la República. *Bre-B — Sistema de pagos inmediatos interoperables*. https://www.banrep.gov.co. Fecha de consulta: 31/10/2026.
