@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
+  <diagram id="erd" name="ERD 3FN Libranza Ban100">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title_4" value="&lt;b&gt;Modelo Entidad-Relación (3FN) — Originación, Recaudo B2G y Titularización de Libranza&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1500" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_CLIENTE" value="&lt;b style='font-size:13px'&gt;CLIENTE&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_cliente&lt;/u&gt;&lt;br&gt;num_documento&lt;br&gt;tipo_actor_publico_pensionado&lt;br&gt;estrato_socioeconomico&lt;br&gt;genero&lt;br&gt;hash_biometria_truora&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="400" height="166" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_SOLICITUD_LIBRANZA" value="&lt;b style='font-size:13px'&gt;SOLICITUD_LIBRANZA&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_solicitud&lt;/u&gt;&lt;br&gt;fecha_hora_inicio&lt;br&gt;canal_origen&lt;br&gt;monto_solicitado&lt;br&gt;puntaje_scoring&lt;br&gt;tiempo_aprobacion_min&lt;br&gt;estado_solicitud&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_cliente&lt;/i&gt;&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_pagaduria&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="650" y="70" width="400" height="223" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_PAGADURIA_PUBLICA" value="&lt;b style='font-size:13px'&gt;PAGADURIA_PUBLICA&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_pagaduria&lt;/u&gt;&lt;br&gt;nit_entidad&lt;br&gt;nombre_entidad&lt;br&gt;codigo_municipio_dane&lt;br&gt;cluster_mrae_1_2_3&lt;br&gt;grupo_mrae_t1_t5&lt;br&gt;modalidad_integracion_api_rpa&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="70" width="400" height="185" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_PAGARE_DIGITAL" value="&lt;b style='font-size:13px'&gt;PAGARE_DIGITAL&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_pagare_deceval&lt;/u&gt;&lt;br&gt;hash_sha256_ley527&lt;br&gt;timestamp_firma_electronica&lt;br&gt;custodio_desmaterializado&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; num_operacion_core&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="400" height="147" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_CREDITO_LIBRANZA" value="&lt;b style='font-size:13px'&gt;CREDITO_LIBRANZA&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; num_operacion_core&lt;/u&gt;&lt;br&gt;monto_desembolsado&lt;br&gt;tasa_efectiva&lt;br&gt;plazo_meses&lt;br&gt;cuota_mensual&lt;br&gt;estado_cartera&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_solicitud&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="650" y="430" width="400" height="185" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_CONVENIO_SECOP" value="&lt;b style='font-size:13px'&gt;CONVENIO_SECOP&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_convenio&lt;/u&gt;&lt;br&gt;num_contrato_secop_ii&lt;br&gt;codigo_rup_719325524&lt;br&gt;fecha_inicio&lt;br&gt;fecha_fin&lt;br&gt;estado_convenio&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_pagaduria&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="430" width="400" height="185" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_TITULARIZACION_ESG" value="&lt;b style='font-size:13px'&gt;TITULARIZACION_ESG&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_emision_rnve&lt;/u&gt;&lt;br&gt;serie_bono&lt;br&gt;monto_emision_cop&lt;br&gt;calificacion_fitch_aaa&lt;br&gt;sello_esg&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; num_operacion_core&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="790" width="400" height="166" as="geometry"/>
+        </mxCell>
+        <mxCell id="t_DESCUENTO_NOMINA" value="&lt;b style='font-size:13px'&gt;DESCUENTO_NOMINA&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_recaudo&lt;/u&gt;&lt;br&gt;periodo_nomina&lt;br&gt;valor_descontado&lt;br&gt;canal_conciliacion_ws_archivo&lt;br&gt;estado_conciliacion&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; num_operacion_core&lt;/i&gt;&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_convenio&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="650" y="790" width="400" height="185" as="geometry"/>
+        </mxCell>
+        <mxCell id="note_1" value="Leyenda: &lt;u&gt;PK&lt;/u&gt; clave primaria · &lt;i&gt;FK&lt;/i&gt; clave foránea · TITULARIZACION_ESG es la entidad asociativa que resuelve la relación N:N entre créditos y series de emisión." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="800" width="400" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1" value="radica (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3722;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_CLIENTE" target="t_SOLICITUD_LIBRANZA">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" value="certifica cupo de (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.4148;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_PAGADURIA_PUBLICA" target="t_SOLICITUD_LIBRANZA">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" value="suscribe (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_PAGADURIA_PUBLICA" target="t_CONVENIO_SECOP">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" value="origina (1:1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmandOne;endFill=0;startSize=12;endSize=12;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_SOLICITUD_LIBRANZA" target="t_CREDITO_LIBRANZA">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" value="se instrumenta en (1:1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmandOne;endFill=0;startSize=12;endSize=12;exitX=0.0000;exitY=0.3973;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_CREDITO_LIBRANZA" target="t_PAGARE_DIGITAL">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" value="se recauda mediante (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_CREDITO_LIBRANZA" target="t_DESCUENTO_NOMINA">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r7" value="ampara (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.4973;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_CONVENIO_SECOP" target="t_DESCUENTO_NOMINA">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440" y="882"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r8" value="se cede a (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.1500;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_CREDITO_LIBRANZA" target="t_TITULARIZACION_ESG">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="665"/>
+              <mxPoint x="260" y="665"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

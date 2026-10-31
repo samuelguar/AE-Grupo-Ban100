@@ -1,67 +1,47 @@
-# Arquitectura Empresarial — Ban100
+# Arquitectura Empresarial — Ban100 S.A. (Bancien S.A.)
 
-**Cliente:** Ban100 (Establecimiento Bancario Comercial, antes Credifinanciera S.A.)  
-**Equipo:** Santiago Barrera Rueda · Krish Purmessur Moros · Samuel Guerrero Arcos  
-**Curso:**Arquitectura Empresarial — Universidad de La Sabana    
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial · Santiago Barrera Rueda, Krish Purmessur Moros, Samuel Guerrero Arcos
+**Curso:** Arquitectura Empresarial — Universidad de La Sabana (Prof. Ing. César Augusto Vega Fernández)
 
 ---
 
 ## 📌 En una frase
 
-Transformamos la plataforma de servicios financieros de Ban100 para que la solicitud y desembolso de créditos de libranza pase de 3 a 5 días a menos de 15 minutos, habilitamos pagos inmediatos 24/7 con el ecosistema Bre-B sin caídas de servicio, y blindamos los datos y la identidad de más de 250.000 clientes pensionados y microempresarios.
-
----
+Rediseñamos cómo Ban100 conecta a sus pensionados, sus canales digitales y las pagadurías públicas, para que un crédito de libranza pase de **3–5 días a menos de 15 minutos**, sin importar qué tan avanzada esté la tecnología de cada pagaduría, y con los datos y la identidad de los clientes protegidos.
 
 ## 🩺 El problema
 
-Hoy Ban100 atiende a más de 250.000 clientes en 900 municipios de Colombia, pero enfrenta cuatro barreras operativas críticas:
-1. **Trámites lentos en libranzas:** La originación de créditos depende de validaciones manuales y papeleo con convenios de pagadurías, tardando entre 3 y 5 días hábiles en desembolsar.
-2. **Información fragmentada:** Los datos de los clientes viven en silos separados por producto (crédito, cuentas, CDTs), sin una visión unificada 360° en tiempo real.
-3. **Sistemas rígidos que frenan la innovación:** El sistema bancario transaccional principal exige procesos por lotes nocturnos (con 12 horas de desfase en saldos), lo que choca con la inmediatez que exige el nuevo sistema de pagos 24/7 Bre-B del Banco de la República.
-4. **Riesgos de seguridad y exigencias normativas:** La dispersión tecnológica y el perfil vulnerable de los clientes (adultos mayores pensionados) exigen reforzar los controles contra suplantaciones de identidad y asegurar el cumplimiento de las circulares de ciberseguridad de la Superintendencia Financiera de Colombia y de protección de datos de la SIC.
-
----
+Ban100 atiende a **202.235 clientes de crédito**, el 85 % en estratos 1, 2 y 3, y llega a más de 1.000 municipios con solo 10 oficinas. El **94 % de lo que presta es libranza** y el **98,3 % de esa libranza se coloca entre pensionados y empleados de gobierno**, así que el banco depende de que cada pagaduría confirme el cupo de descuento. En unos 850 a 880 municipios esas pagadurías aún tienen sistemas poco modernizados, lo que retrasa la aprobación. Además, el banco debe probar la identidad y el consentimiento de clientes que contratan sin ir a una oficina, y cumplir las exigencias de la Superintendencia Financiera y de protección de datos.
 
 ## 💡 Lo que proponemos
 
-Una arquitectura empresarial moderna, ágil y segura enfocada en el crecimiento del negocio:
-
-- **Originación de libranzas 100% digital en minutos:** Integrar biometría facial pasiva y firma electrónica legalmente válida para que un pensionado solicite y reciba su crédito en menos de 15 minutos desde su celular o WhatsApp, sin pisar una oficina.
-- **Pagos inmediatos 24/7/365 sin interrupciones:** Conectar a Ban100 con el riel nacional Bre-B mediante una infraestructura en nube de alta disponibilidad (Bogotá–Medellín), garantizando transferencias en menos de 3 segundos con disponibilidad del 99.99%.
-- **Saldos y visión del cliente en tiempo real:** Eliminar los lotes nocturnos mediante sincronización continua de datos, permitiendo consultar saldos y movimientos al instante en cualquier canal.
-- **Blindaje integral de identidad y datos personales:** Implementar autenticación reforzada contra fraudes y suplantaciones digitales, enmascaramiento de información sensible de mesadas pensionales y un módulo de autoservicio para que los clientes gestionen sus derechos de privacidad.
-- **Hoja de ruta gradual y de bajo riesgo:** Un plan de modernización en 3 horizontes (inmediato, mediano y largo plazo) que transforma la tecnología por etapas, asegurando continuidad operativa sin traumatismos para los clientes actuales.
-
----
+- **Dos velocidades para conectar con las pagadurías:** una conexión directa y estándar con las entidades más avanzadas, y un canal asíncrono con portal de autogestión para las demás, de modo que ninguna frene al resto.
+- **Un servicio que no se detenga cuando el sistema central está en mantenimiento:** separar la originación del sistema central con sincronización casi inmediata y recuperación automática.
+- **Un asistente digital seguro:** que atienda por WhatsApp y app, consulte cupos y simule créditos, proteja los datos personales y pase a una persona las decisiones importantes.
+- **Cumplimiento verificable:** autogestión de la revocatoria de datos, borde preparado para IPv6 y un repositorio de arquitectura con indicadores.
+- **Un plan en cuatro fases** (0–1 mes, 1–3 meses, 3–6 meses y 6–12 meses), empezando por lo más urgente y de menor costo.
 
 ## 🗺️ Cómo se implementa
 
-Para conocer los beneficios cuantitativos, las fases de ejecución en tres horizontes (H1 Quick Wins, H2 Ciberseguridad y Datos, H3 Modernización del Core) y los tiempos estimados, consulte el **[Resumen Ejecutivo](resumen-ejecutivo.md)**, diseñado especialmente para la alta dirección y los líderes de negocio.
-
----
+Ver el **[Resumen Ejecutivo](resumen-ejecutivo.md)** — ahí está el detalle de beneficios esperados, fases de implementación y tiempos, en un solo documento pensado para el negocio, no para el equipo técnico.
 
 ## 📂 Si quiere ver el detalle técnico completo
 
-Todo el análisis, modelos visuales y diagnósticos que sustentan esta propuesta están documentados taller por taller, siguiendo los estándares internacionales de arquitectura (MRAE v3.0 MinTIC, TOGAF ADM, C4 Model y STRIDE):
+Todo el análisis que sustenta esta propuesta está documentado carpeta por carpeta. Todos los diagramas son archivos `.drawio` que se abren en [app.diagrams.net](https://app.diagrams.net).
 
-| Carpeta | Qué contiene | Estado |
-|---|---|:---:|
-| [`00-preliminary-vision/`](./00-preliminary-vision/) | Ficha de caracterización institucional, dolores de negocio y visión estratégica | **Completo** |
-| [`01-bpmn/`](./01-bpmn/) | Modelado BPMN 2.0 del proceso misional de originación y desembolso digital de libranza | **Completo** |
-| [`02-modelo-informacion/`](./02-modelo-informacion/) | Estructura de datos (ERD), catálogo de llaves Bre-B y diagrama de contexto organizacional | **Completo** |
-| [`03-arquitectura-c4/`](./03-arquitectura-c4/) | Arquitectura de sistemas en modelo C4 (Contexto C1 y Contenedores C2 con 19 componentes) | **Completo** |
-| [`04-infraestructura/`](./04-infraestructura/) | Mapa de infraestructura en nube híbrida multi-región y diagnóstico de 5 riesgos técnicos | **Completo** |
-| [`05-seguridad-stride/`](./05-seguridad-stride/) | Análisis de amenazas de ciberseguridad STRIDE y diseño de arquitectura Zero Trust | **Completo** |
-| [`06-normatividad/`](./06-normatividad/) | Diagnóstico de cumplimiento legal (Circular 008 SFC, Ley 1581 Habeas Data, ISO 27001) | **Completo** |
-| [`07-opportunities-solutions/`](./07-opportunities-solutions/) | Arquitectura objetivo (TO-BE), matriz de 20 brechas y hoja de ruta en 3 horizontes | **Completo** |
-| [`08-integracion-vistas/`](./08-integracion-vistas/) | Tablero integrado multicapa (5 capas conectadas de punta a punta con 0 huérfanos) | **Completo** |
-| [`09-presentacion-final/`](./09-presentacion-final/) | Presentación ejecutiva, paquetes de trabajo, gobernanza y sustentación final | ⏳ *Pendiente* |
+| Carpeta | Qué contiene |
+|---|---|
+| [`00-preliminary-vision/`](./00-vision-preliminar/) | Contexto del cliente (ficha), visión de la solución y mapa conceptual |
+| [`01-bpmn/`](./01-bpmn/) | Cómo funciona el proceso de originación de libranza y su visación con pagadurías |
+| [`02-modelo-informacion/`](./02-modelo-informacion/) | Qué información maneja el negocio y cómo fluye (modelo de datos y contexto) |
+| [`03-arquitectura-c4/`](./03-arquitectura-c4/) | Los sistemas actuales y cómo están construidos |
+| [`04-infraestructura/`](./04-infraestructura/) | Dónde corre todo hoy, qué riesgos técnicos tiene y cómo se estima el plazo de las pagadurías |
+| [`05-seguridad-stride/`](./05-seguridad-stride/) | Análisis de seguridad del flujo de libranza (8 amenazas priorizadas) |
+| [`06-normatividad/`](./06-normatividad/) | Cumplimiento legal y normativo (15 criterios, 6 brechas) |
+| [`07-opportunities-solutions/`](./07-oportunidades-soluciones/) | La solución propuesta y las brechas que cierra |
+| [`08-integracion-vistas/`](./08-integracion-vistas/) | Cómo se conecta todo lo anterior en una sola arquitectura (0 elementos huérfanos) |
 
----
-
-## 👥 Contacto del Equipo
-
-Para dudas o consultas sobre esta propuesta de Arquitectura Empresarial:
+## 👥 Contacto
 
 - **Santiago Barrera Rueda** — `santiagobarrue@unisabana.edu.co`
 - **Krish Purmessur Moros** — `krishpumo@unisabana.edu.co`
@@ -73,4 +53,4 @@ Para dudas o consultas sobre esta propuesta de Arquitectura Empresarial:
 
 ## 📄 Licencia
 
-Este repositorio es de uso académico bajo licencia MIT. Desarrollado para el curso deArquitectura Empresarial — Universidad de La Sabana   (2026).
+Este repositorio es de uso académico bajo licencia MIT. Desarrollado para el curso de Arquitectura Empresarial — Universidad de La Sabana (2026).

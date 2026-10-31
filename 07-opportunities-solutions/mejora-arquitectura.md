@@ -1,245 +1,113 @@
 # 📄 Mejora de Arquitectura (TO-BE) — Identificación y Priorización de Mejoras
 
-**Ban100** (Establecimiento Bancario Comercial, anteriormente Credifinanciera S.A.)  
-*Especialista en inclusión financiera, crédito de libranza para pensionados y microcrédito productivo en más de 900 municipios de Colombia.*
+## 🔖 Cliente
+**Ban100 S.A. (Bancien S.A.)** — NIT `900.200.960-9`
 
-- **Santiago Barrera Rueda**
-- **Krish Purmessur Moros**
-- **Samuel Guerrero Arcos**
+## 👥 Integrantes del equipo
+- Santiago Barrera Rueda (santiagobarrue@unisabana.edu.co)
+- Krish Purmessur Moros (krishpumo@unisabana.edu.co)
+- Samuel Guerrero Arcos (samuelguar@unisabana.edu.co)
 
-**Fecha:** 12 de Septiembre de 2026  
-**Curso:** Arquitectura Empresarial — Universidad de La Sabana  
-**Docente:** Cesar Augusto Vega  
-**Entregable Oficial:** Actividad de Mejora de Arquitectura (Fase E: Opportunities & Solutions — TOGAF ADM / MRAE v3.0 MinTIC)
+**Equipo:** Ban100 — Grupo de Arquitectura Empresarial
 
 ---
 
-## 1. Diagnóstico Inicial con preguntas orientadoras
+## 1. Diagnóstico inicial
 
-El presente diagnóstico consolida de manera fidedigna la evidencia técnica, operacional, de seguridad y regulatoria levantada durante las fases previas de la arquitectura de Ban100 (**Taller 3 — Arquitectura de Aplicaciones C4**, **Taller 4 — Mapa de Infraestructura y Diagnóstico**, **Taller 5 — Evaluación de Seguridad STRIDE** y **Taller 6 — Cumplimiento Normativo y Protección de Datos**). Ningún hallazgo ha sido inventado; cada elemento responde a hechos documentados en la operación bancaria.
+Respuestas basadas exclusivamente en lo diagnosticado en los Talleres 3 a 6.
 
-#### ¿Cuáles son los procesos o tecnologías que generan mayor fricción en la operación?
-1. **Core Bancario Legacy Monolítico (Taller 4 - INF-1):** Alojado en el centro de datos on-premise de Bogotá, carece de interfaces de programación de aplicaciones (APIs) modernas. Toda integración con canales digitales o nuevos productos requiere desarrollos punto a punto costosos y rígidos, frenando el desacoplamiento proyectado en la hoja de ruta.
-2. **Base de Datos Transaccional con Procesamiento Batch Nocturno (Taller 4 - INF-2):** La sincronización de estados de cuenta, movimientos de cartera y el catálogo local de Llaves del Sistema de Pagos Inmediatos Bre-B depende de ejecuciones por lotes cada 12 horas. Esto genera que los clientes perciban saldos desactualizados durante la noche y restringe la inmediatez transaccional 24/7 exigida por el Banco de la República.
-3. **Puntos Únicos de Falla (SPOF) en el Borde y Core (Taller 4 - INF-3 / Taller 6 - B2):** La presencia de un balanceador de carga perimetral en instancia única y la ausencia de réplicas activas del Core en la región secundaria de contingencia (Medellín) exponen a los 250.000 clientes a una interrupción total del servicio si ocurre una falla física o lógica en Bogotá.
+| Pregunta orientadora | Respuesta para Ban100 | Taller de origen |
+|---|---|---|
+| ¿Qué procesos o tecnologías generan mayor fricción? | La visación de cupo con 850–880 pagadurías municipales de Grupos MRAE 3 a 5 (sin API directa) y el enlace síncrono μS Originación ↔ Core On-Premise frenan la meta de originar libranza en < 15 min (hoy 3–5 días). | Talleres 3 y 4 |
+| ¿Qué problemas recurrentes señaló el cliente? | Retraso en validación de cupos y visación con pagadurías de baja madurez digital; el 94 % de la colocación es libranza y el 98,3 % de ese segmento es sector público/pensionados. | Taller 0 y 1 |
+| ¿Qué vulnerabilidades o riesgos quedaron evidenciados? | T1 suplantación biométrica, T4 exposición de PII, T7 fuga de PII hacia el LLM, T8 archivo de visación alterado; seis parciales normativos (Ley 1581, CE 008/2023, DLP, IPv6, interoperabilidad y repositorio de AE). | Talleres 5 y 6 |
 
-#### ¿Qué problemas recurrentes señalaron los usuarios o el cliente en las entrevistas?
-1. **Trámites Manuales y Demoras en Derechos de Privacidad (Taller 6 - B1 / NOR-1):** Los pensionados y clientes no cuentan con un mecanismo digital de autoservicio para revocar su consentimiento de tratamiento de datos o ejercer sus derechos de Actualización, Rectificación, Cancelación y Oposición (ARCO). Dependen de solicitudes presenciales o PQRs por correo electrónico, con tiempos de respuesta que promedian 15 días hábiles, sobrecargando las mesas de servicio y arriesgando sanciones ante la SIC.
-2. **Interrupción y Rechazos de Transferencias Inmediatas (Taller 4 - INF-4):** Durante ventanas de contingencia o micro-cortes de red, el conmutador de la réplica pasiva de Bre-B tarda más de 5 segundos en activarse (RTO > 5s), ocasionando timeouts en la cámara de compensación central y rechazos automáticos de transferencias de mesadas pensionales.
-3. **Parálisis de Originación en Contingencia (Taller 4 - INF-5):** En caso de degradación de la sede Bogotá, la fuerza comercial en municipios rurales no puede radicar créditos de libranza ni aperturas de CDT porque la región Medellín solo aloja servicios básicos de consulta, dejando al banco comercialmente inoperante.
+**Resumen del problema actual (foto del AS-IS):** Ban100 originó digitalmente el 95 % de sus créditos en 2024 (100 % en libranza), pero el ciclo de libranza sigue limitado por la contraparte pública más lenta y por un Core On-Premise acoplado de forma síncrona. La arquitectura carece de controles específicos para el asistente conversacional y de un repositorio unificado de AE (MAE Nivel 3 → 4).
 
-#### ¿Qué vulnerabilidades de seguridad o riesgos quedaron evidenciados en el análisis previo?
-1. **Suplantación de Identidad por Deepfakes y Ataques de Presentación (Taller 5 - T1 / STR-1):** La validación biométrica actual y el OTP mediante SMS convencional resultan vulnerables ante inyección de video sintético y SIM swapping, arriesgando fraudes crediticios contra adultos mayores.
-2. **Ausencia de Firma Digital en Mensajería Bre-B en Tránsito (Taller 5 - T2 / STR-2):** Aunque existe túnel VPN, los mensajes ISO 20022 (`pacs.008`) no cuentan con firma digital de payload XML-DSig con certificados X.509 clase 3 antes de salir de la red interna, posibilitando manipulación de cuentas destino por malware o atacantes en tránsito (*Tampering*).
-3. **Vulnerabilidad de Repudio Legal en Pagarés (Taller 5 - T3 / STR-3):** La aceptación mediante checkbox web y registro simple de IP deja desprotegido judicialmente el cobro ejecutivo de la cartera ante demandas de deudores, comprometiendo además los convenios de titularización de cartera con BTG Pactual (>$500kM COP).
-4. **Exposición de Datos Sensibles en Convenios de Pagadurías (Taller 5 - T4 / Taller 6 - B4):** La carencia de Enmascaramiento Dinámico de Datos (DDM) a nivel de motor de base de datos permite que personal operativo y adaptadores de nómina observen montos pensionales y saldos en texto claro.
-5. **Riesgo Inminente de Fuga Masiva de Datos por Insiders (Taller 6 - B5 / NOR-5):** Los puestos de trabajo de asesores comerciales carecen de agentes Endpoint DLP, facilitando la extracción indebida de bases de pensionados hacia memorias USB o correos no corporativos.
-6. **Inyección de Scripts y Vulnerabilidad Web Skimming (Taller 6 - B6 / NOR-6):** La ausencia de cabeceras estrictas de Content-Security-Policy (CSP) en portales web expone las credenciales de clientes ante posibles ataques de Cross-Site Scripting (XSS).
-7. **Retención Indefinida de Biometría Desistida (Taller 6 - B7 / NOR-7):** No existe purga automatizada (TTL) para vectores faciales de solicitudes abandonadas, violando el principio de necesidad y temporalidad de la Ley 1581 de 2012.
+**Brechas consolidadas (Talleres 3, 4, 5 y 6):** G1 asimetría B2G (T4, T5) · G2 acoplamiento síncrono (T4, T6) · G3 brecha IPv6 (T4, T6) · G4 repositorio de AE y métricas (T6) · G5 revocatoria Ley 1581 (T6) · G6 DLP y guardrails agénticos (T5, T6).
 
 ---
 
-## 2. Propuesta de Mejoras
+## 2. Propuesta de mejoras
 
-Para cerrar la totalidad de las brechas diagnosticadas sin incurrir en soluciones improvisadas, se aplicó una metodología de dos fases: primero una lluvia de ideas sin censura inicial que abarca procesos, canales, seguridad y tecnología, y posteriormente una priorización estratégica en tres horizontes temporales de madurez arquitectural.
+### 2.1 Lluvia de ideas (sin censura inicial)
 
-### 2.1 Lluvia de Ideas (Sin Censura Inicial)
+| # | Idea de mejora | Tipo |
+|---|---|---|
+| 1 | Adaptador B2G de Dos Velocidades (X-Road/REST para G1-G2; RPA/ETL para G3-G5) | Tecnología |
+| 2 | Portal Web de Autogestión para pagadurías de Grupos 3 a 5 | Proceso |
+| 3 | Bus de Eventos y CDC (< 500 ms) con Circuit Breaker hacia el Core | Tecnología |
+| 4 | Borde Dual-Stack IPv6/IPv4 y API Gateway Activo-Activo | Tecnología |
+| 5 | Revocatoria y supresión Ley 1581 en autogestión | Seguridad / Proceso |
+| 6 | Filtro DLP y guardrails para el asistente conversacional | Seguridad |
+| 7 | Orquestador agéntico Ban-I Bot con 4 herramientas y Human-in-the-Loop | IA agéntica |
+| 8 | Repositorio de AE bajo metamodelo MRAE y métricas automatizadas | Proceso |
+| 9 | Comunicación proactiva a pagadurías sobre plazos MRAE y guías de integración | Comunicación |
+| 10 | Detección de vida certificada y OTP en la validación biométrica | Seguridad |
 
-Se generaron **12 iniciativas de mejora** orientadas a resolver las fricciones de negocio, riesgos de seguridad y brechas normativas:
+### 2.2 Priorización (3 soluciones estructurales)
 
-| # | Idea de Mejora | Tipo | Brechas Asociadas | Descripción Resumida |
-|:---:|---|:---:|:---:|---|
-| **1** | **Balanceador Global Cloud Activo-Activo Multi-Región** | Tecnología | INF-3, NOR-2 | Reemplazar la instancia única del balanceador por un esquema Anycast multi-región con conmutación por DNS global en menos de 30 segundos. |
-| **2** | **Change Data Capture (CDC) en Tiempo Real con Debezium y Kafka** | Tecnología | INF-2 | Capturar transacciones desde los transaction logs de la BD Core e inyectarlas en streaming continuo hacia Kafka, alimentando el MDM y Bre-B en tiempo real. |
-| **3** | **Descomposición del Core Bancario mediante Patrón Strangler Fig** | Tecnología | INF-1 | Migrar progresivamente los módulos de cartera y depósitos hacia microservicios en Kubernetes, manteniendo fachadas de integración sin downtime. |
-| **4** | **Módulo Bre-B Activo-Activo con Geo-Replicación Kafka MirrorMaker 2** | Tecnología | INF-4, NOR-2 | Replicar el motor de pagos y catálogo de llaves entre Bogotá y Medellín con sincronización sub-segundo, alcanzando RTO < 1s y RPO = 0. |
-| **5** | **Kubernetes Federation (KubeFed) para Paridad Multi-Región** | Tecnología | INF-5 | Desplegar el stack completo de microservicios de originación y captación en la región secundaria, habilitando atención continua ante catástrofes. |
-| **6** | **Módulo de Autoservicio de Privacidad y Derechos ARCO** | Proceso / Funcional | NOR-1 | Integrar en la App Móvil y Portal Web un componente digital para la revocatoria y consulta de consentimientos con orquestación directa al MDM. |
-| **7** | **Dynamic Data Masking (DDM) y Cifrado TDE en Motores de Base de Datos** | Seguridad / Tecnología | STR-4, NOR-4 | Implementar enmascaramiento dinámico a nivel de motor SQL para campos de salario y saldo, y cifrado AES-256 en reposo (TDE). |
-| **8** | **Despliegue de Agente Corporativo Endpoint DLP** | Seguridad / Proceso | NOR-5 | Instalar agentes de prevención de fuga en estaciones de asesores comerciales con bloqueo de puertos USB, marcas de agua y detección de cédulas. |
-| **9** | **Inyección de Cabeceras CSP Estrictas y Rate Limiting en Borde** | Seguridad | STR-5, NOR-6 | Inyectar cabeceras HTTP (CSP, HSTS, X-Frame-Options) en CDN/WAF y configurar rate limiting adaptativo con circuit breakers Resilience4j. |
-| **10** | **Políticas de Ciclo de Vida Automatizado (TTL = 30 días) para Biometría** | Cumplimiento / Tecnología | NOR-7 | Configurar reglas de purga y anonimización automática en buckets de almacenamiento cloud para datos biométricos de solicitudes desistidas. |
-| **11** | **Biometría iBeta Nivel 2 + Enrolamiento FIDO2 / WebAuthn** | Seguridad | STR-1 | Incorporar pruebas de vida pasivas certificadas y autenticación criptográfica hardware-backed en el dispositivo móvil del pensionado. |
-| **12** | **Pagaré Desmaterializado con Firma Digital y Custodia DECEVAL** | Legal / Proceso / Seguridad | STR-3 | Emitir pagarés electrónicos con estampado cronológico bajo Ley 527 de 1999 y radicación automática vía API en DECEVAL. |
+| Solución priorizada | Esfuerzo | Impacto | Quick win / Largo plazo | Justificación |
+|---|---|---|---|---|
+| **SOL-1** Adaptador B2G de Dos Velocidades (ideas 1, 2, 9) | Alto | Alto | Largo plazo (entrega incremental desde la Fase 2) | Cierra G1 y mitiga T8: atiende a la vez a las pagadurías G1-G2 con interfaz estandarizada y a las 850–880 de G3-G5 sin exigirles API. |
+| **SOL-2** Desacoplamiento asimétrico del Core con Bus CDC, Circuit Breaker y BCP/DRP (ideas 3, 4) | Alto | Alto | Largo plazo | Cierra G2 y G3: elimina la dependencia síncrona y habilita continuidad y Dual-Stack IPv6. |
+| **SOL-3** Capa agéntica segura y gobierno de datos personales (ideas 5, 6, 7, 10) | Bajo-Medio | Alto | **Quick win** | Cierra G5 y G6 con controles de bajo esfuerzo y alto efecto regulatorio (Ley 1581, CE 008/2023). |
 
-### 2.2 Priorización Estratégica (Horizontes H1, H2 y H3)
-
-De las 12 ideas generadas, se estructuró una priorización técnica basada en la matriz de **Impacto vs. Esfuerzo**, dividida en tres horizontes complementarios para asegurar victorias tempranas (*Quick Wins*) mientras se construyen las capacidades estructurales de largo plazo:
-
-| Solución Priorizada | Esfuerzo | Impacto | Horizonte | Justificación Técnica y de Negocio | Brechas que Cierra |
-|---|:---:|:---:|:---:|---|:---:|
-| **Paquete 1: Resiliencia Perimetral y Cumplimiento Ágil** | Bajo - Medio | Alto | **H1: Quick Wins (0 a 3 meses)** | Cierra vulnerabilidades críticas de borde sin tocar el core. La inyección de CSP y Rate Limiting previene caídas en días de pago de pensiones y ataques web; el balanceador multi-región elimina el SPOF principal; y las políticas de TTL y RNBD eliminan el riesgo de sanciones inminentes de la SIC. | INF-3, STR-5, STR-7, NOR-3, NOR-6, NOR-7 |
-| **Paquete 2: Ciberseguridad Zero Trust, Privacidad y CDC** | Medio | Crítico | **H2: Mediano Plazo (3 a 6 meses)** | Blinda el activo de información del banco. El CDC elimina el desfase de 12 horas conectando la BD a Kafka; FIDO2 y la firma ISO 20022 erradican el fraude por suplantación y alteración de giros; DDM y DLP protegen la base de pensionados; y el portal ARCO automatiza el cumplimiento de Habeas Data. | INF-2, STR-1, STR-2, STR-3, STR-4, STR-6, STR-8, NOR-1, NOR-4, NOR-5 |
-| **Paquete 3: Modernización del Core y Resiliencia Total** | Alto | Crítico | **H3: Largo Plazo (6 a 12 meses)** | Solución definitiva a la rigidez y riesgo de continuidad del banco. Descompone el monolito mediante Strangler Fig sin interrumpir la operación; logra disponibilidad continua 24/7 en Bre-B (RTO < 1s) mediante réplicas geo-distribuidas; y garantiza paridad operativa total en la región Medellín. | INF-1, INF-4, INF-5, NOR-2 |
+La idea 8 (repositorio de AE) se ejecuta como habilitador de gobierno dentro de la Fase 4 y cierra G4.
 
 ---
 
 ## 3. Visualización TO-BE
 
-La arquitectura objetivo (**TO-BE**) extiende de forma coherente los modelos de los Talleres 3 (C4 Contenedores) y 4 (Mapa de Infraestructura), incorporando de manera nativa los controles de seguridad del Taller 5 y los requerimientos de cumplimiento del Taller 6.
+### 3.1 Proceso mejorado
+El proceso del Taller 1 se mantiene, con un cambio de fondo en la compuerta *¿Pagaduría tiene interoperabilidad API/X-Road (G1-G2) o requiere vía asíncrona (G3-G5)?*: la vía asíncrona deja de ser manual y pasa a un motor RPA/ETL con cola de mensajería y un portal de autogestión; además, el asistente solo responde con datos devueltos por sus herramientas y escala a un analista las acciones de alto impacto.
 
-### 3.1 Proceso Mejorado: Originación Digital y Desembolso Seguro Bre-B
+### 3.2 Cambios en aplicaciones, infraestructura y flujos de información
+- **Aplicaciones** (extiende el C2 del Taller 3, conservando sus nombres): [Ver C2 TO-BE en draw.io](./to-be-aplicaciones-final.drawio). Adiciones 🆕: Adaptador B2G de Dos Velocidades, Orquestador Agéntico Ban-I Bot con Guardrails DLP y Aprobación Humana (Human-in-the-Loop), Módulo de Revocatoria y Supresión Ley 1581, API Gateway Redundante Activo-Activo y Bus de Eventos CDC con Circuit Breaker.
+- **Infraestructura** (extiende el mapa del Taller 4): [Ver mapa TO-BE en draw.io](./to-be-tecnologia-final.drawio). Adiciones 🆕: Borde Dual-Stack IPv6/IPv4 (`MGGTI.LI.ST.14`), API Gateway Activo-Activo, Bus CDC (< 500 ms) y BCP/DRP automatizado.
+- **Migración**: [Ver vista ArchiMate de Implementación y Migración en draw.io](./vista-archimate-migracion.drawio): Plateau AS-IS 2026 → 4 Gaps → 4 Work Packages → Plateau TO-BE 2027.
 
-El flujo transaccional misional se transforma eliminando las validaciones débiles y la dependencia de procesamiento por lotes:
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Cliente as 👤 Pensionado / Solicitante
-    participant App as 📱 App Móvil Ban100
-    participant GW as 🛡️ API Gateway (CSP + RateLimit)
-    participant FIDO as 🔐 Auth FIDO2 / WebAuthn
-    participant Orig as ⚙️ MS Originación (Zero Trust)
-    participant Pagad as 🏢 MS Pagadurías (con DDM)
-    participant CDC as 🔄 CDC Debezium ➔ Kafka
-    participant Core as 🏦 Core Estrangulado (K8s)
-    participant BreB as ⚡ MS Bre-B (Activo-Activo)
-    participant BanRep as 🏛️ Banco de la República
-    participant WORM as 🔒 Storage WORM (SFC 008)
-
-    Cliente->>App: Solicita Crédito de Libranza
-    App->>GW: Petición HTTPS con Token mTLS
-    GW->>FIDO: Verifica desafío criptográfico FIDO2 (Anti-Spoofing T1)
-    FIDO-->>GW: Identidad verificada con hardware biométrico
-    GW->>Orig: Orquesta crédito (Cálculo estricto en Backend T6)
-    Orig->>Pagad: Consulta cupo pensional (Datos con DDM B4)
-    Pagad-->>Orig: Capacidad validada sin exponer saldos planos
-    Orig->>Core: Genera obligación de crédito y desembolso
-    Core->>CDC: Escribe transacción en log WAL
-    CDC--)Core: Captura evento en streaming en tiempo real (<500ms)
-    Orig->>BreB: Ordena desembolso inmediato ISO 20022
-    BreB->>BanRep: Envía pacs.008 firmado con XML-DSig y mTLS (T2)
-    BanRep-->>BreB: Confirma liquidación pacs.002
-    BreB->>WORM: Deposita traza inmutable con SHA-256 Chaining (T8)
-    BreB-->>App: Notificación push de dinero acreditado en <3 segundos
-```
-
-### 3.2 Cambios en Aplicaciones, Infraestructura y Flujos de Información
-
-#### Modelo TO-BE de Aplicaciones (Extensión C2)
-El archivo editable [`to-be-aplicaciones-final.drawio`](to-be-aplicaciones-final.drawio) documenta las siguientes adiciones estructurales:
-- **🆕 Módulo de Privacidad y Derechos ARCO (`cnt_arco`):** Microfrontend omnicanal en App y Web para revocatoria y consulta ciudadana.
-- **🆕 Servidor FIDO2 / WebAuthn (`cnt_fido`):** Servicio de autenticación criptográfica asimétrica integrado con Truora.
-- **🆕 Pipeline Change Data Capture (`ms_cdc`):** Motor Debezium sobre Kafka Connect para eliminar el batch nocturno.
-- **🆕 Módulo Bre-B Réplica Activa en Medellín (`ms_breb_med`):** Instancia paralela sincronizada con MirrorMaker 2 (RTO < 1s).
-- **🆕 Repositorio WORM Inmutable (`db_worm`):** Almacenamiento seguro con encadenamiento SHA-256 para auditoría Circular 008 SFC.
-- **🆕 Bucket con Políticas TTL (`db_ttl`):** Purga automática a 30 días de fotos y biometría de solicitudes no perfeccionadas.
-
-#### Modelo TO-BE de Tecnología (Extensión Mapa Infraestructura)
-El archivo editable [`to-be-tecnologia-final.drawio`](to-be-tecnologia-final.drawio) resuelve los 5 riesgos del Taller 4 marcándolos en verde con resolución explícita:
-- **✅ Balanceador Global Activo-Activo Cloud (`z2_3`):** Anycast DNS con health checks continuos y failover < 30s (resuelve INF-3).
-- **✅ Pipeline CDC Streaming (`z3_cdc`):** Reemplazo del lote nocturno por captura continua de transacciones (resuelve INF-2).
-- **✅ Core Bancario Estrangulado (`z3_8`):** Microservicios de cartera desacoplados en Kubernetes (resuelve INF-1).
-- **✅ Módulo Bre-B Activo-Activo (`z4_3`):** Geo-replicación continua con RTO < 1s y RPO = 0 en Medellín (resuelve INF-4).
-- **✅ Kubernetes Federation Multi-Región (`z4_2`):** Paridad de microservicios misionales en ambas regiones (resuelve INF-5).
-- **✅ Endpoint DLP Corporativo (`z6_dlp`):** Protección en puestos de trabajo de asesores y sucursales (resuelve NOR-5).
-
-### 3.3 Matriz de Controles de Seguridad Integrados en el TO-BE
-
-En cumplimiento de los lineamientos del curso, la arquitectura objetivo incorpora explícitamente las mitigaciones de las 8 amenazas STRIDE del Taller 5 y las 7 brechas normativas del Taller 6:
-
-| Amenaza / Brecha Origen | Componente TO-BE que la Integra | Mecanismo Técnico de Control Implementado |
+| Elemento TO-BE | Brecha que cierra | Origen AS-IS |
 |---|---|---|
-| **STR-1 (T1: Spoofing)** | `cnt_fido` / `cnt_app` | Autenticación criptográfica FIDO2 basada en enclave seguro del smartphone + Biometría iBeta Nivel 2. |
-| **STR-2 (T2: Tampering)** | `ms_breb_bog` / `ms_breb_med` | Firma digital de payload XML-DSig con certificados X.509 clase 3 y transporte mediante mTLS estricto. |
-| **STR-3 (T3: Repudiation)** | `ms_orig` / `x_deceval` | Pagaré desmaterializado con estampado cronológico certificado bajo Ley 527 de 1999 depositado en DECEVAL. |
-| **STR-4 (T4: Info Disclosure)** | `db_core` / `ms_pagad` | Dynamic Data Masking (DDM) a nivel de motor de base de datos relacional y cifrado transparente TDE AES-256. |
-| **STR-5 (T5: DoS Mesadas)** | `cnt_gw` / `infra_cdn` | Rate Limiting adaptativo por Token/IP en API Gateway y absorción elástica de tráfico volumétrico en CDN/WAF. |
-| **STR-6 (T6: Privilege Elev.)** | `ms_orig` / `cnt_gw` | Principio Zero Trust con validaciones backend-authoritative y tokens JWT firmados con RS256 asimétrico. |
-| **STR-7 (T7: Tampering Llaves)** | `ms_breb` / `x_rnec` | OTP criptográfico de 6 dígitos con caducidad de 120s + validación cruzada con la Registraduría (RNEC). |
-| **STR-8 (T8: Repudiation Logs)** | `db_worm` / `cnt_soc` | Repositorio WORM en la nube con encadenamiento criptográfico (Hash Chaining SHA-256) y streaming a SIEM. |
-| **NOR-1 (B1: Autoservicio ARCO)** | `cnt_arco` / `ms_mdm` | Microfrontend de autogestión de consentimiento conforme al régimen de protección de datos de la Ley 1581. |
-| **NOR-2 (B2: DRP Incompleto)** | `infra_drp` / `infra_lb` | DRP Activo-Activo con failover DNS < 30s y réplicas en Kubernetes multi-región conforme a Circular 008 SFC. |
-| **NOR-3 (B3: RNBD Desactualizado)**| `cnt_soc` / `x_sic` | Actualización formal del inventario técnico y flujos internacionales ante la plataforma RNBD de la SIC. |
-| **NOR-4 (B4: DDM Pagadurías)** | `ms_pagad` / `db_core` | Filtros de enmascaramiento en tiempo real para evitar fuga de mesadas hacia operadores de convenios. |
-| **NOR-5 (B5: Fuga Datos Asesores)**| `cnt_asesor` / `z6_dlp` | Agente Endpoint DLP en puestos de venta con bloqueo de USB, marca de agua en pantalla y detección de cédulas. |
-| **NOR-6 (B6: Ausencia CSP Web)** | `cnt_web` / `infra_cdn` | Inyección de cabeceras HTTP CSP estrictas en CDN y API Gateway restringiendo fuentes de scripts (anti-XSS). |
-| **NOR-7 (B7: Retención Biometría)**| `db_ttl` | Reglas de almacenamiento cloud con TTL automático de 30 días para purga de solicitudes desistidas. |
+| Adaptador B2G de Dos Velocidades | G1 | Riesgo R1 (Taller 4), T8 (Taller 5) |
+| Bus CDC + Circuit Breaker + BCP/DRP | G2 | Riesgo R2 (Taller 4), checklist 6 |
+| Borde Dual-Stack IPv6 y Gateway Activo-Activo | G3 | Riesgo R3 (Taller 4), checklist 13 |
+| Repositorio de AE y métricas | G4 | Checklist 14 (Taller 6) |
+| Módulo de Revocatoria y Supresión Ley 1581 | G5 | Checklist 2 (Taller 6) |
+| Guardrails DLP + Orquestador con HITL | G6 | T7 (Taller 5), checklist 7 |
 
-### 3.4 Vista ArchiMate Equivalente: Capa de Implementación y Migración
-
-El análisis de brechas se modela en ArchiMate utilizando los conceptos de **Plateau** (estados estables de arquitectura) y **Gap** (diferencias a cerrar):
-
-```mermaid
-flowchart LR
-    subgraph asis_plat["📍 Plateau: AS-IS 2026"]
-        as1["Monolito Core en Bogotá"]
-        as2["BD Batch Nocturno (12h)"]
-        as3["Balanceador Único (SPOF)"]
-        as4["Bre-B Activo-Pasivo (RTO > 5s)"]
-        as5["Controles STRIDE/Norma Parciales"]
-    end
-
-    subgraph gaps["⚠️ Brechas Consolidadas (Gaps)"]
-        g1(["Gap 1: Rigidez de Integración"])
-        g2(["Gap 2: Latencia de Datos Maestros"])
-        g3(["Gap 3: Disponibilidad y Resiliencia"])
-        g4(["Gap 4: Seguridad y Privacidad"])
-    end
-
-    subgraph tobe_plat["📍 Plateau: TO-BE 2027"]
-        tb1["Core Estrangulado en Microservicios"]
-        tb2["CDC Streaming en Tiempo Real"]
-        tb3["Multi-Región Activa-Activa (SLA 99.99%)"]
-        tb4["Bre-B Activo-Activo (RTO < 1s)"]
-        tb5["Zero Trust + DDM + DLP + WORM + ARCO"]
-    end
-
-    as1 -.-> g1
-    as2 -.-> g2
-    as3 -.-> g3
-    as4 -.-> g3
-    as5 -.-> g4
-
-    g1 ==> tb1
-    g2 ==> tb2
-    g3 ==> tb3
-    g3 ==> tb4
-    g4 ==> tb5
-
-    classDef plateau fill:#ffcc99,color:#000,stroke:#cc6600,stroke-width:2px;
-    classDef gap fill:#fee2e2,color:#991b1b,stroke:#ef4444,stroke-width:2px;
-    class asis_plat,tobe_plat,as1,as2,as3,as4,as5,tb1,tb2,tb3,tb4,tb5 plateau;
-    class g1,g2,g3,g4 gap;
-```
+### 3.3 Controles de seguridad integrados
+Del Taller 5 se integran: **T1** liveness certificado y OTP (idea 10); **T4** DLP y control de acceso por atributos sobre Cliente 360; **T5** Gateway Activo-Activo y límites de tasa; **T6** cuentas de servicio de mínimo privilegio con doble autorización de desembolsos; **T7** filtro DLP, separación de instrucciones y entrada, y Human-in-the-Loop; **T8** firma digital de los archivos de pagaduría y portal de autogestión con autenticación fuerte. El agente se modela con el patrón de sistemas agénticos: [Ver vista del sistema agéntico](../../archimate-transversal/vista-sistema-agentico-ban-i-bot.drawio).
 
 ---
 
-## 4. Análisis de Beneficios y Riesgos de Implementación
+## 4. Análisis de beneficios y riesgos
 
-Ninguna solución arquitectural está exenta de fricciones. En esta sección se contrastan de manera honesta los beneficios tangibles para el negocio y la tecnología frente a los riesgos, limitaciones y dependencias operativas que el comité de arquitectura debe gestionar durante la ejecución.
-
-| Solución Priorizada | Beneficio de Negocio | Beneficio Tecnológico / Seguridad | Riesgo, Limitación o Dependencia de Implementación |
+| Mejora / Solución | Beneficio de negocio | Beneficio tecnológico/seguridad | Riesgo, limitación o dependencia de implementación |
 |---|---|---|---|
-| **1. Balanceador Global Activo-Activo Multi-Región** | Garantía de disponibilidad ininterrumpida (SLA 99.99%) para los 250.000 clientes pensionados y empleados en 900+ municipios. | Cero SPOF perimetral; conmutación automática de tráfico entre Bogotá y Medellín en menos de 30 segundos. | Depende del presupuesto adicional para suscripciones de nube multi-región y de la sincronización impecable de certificados SSL/TLS. |
-| **2. Change Data Capture (CDC) con Debezium y Kafka** | Saldos pensionales y cupos de libranza actualizados al instante en todos los canales sin esperar el batch nocturno. | Desacoplamiento total de cargas transaccionales y analíticas; alimentación en streaming continuo al MDM y Bre-B. | Sobrecarga temporal de CPU y memoria en el motor transaccional durante la lectura inicial de logs; dependencia de alta disponibilidad de Kafka. |
-| **3. Módulo Bre-B Activo-Activo con MirrorMaker 2** | Cero rechazos o demoras en transferencias de dinero las 24 horas del día; cumplimiento impecable ante el Banco de la República. | RTO < 1 segundo y RPO = 0 durante eventos de conmutación; sincronización sub-segundo del Directorio de Llaves. | Manejo complejo de consistencia eventual y resolución de posibles colisiones en pagos concurrentes procesados en ambas regiones. |
-| **4. Enrolamiento FIDO2 y Biometría iBeta Nivel 2** | Erradicación total de fraudes por suplantación de identidad en créditos de libranza; confianza plena del adulto mayor. | Autenticación criptográfica hardware-backed inmune a deepfakes, phishing y robo de credenciales en tránsito. | Curva de adopción en usuarios de la tercera edad con dispositivos móviles de gama baja; necesidad de habilitar asistencia telefónica guiada. |
-| **5. Dynamic Data Masking (DDM) y Cifrado TDE** | Protección estricta del secreto bancario e intimidad financiera de pensionados; cumplimiento de convenios de libranza. | Enmascaramiento dinámico a nivel motor de base de datos sin alterar el código de los microservicios de negocio. | Requiere ajustar consultas complejas de auditoría e impuestos que exigen visualizar datos en claro bajo permisos debidamente trazados. |
-| **6. Agente Endpoint DLP en Puestos de Asesores** | Protección del activo de información de clientes más valioso de Ban100; prevención de competencia desleal y fuga masiva. | Bloqueo físico de puertos USB, estampado de marcas de agua dinámicas y alertas en tiempo real de exportaciones no autorizadas. | Resistencia al cambio por parte de los asesores comerciales y posible impacto en el rendimiento de equipos antiguos en municipios remotos. |
-| **7. Descomposición Core mediante Strangler Fig** | Reducción drástica del Time-to-Market de nuevos productos financieros de 6 meses a tan solo 3 semanas. | Eliminación gradual de la deuda técnica del monolito legacy; escalado horizontal elástico independiente por servicio. | Alta complejidad de ingeniería inversa sobre código legacy no documentado; riesgo de inconsistencias de datos en la fase híbrida. |
-| **8. Módulo Digital de Autoservicio Derechos ARCO** | Reducción del 70% en costos de operación de PQRs de privacidad; empoderamiento y satisfacción del cliente. | Sincronización automática de consentimientos en el MDM en tiempo real, cerrando brechas con la Superintendencia de Industria y Comercio. | Requiere catalogar dependencias jurídicas complejas para no revocar datos requeridos contractualmente para el cobro de créditos vigentes. |
-| **9. Cabeceras CSP Estrictas y Rate Limiting** | Canales transaccionales blindados contra caída por saturación en días de mesadas y protegidos ante robo web. | Cierre de vectores XSS e inyección de scripts externos maliciosos; degradación elegante ante picos masivos de tráfico. | Requiere monitoreo previo de 2 semanas en modo `Report-Only` para no bloquear scripts analíticos legítimos de la entidad bancaria. |
-| **10. Purga Automática TTL para Biometría Desistida** | Eliminación de pasivos legales ante la SIC por retención desproporcionada y optimización en costos de almacenamiento cloud. | Depuración higiénica y desatendida de repositorios cloud basada en políticas nativas de ciclo de vida de objetos. | Debe validarse con precisión el estado 'desistido' para no purgar expedientes que se encuentren en periodo de reactivación o apelación. |
+| SOL-1 Adaptador B2G de Dos Velocidades | Acerca la originación a la meta < 15 min sin esperar a que cada municipio se modernice. | Interoperabilidad estandarizada (`MGGTI.LI.GI.05`) y trazabilidad de cada visación. | Depende del ritmo de adopción de las pagadurías (plazos MRAE de 40 a 47 meses) y de convenios y soporte a municipios. |
+| SOL-2 Desacoplamiento del Core | Originación disponible aun con ventanas de mantenimiento del Core. | Menor acoplamiento, recuperación automatizada y Dual-Stack IPv6. | Consistencia eventual y complejidad operativa del bus; requiere pruebas periódicas de DRP. |
+| SOL-3 Capa agéntica segura y Ley 1581 | Cumplimiento regulatorio y confianza de pensionados (estratos 1–3). | Prevención de fuga de PII y supervisión humana de acciones críticas. | Dependencia de un proveedor de LLM, costo por sesión y necesidad de monitoreo continuo por el SOC 24/7. |
 
----
+**Work Packages (alimentan el plan de implementación):**
 
-## 5. Conclusiones y Próximos Pasos
-
-1. **Trazabilidad Total:** El estado objetivo propuesto (TO-BE) no es una lista abstracta de deseos tecnológicos, sino la respuesta directa y articulada a las 20 brechas diagnosticadas en los Talleres 3 a 6.
-2. **Equilibrio Estratégico:** La hoja de ruta en tres horizontes (H1, H2, H3) permite capturar valor inmediato en resiliencia y cumplimiento legal en los primeros 90 días, mientras se abordan las transformaciones de fondo en ciberseguridad y modernización del Core Bancario.
-3. **Insumo Directo para la Fase F (Taller 9):** La matriz priorizada de brechas y soluciones aquí formulada constituye el insumo estructurado para el **Plan de Implementación y Migración**, donde cada iniciativa se convertirá en un `Work Package` formal con presupuesto, cronograma y responsables definidos.
+| WP | Fase | Ventana | Entregables | Brechas |
+|---|---|---|---|---|
+| WP1 | Fase 1: Quick Win | 0–1 mes | Revocatoria Ley 1581; política DLP del Bot; liveness y OTP | G5, G6 |
+| WP2 | Fase 2: Corto Plazo | 1–3 meses | Adaptador B2G (vía rápida y Portal de Autogestión); agente con HITL | G1, G6 |
+| WP3 | Fase 3: Mediano Plazo | 3–6 meses | Bus CDC, Circuit Breaker y BCP/DRP automatizado | G2 |
+| WP4 | Fase 4: Largo Plazo | 6–12 meses | Dual-Stack IPv6, Gateway Activo-Activo y repositorio de AE | G3, G4 |
 
 ---
 
 ## 📎 Anexos
-
-Los siguientes entregables complementan y soportan técnicamente este informe:
-- **Diagrama TO-BE de Aplicaciones (C2 Extendido):** [`to-be-aplicaciones-final.drawio`](to-be-aplicaciones-final.drawio)
-- **Diagrama TO-BE de Tecnología (Mapa de Infraestructura Objetivo):** [`to-be-tecnologia-final.drawio`](to-be-tecnologia-final.drawio)
-- **Matriz de Brechas Completa (Gap Analysis en Excel):** [`matriz-brechas.xlsx`](matriz-brechas.xlsx)
-- **Referencias Bibliográficas y Patrones de Solución:** [`referencias.md`](referencias.md)
+- Diagrama TO-BE de Aplicaciones: [`to-be-aplicaciones-final.drawio`](./to-be-aplicaciones-final.drawio)
+- Diagrama TO-BE de Tecnología: [`to-be-tecnologia-final.drawio`](./to-be-tecnologia-final.drawio)
+- Vista de Implementación y Migración: [`vista-archimate-migracion.drawio`](./vista-archimate-migracion.drawio)
+- Matriz de brechas (Gap Analysis): [`matriz-brechas.xlsx`](./matriz-brechas.xlsx)
 
 ---
 
-_Este documento hace parte de la entrega oficial del Taller 7 (Opportunities & Solutions) del cursoArquitectura Empresarial — Universidad de La Sabana  ._
+**Homologación MRAE v3.0:** `MAE.LI.PA.05` (definición de AS-IS/TO-BE/Gap), `PA.07` (hoja de ruta en el PETI), `MGGTI.LI.ES.02` (PETI a 4 años con actualización anual), `ST.14` (IPv6), `GI.05` (publicación de servicios de intercambio) y `MGPTI.LI.CES.04` (PMO de TI, 1,14 %).
+
+_Este documento hace parte de la entrega del Taller 7 (Opportunities & Solutions) del curso AREM - Universidad de La Sabana._

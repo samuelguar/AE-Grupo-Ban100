@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
+  <diagram id="motivacion" name="Vista ArchiMate Motivación Ban100">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title_2" value="&lt;b&gt;Vista ArchiMate 3.2 — Capa de Motivación (Ban100 S.A.)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1400" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_mot" value="MOTIVACIÓN" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2F2FF;strokeColor=#6666CC;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontColor=#3A3A99;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="1440" height="640" as="geometry"/>
+        </mxCell>
+        <mxCell id="s1" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Presidencia Ejecutiva y Junta Directiva Ban100&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="40" y="70" width="340" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="drv" value="«Driver»&lt;br&gt;&lt;b&gt;Asimetría tecnológica de 850–880 pagadurías municipales (Grupos 3 a 5 MRAE)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="460" y="70" width="400" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="s2" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Superintendencia Financiera (SFC) / Inversionistas ESG&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="1000" y="70" width="340" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="g1" value="«Goal»&lt;br&gt;&lt;b&gt;Originación 100% digital de libranza (&amp;lt; 15 min)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="120" y="280" width="380" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="con" value="«Constraint»&lt;br&gt;&lt;b&gt;Operación B2G sin obligatoriedad SIGEP pero sujeta a plazos MRAE de contrapartes (40–47 meses)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="600" y="270" width="400" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="g2" value="«Goal»&lt;br&gt;&lt;b&gt;Mantener calificación AAA ESG en titularizaciones (hasta COP $1 billón)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="1080" y="280" width="340" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="req" value="«Requirement»&lt;br&gt;&lt;b&gt;Cumplir Circular Externa 008/2023 SFC y MSPI&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
+          <mxGeometry x="1080" y="480" width="340" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="m1" value="define" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;fontSize=10;exitX=0.6176;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.3421;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s1" target="g1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="m2" value="presiona" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;fontSize=10;exitX=0.0500;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.9474;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="drv" target="g1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="m3" value="limita plazos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;fontSize=10;exitX=0.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="con" target="g1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="m4" value="exige" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;fontSize=10;exitX=0.6176;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.3824;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2" target="g2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="m5" value="realiza" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;endSize=10;fontSize=10;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="req" target="g2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="m6" value="impone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endSize=10;fontSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2" target="req">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="170"/>
+              <mxPoint x="1470" y="580"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

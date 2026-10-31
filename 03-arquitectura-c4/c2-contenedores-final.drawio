@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
+  <diagram id="c2" name="C4 Nivel 2 — Contenedores Ban100">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title_7" value="&lt;b&gt;C4 Nivel 2 — Diagrama de Contenedores (AS-IS): Plataforma Digital de Libranza y Banca Inclusiva Ban100&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1600" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="bound" value="Plataforma Digital de Libranza y Banca Inclusiva Ban100 [Límite del sistema]" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;dashed=1;fillColor=#fafcff;strokeColor=#438dd5;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontSize=12;fontColor=#438dd5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="1160" height="1070" as="geometry"/>
+        </mxCell>
+        <mxCell id="pa" value="&lt;b&gt;Analista de Operaciones y Pagadurías&lt;/b&gt;&lt;br&gt;[Persona]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="320" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="pp" value="&lt;b&gt;Pensionado / Empleado Público&lt;/b&gt;&lt;br&gt;[Persona]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="80" width="320" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="pm" value="&lt;b&gt;Microempresario / Ahorrador CDT&lt;/b&gt;&lt;br&gt;[Persona]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="80" width="320" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="sv" value="&lt;b&gt;Sucursal Virtual Responsive&lt;/b&gt;&lt;br&gt;[SPA Web HTTPS]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="40" y="80" width="320" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="app" value="&lt;b&gt;App Móvil Ban100&lt;/b&gt;&lt;br&gt;[iOS / Android]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="420" y="80" width="320" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="bot" value="&lt;b&gt;Ban-I Bot Libranza&lt;/b&gt;&lt;br&gt;[Asistente Conversacional Omnicanal]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="800" y="80" width="320" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="waf" value="&lt;b&gt;Balanceador y WAF&lt;/b&gt;&lt;br&gt;[Infraestructura · Cluster HA Activo-Pasivo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6b6b6b;strokeColor=#444444;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="40" y="230" width="1080" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="gw" value="&lt;b&gt;API Gateway&lt;/b&gt;&lt;br&gt;[Kong / Reverse Proxy TLS 1.3]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="220" y="360" width="720" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="pay" value="&lt;b&gt;Módulo de Pagos en Línea y Actualización de Datos&lt;/b&gt;&lt;br&gt;[Servicio Web]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="40" y="500" width="320" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="mus" value="&lt;b&gt;μS Originación y Scoring&lt;/b&gt;&lt;br&gt;[Microservicio en Kubernetes]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="800" y="500" width="320" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="mdm" value="&lt;b&gt;Cliente 360 MDM&lt;/b&gt;&lt;br&gt;[Repositorio Maestro de Datos]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="240" y="670" width="520" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="core" value="&lt;b&gt;Core Bancario Transaccional&lt;/b&gt;&lt;br&gt;[Sistema Central On-Premise]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="800" y="810" width="320" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="dbm" value="&lt;b&gt;Base de Datos MDM&lt;/b&gt;&lt;br&gt;[Motor relacional]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#6b6b6b;strokeColor=#444444;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="240" y="840" width="520" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="dbc" value="&lt;b&gt;Base de Datos del Core&lt;/b&gt;&lt;br&gt;[Motor relacional On-Premise]" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#6b6b6b;strokeColor=#444444;fontColor=#ffffff;fontSize=11;" vertex="1" parent="bound">
+          <mxGeometry x="800" y="960" width="320" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="xp" value="&lt;b&gt;Pagadurías Públicas Nacionales y Territoriales&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="710" width="360" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="xt" value="&lt;b&gt;Truora (Biometría y Firma)&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="820" width="360" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="xc" value="&lt;b&gt;Centrales de Riesgo TransUnion/DataCrédito&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="930" width="360" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="xs" value="&lt;b&gt;SFC / RNVE-SIMEV&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="1050" width="360" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="xb" value="&lt;b&gt;Bre-B (Banco de la República)&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="1130" width="360" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_7" value="Leyenda: contenedor (azul #438dd5, tecnología entre corchetes) · infraestructura (gris #6b6b6b) · externo (gris #8a8a8a) · línea punteada = integración con tercero" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1330" width="1500" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="a1" value="consulta convenios y pagos [HTTPS]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="pa" target="sv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a2" value="solicita libranza [HTTPS]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="pp" target="app">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a3" value="consulta y solicita productos [HTTPS / WhatsApp]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="pm" target="bot">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b1" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.1481;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="sv" target="waf">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b2" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="app" target="waf">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b3" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.8519;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="bot" target="waf">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b4" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="waf" target="gw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b5" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.0972;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.7812;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw" target="pay">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b6" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.9028;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.2188;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="gw" target="mus">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b7" value="JDBC/TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.8125;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.1154;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="pay" target="mdm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b8" value="JDBC/TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.0000;exitY=0.4375;exitDx=0;exitDy=0;entryX=1.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="mus" target="mdm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="845"/>
+              <mxPoint x="840" y="960"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b9" value="SOAP/XML" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="mus" target="core">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b10" value="JDBC/TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="mdm" target="dbm">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b11" value="JDBC/TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="dbc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b12" value="SFTP/Batch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.1042;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.6875;entryDx=0;entryDy=0;" edge="1" parent="1" source="mus" target="xp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b13" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="mus" target="xt">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b14" value="SOAP/XML" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.8958;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3125;entryDx=0;entryDy=0;" edge="1" parent="1" source="mus" target="xc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b15" value="SFTP/Batch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.2273;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="xs">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="b16" value="HTTPS/JSON REST" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;dashed=1;exitX=1.0000;exitY=0.8636;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.2500;entryDx=0;entryDy=0;" edge="1" parent="1" source="core" target="xb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

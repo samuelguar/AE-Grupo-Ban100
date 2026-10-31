@@ -1,53 +1,54 @@
-# Resumen Ejecutivo — Ban100: Transformación de Arquitectura Empresarial
+# Resumen Ejecutivo — Arquitectura Empresarial Ban100
 
-> **Nota de Estado:** Este documento consolida la síntesis ejecutiva de la arquitectura empresarial para **Ban100**, integrando los resultados diagnósticos y las soluciones de los **Talleres 0 al 8** (Visión, Procesos BPMN, Información, Aplicaciones C4, Infraestructura, Ciberseguridad STRIDE, Normatividad, Soluciones TO-BE e Integración de Vistas). Sirve como base directa para la presentación final y plan de implementación del **Taller 9**.
+**Para:** Presidencia Ejecutiva y Junta Directiva de Ban100 S.A. (Bancien S.A.)
+**De:** Ban100 — Grupo de Arquitectura Empresarial (Santiago Barrera Rueda, Krish Purmessur Moros, Samuel Guerrero Arcos)
+**Fecha:** 31 de octubre de 2026
 
----
+## 1. El problema
 
-## 1. ¿Cuál es el problema del negocio?
+El 94 % de la colocación de Ban100 es libranza y el 98,3 % de ese segmento está en pensionados y empleados de gobierno, de modo que el tiempo para aprobar un crédito depende de la pagaduría más lenta. En 850 a 880 municipios (Grupos Territoriales 3, 4 y 5 del MRAE) las pagadurías tienen una madurez digital baja y plazos de adopción de 40 a 47 meses. A la vez, el enlace entre el servicio de originación y el sistema central On-Premise es síncrono, y existen seis brechas normativas parciales (datos personales, ciberseguridad, DLP, IPv6, interoperabilidad y gobierno de la arquitectura).
 
-**Ban100** (antiguamente Credifinanciera S.A.), entidad bancaria comercial supervisada por la Superintendencia Financiera de Colombia (SFC), lidera la inclusión financiera atendiendo a **más de 250.000 clientes en más de 900 municipios**, con especial foco en pensionados, empleados públicos y microempresarios. A pesar de su posicionamiento, la entidad enfrenta cuatro dolores estructurales:
+## 2. La propuesta
 
-1. **Ciclos lentos de colocación de crédito:** La originación de créditos de libranza depende de procesos manuales, cotejo físico de pagarés y validaciones telefónicas o por correo con pagadurías, demorando los desembolsos entre **3 y 5 días hábiles**.
-2. **Fragmentación de clientes y productos:** La información vive dispersa en silos departamentales, impidiendo contar con una visión unificada 360° del cliente y dificultando la evaluación de cupos en tiempo real.
-3. **Rigidez tecnológica e inmediatez comprometida:** El sistema bancario principal funciona con procesos por lotes nocturnos (*batch* de 12 horas de desfase), lo que choca frontalmente con la exigencia regulatoria del nuevo sistema **Bre-B del Banco de la República** (pagos inmediatos interoperables 24/7/365 con latencia < 3 segundos).
-4. **Exposición a riesgos de ciberseguridad y fraude:** La atención a una población objetivo vulnerable (adultos mayores pensionados) requiere blindar los canales digitales contra suplantaciones de identidad (deepfakes, ingeniería social) y cumplir rigurosamente con la **Circular Externa 008 de 2023 de la SFC** y la Ley 1581 de protección de datos personales.
+| Solución | Qué cambia para el negocio | Brecha que cierra |
+|---|---|---|
+| **Integración B2G de dos velocidades** | Conexión estándar (X-Road/REST) con pagadurías avanzadas y canal asíncrono con portal de autogestión para las demás | G1 |
+| **Desacoplamiento del sistema central** | La originación sigue disponible durante mantenimientos del Core; sincronización en menos de 500 ms y recuperación automatizada | G2, G3 |
+| **Asistente Ban-I Bot seguro y gobierno de datos** | Atención digital con filtro de datos personales, aprobación humana de acciones críticas y revocatoria automática (Ley 1581) | G5, G6 |
+| **Repositorio de arquitectura con métricas** | Madurez MAE de Nivel 3 hacia Nivel 4–5 | G4 |
 
----
+## 3. Beneficios esperados
 
-## 2. ¿Qué proponemos?
+| Beneficio | Indicador | Línea base → meta |
+|---|---|---|
+| Originación inmediata | Tiempo de aprobación de libranza (`tiempo_aprobacion_min`) | 3–5 días → **< 15 minutos** |
+| Cobertura | Municipios con originación digital | 965 (2024) → 1.000+ (2025, 90 % de 1.101) sostenidos |
+| Capital de confianza | Calificación de titularizaciones | Mantener **AAA con certificación ESG** (programas hasta COP $1 billón) |
+| Cumplimiento | Criterios del checklist normativo | 9 de 15 "Cumple" → 15 de 15 |
+| Madurez de arquitectura | Instrumento MRAE de 300 ítems | MAE Nivel 3 → 4; MGGTI Nivel 4; MGPTI Nivel 4 |
 
-Bajo los lineamientos del **Marco de Referencia de Arquitectura Empresarial (MRAE v3.0 MinTIC)** y el estándar **TOGAF ADM**, se estructuró una **Arquitectura Empresarial Objetivo (TO-BE)** que moderniza integralmente la operación:
+## 4. Cómo y cuándo (cuatro fases)
 
-- **Desmaterialización y automatización de la libranza:** Integración con **Truora** para biometría facial pasiva certificada (iBeta Nivel 2) y firma electrónica respaldada en la **Ley 527 de 1999**, con depósito de pagarés desmaterializados en **DECEVAL**. Esto habilita la titularización de cartera con aliados como BTG Pactual por más de $500.000 millones COP.
-- **Riel de pagos inmediatos Bre-B 24/7 de alta resiliencia:** Adopción de mensajería financiera internacional **ISO 20022 (`pacs.008`)**, con despliegue activo-activo multi-región (Bogotá–Medellín) que garantiza continuidad operativa con **RTO < 1 segundo y RPO = 0**.
-- **Sincronización en tiempo real (Change Data Capture - CDC):** Reemplazo de los lotes nocturnos por captura continua de datos en menos de 500 milisegundos mediante Debezium y Apache Kafka, alimentando el **Golden Record del Master Data Management (MDM)** para saldos exactos en todo momento.
-- **Seguridad Zero Trust y cumplimiento normativo:** Autenticación reforzada con servidor **FIDO2 / WebAuthn**, enmascaramiento dinámico de saldos pensionales (DDM), directivas web estrictas (CSP), pistas de auditoría inmutables en almacenamiento **WORM SHA-256** y un **Módulo de Derechos ARCO** para que los clientes autogestionen su privacidad.
+| Fase | Ventana | Entregables | Brechas |
+|---|---|---|---|
+| 1 · Quick Win | 0–1 mes | Revocatoria Ley 1581, política DLP del Bot, liveness y OTP | G5, G6 |
+| 2 · Corto Plazo | 1–3 meses | Adaptador B2G (vía rápida y Portal de Autogestión) y agente con aprobación humana | G1, G6 |
+| 3 · Mediano Plazo | 3–6 meses | Bus de eventos CDC, Circuit Breaker y BCP/DRP automatizado | G2 |
+| 4 · Largo Plazo | 6–12 meses | Borde Dual-Stack IPv6, API Gateway Activo-Activo y repositorio de AE | G3, G4 |
 
----
+## 5. Relación con el MRAE v3.0 (MinTIC)
 
-## 3. Beneficios Esperados y Metas Cuantitativas
+Ban100 **no es sujeto obligado directo** del Decreto 767 de 2022 ni reporta en el FURAG, pero converge con el MRAE por tres vectores: pertenece al grupo de interés del sector privado de la Política de Gobierno Digital, depende de convenios en SECOP II con entidades territoriales (por ejemplo, los contratos `CO1.PCCNTR.6460767` y `CO1.PCCNTR.4097470` con la Gobernación del Caquetá) cuyas contrapartes sí tienen plazos MRAE, y puede usar sus 106 lineamientos (29 MAE, 63 MGGTI y 14 MGPTI) como marco homologable ante la SFC.
 
-| Objetivo de Negocio | Beneficio Arquitectónico Clave | Métrica de Medición | Meta Cuantitativa |
-|---|---|---|:---:|
-| **Inclusión y colocación ágil** | Desembolso de libranzas 100% digital en canales App y WhatsApp | Tiempo de ciclo (*Time to Money*) | **De 3-5 días a &lt; 15 minutos** (-70%) |
-| **Interoperabilidad Bre-B** | Procesamiento de transferencias inmediatas por llaves y códigos QR | Disponibilidad y latencia transaccional | **SLA 99.99% y latencia &lt; 3 segundos** |
-| **Eficiencia operativa** | Autogestión web y móvil de constitución y renovación de CDTs | Costo operativo por renovación | **Reducción del 90% en costos** |
-| **Resiliencia ante desastres** | Conmutación automática ante caída de la región principal Bogotá | Tiempo de recuperación (*RTO*) | **Failover &lt; 30s perimetral / &lt; 1s en Bre-B** |
-| **Cumplimiento y ciberseguridad** | Blindaje contra fraudes y conformidad Circular 008 SFC y SIC | Hallazgos en auditorías regulatorias | **100% de conformidad / 0 sanciones** |
+## 6. Riesgos principales de la implementación
 
----
+- La adopción de las pagadurías no depende de Ban100: la vía asíncrona es la que garantiza avance.
+- El bus de eventos introduce consistencia eventual y exige pruebas periódicas de recuperación.
+- El asistente depende de un proveedor externo de modelos de lenguaje; requiere monitoreo del SOC 24/7 y control de costos.
 
-## 4. ¿Dónde profundizar?
+## 7. Dónde profundizar
 
-Todo el sustento técnico, modelos en Draw.io, matrices de trazabilidad e informes de cumplimiento se encuentran organizados en la tabla de contenidos principal del [**`README.md`**](./README.md).
-
-Para revisar los análisis específicos más relevantes para la toma de decisiones:
-- **Solución Objetivo y Matriz de Brechas:** [`07-opportunities-solutions/`](./07-opportunities-solutions/)
-- **Tablero Integrado de Vistas Multicapa:** [`08-integracion-vistas/`](./08-integracion-vistas/)
-- **Auditoría de Ciberseguridad:** [`05-seguridad-stride/`](./05-seguridad-stride/)
-- **Diagnóstico Normativo y Legal:** [`06-normatividad/`](./06-normatividad/)
-
----
-
-_Documento elaborado por el Equipo de Arquitectura Empresarial Ban100 — Universidad de La Sabana (2026)._
+- [README del repositorio](README.md)
+- [Mejora de arquitectura y matriz de brechas](07-opportunities-solutions/mejora-arquitectura.md)
+- [Tablero integrado y verificación de 0 huérfanos](08-integracion-vistas/informe.md)
+- [Checklist normativo](06-normatividad/informe.md)

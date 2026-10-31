@@ -1,92 +1,123 @@
-# Ficha de Caracterización del Cliente: Ban100
+# 📄 Ficha de Caracterización del Cliente
 
-**Nombre del Equipo:** Equipo de Arquitectura Empresarial Ban100  
-**Integrantes:**
-- Santiago Barrera Rueda
-- Krish Purmessur Moros
-- Samuel Guerrero Arcos
+**Nombre del Equipo:** Ban100 — Grupo de Arquitectura Empresarial
+**Fecha:** 31 de octubre de 2026
+**Nombre del Cliente:** Dato reservado / No disponible en fuentes públicas verificadas (Canal institucional: Relación con Inversionistas y Defensoría del Consumidor Financiero Ban100 S.A.)
+**Rol/Organización:** Presidencia Ejecutiva — Ban100 S.A. (Bancien S.A.)
 
-**Fecha:** 21 de Agosto de 2026  
-**Nombre del Cliente:** Héctor Chaves (Presidencia Ejecutiva) / Representación Institucional  
-**Rol/Organización:** Presidencia Ejecutiva — Ban100 (Finanza Inversiones S.A.S.)
-
----
+**Integrantes:** Santiago Barrera Rueda · Krish Purmessur Moros · Samuel Guerrero Arcos
+**Curso:** Arquitectura Empresarial (AREM) — Universidad de La Sabana, Facultad de Ingeniería. Docente: Prof. Ing. César Augusto Vega Fernández.
 
 ## I. Información General del Negocio
-
-- **Nombre de la empresa o entidad:** Ban100 (Anteriormente Banco Credifinanciera S.A. / C.A. Credifinanciera).
-- **Sector económico:** Sector Financiero y Bancario Colombiano — Establecimiento Bancario Comercial enfocado en Inclusión Financiera y Cartera de Consumo/Microcrédito.
-- **Número de empleados / usuarios / clientes:** 
-  - Más de 250.000 clientes activos en el territorio nacional.
-  - Cobertura presencial y digital en más de 900 municipios de Colombia.
-  - Estructura patrimonial robusta con calificaciones crediticias de grado de inversión otorgadas por Fitch Ratings ('AA-(col)' de largo plazo y 'F1+(col)' de corto plazo) y BRC Ratings - S&P Global ('AA-' y 'BRC 1+').
-- **Ubicación principal (física o digital):** 
-  - Sede Principal: Bogotá D.C., con presencia de sedes regionales y oficinas comerciales en nodos urbanos e intermedios (Cali, Medellín, Barranquilla, Bucaramanga, etc.).
-  - Plataforma Digital: Portal transaccional web, Aplicación Móvil Ban100 y Canal Conversacional WhatsApp (Bot transaccional integrado).
-- **Tecnologías principales actuales:**
-  - **Core Bancario Tradicional:** Sistema transaccional monolítico centralizado para la administración de depósitos, cartera y captaciones.
-  - **Plataformas de Identidad y Firma:** Integración API con **Truora** (Reconocimiento facial, biometría, validación OCR de documento de identidad y firma electrónica desmaterializada bajo Ley 527 de 1999).
-  - **Canales de Contacto:** WhatsApp Business API integrado para trámites conversacionales de captación y consulta.
-  - **Infraestructura de Cómputo:** Esquema híbrido (Centro de Datos principal On-Premise con servicios específicos aprovisionados en nube pública).
-  - **Custodia y Titularización:** Conexión con Deceval para custodia de pagarés y plataformas de titularización con BTG Pactual y la Sociedad Titularizadora.
-
----
+- Nombre de la empresa o entidad: **Ban100 S.A.** (registrada de forma indistinta como **Bancien S.A. y/o Ban100 S.A.**). NIT `900.200.960-9`; Matrícula Mercantil `01775679` (Cámara de Comercio de Bogotá).
+- Sector económico: servicios financieros — establecimiento bancario comercial (CIIU `6412`, bancos comerciales), vigilado por la Superintendencia Financiera de Colombia (SFC) y emisor de valores en el RNVE / SIMEV.
+- Número de empleados / usuarios / clientes: **399 colaboradores** (55,3 % mujeres) y **202.235 clientes de crédito** activos (49 % mujeres y 51 % hombres; 85 % en estratos 1, 2 y 3).
+- Ubicación principal (física o digital): Bogotá D.C. (domicilio principal); **10 oficinas físicas** para captación y canales digitales de punta a punta; cobertura de **965 municipios en 2024** y **más de 1.000 municipios en 2025** (90 % de los 1.101 municipios de Colombia).
+- Tecnologías principales actuales:
+  - Canales digitales: App móvil, Sucursal Virtual (web) y WhatsApp / Ban-I Bot Libranza, con biometría facial y firma electrónica en línea integradas con Truora S.A.S.
+  - Plataforma de servicios en nube pública (Kubernetes): API Gateway y microservicio de Originación y Scoring, con Cliente 360 (MDM).
+  - Core Bancario transaccional en centro de datos On-Premise y SOC 24/7 de monitoreo y ciberseguridad.
 
 ## II. Objetivos Estratégicos
+1. **Inclusión financiera:** sostener y ampliar la cobertura en 1.000+ municipios (55 % de la cartera colocada en ciudades y municipios con menos de 500.000 habitantes) para la base de la pirámide y la *Silver Economy* (pensionados).
+2. **Capital de confianza:** mantener la calificación **AAA con certificación ESG** de las titularizaciones de cartera de libranza (emisiones de COP $90.000 millones, COP $250.000 millones y COP $48.000 millones; dos programas aprobados por la SFC hasta por COP $1 billón).
+3. **Originación inmediata:** reducir el ciclo de originación de libranza de **3–5 días a menos de 15 minutos**, con el 100 % de solicitudes y aprobaciones digitales.
+4. **Cumplimiento y resiliencia:** cumplir la Circular Externa 008 de 2023 de la SFC, el MSPI, la Ley 1581 de 2012 y la Ley 527 de 1999, y converger de forma voluntaria con el MRAE v3.0 (Decreto 767 de 2022).
 
-1. **Escalar la Inclusión Financiera Multicanal:** Expandir la colocación de productos de crédito de libranza y microcrédito en más de 900 municipios, logrando una originación 100% digital que reduzca las barreras geográficas para pensionados y microempresarios.
-2. **Interoperabilidad y Habilitación de Pagos Inmediatos 24/7:** Integrarse de manera nativa al Sistema de Pagos Inmediatos Interoperables (**Bre-B**) del Banco de la República, soportando transferencias en tiempo real mediante "Llaves" (celular, cédula, correo, código alfanumérico) y códigos QR bajo estándar ISO 20022.
-3. **Optimización de Eficiencia Operativa y Automatización:** Reducir los costos y tiempos de ciclo en captaciones (CDT) y colocaciones (Libranzas), automatizando el 100% de la consulta de convenios con pagadurías y minimizando la intervención manual.
-4. **Cumplimiento Regulatorio y Resiliencia en Ciberseguridad:** Adecuar la infraestructura tecnológica y los procesos al 100% de las directrices de la **Circular Externa 008 de 2023 de la Superintendencia Financiera de Colombia (SFC)** y adoptar una arquitectura Zero Trust con alta disponibilidad (99.99%).
+## III. Problemas o necesidades identificadas
+> Descritos como síntomas del negocio, no como soluciones técnicas ya decididas.
 
----
+- Problema #1: **Retraso de 3 a 5 días** en la validación de cupos y la visación de libranzas con pagadurías territoriales de baja madurez digital (850–880 municipios en los Grupos Territoriales 3, 4 y 5 del MRAE, con puntajes de arquitectura entre 40,5 y 56,3).
+- Problema #2: **Concentración del negocio:** el 94 % de la colocación total es libranza y el 98,3 % de ese segmento se coloca entre pensionados y empleados de gobierno; cualquier demora o interrupción en una pagaduría afecta casi toda la originación.
+- Problema #3: **Riesgo de suplantación y de incumplimiento** en una base de clientes con perfil vulnerable (pensionados, estratos 1–3) que contrata sin oficina: la identidad y el consentimiento deben quedar probados ante la SFC y la SIC.
+- Problema #4: **Gobierno de arquitectura incompleto:** el diagnóstico de madurez MAE está en Nivel 3 (Gestionado) en transición a Nivel 4; no existe un repositorio unificado de AE bajo metamodelo MRAE ni métricas automatizadas.
 
-## III. Problemas o Necesidades Identificadas
+## IV. Procesos clave del negocio
+- Originación de crédito de libranza 100 % digital y visación B2G con pagadurías (proceso modelado en el Taller 1).
+- Recaudo mediante descuento directo de nómina o mesada pensional bajo convenios SECOP II (por ejemplo, contratos `CO1.PCCNTR.6460767` y `CO1.PCCNTR.4097470` con la Gobernación del Caquetá, RUP `719325524`).
+- Colocación de microcrédito (COP $500.000 a COP $100 millones; ticket promedio de COP $6 millones) y crédito de consumo.
+- Captación mediante cuentas de ahorro y CDT (10 oficinas y canales digitales).
+- Titularización de cartera de libranza con calificación AAA ESG.
 
-*Los problemas se describen a continuación como síntomas operativos y de negocio experimentados por la entidad y sus clientes:*
-
-- **Problema #1: Tiempos de respuesta lentos y fricción en la originación de libranzas.**
-  - *Síntoma:* La verificación manual de convenios con pagadurías institucionales y la recolección física de soportes retrasan el desembolso de los créditos durante varios días, generando insatisfacción en el cliente pensionado y pérdida de oportunidades comerciales frente a neobancos.
-- **Problema #2: Fragmentación de la información del cliente y procesamiento por lotes (Batch).**
-  - *Síntoma:* La existencia de silos de datos independientes por producto (libranza, CDT, cuentas de ahorro) impide tener una visión unificada 360° del cliente en tiempo real. La liquidación y actualización de saldos depende de procesos nocturnos por lotes, generando latencia operativa.
-- **Problema #3: Rigidez del Core Monolítico e Integraciones Punto a Punto.**
-  - *Síntoma:* La interconexión directa y no estandarizada entre aplicaciones dificulta la rápida integración con nuevos ecosistemas financieros (como Bre-B o banca abierta), elevando los costos de mantenimiento de TI y limitando la elasticidad ante picos de demanda.
-- **Problema #4: Vulnerabilidad ante ventanas de mantenimiento y requerimientos reforzados de seguridad.**
-  - *Síntoma:* La dependencia de infraestructura física on-premise obliga a programar ventanas de indisponibilidad técnica. Adicionalmente, el esquema de monitoreo perimetral tradicional requiere modernizarse frente a las exigencias de autenticación adaptativa y analítica antifraude continua exigidas por la SFC.
-
----
-
-## IV. Procesos Clave del Negocio
-
-1. **Originación y Desembolso Digital de Crédito de Libranza:** Flujo integral que comprende captura de solicitud, validación biométrica con Truora, verificación automática de capacidad y cupo en pagaduría, emisión/firma de pagaré desmaterializado y desembolso inmediato. *(Proceso seleccionado para modelado BPMN en Taller 1)*.
-2. **Evaluación y Colocación de Microcrédito Productivo:** Proceso mixto (remoto/asistido) para evaluación de riesgo crediticio y financiamiento a microempresarios e independientes.
-3. **Apertura y Renovación Digital de Certificados de Depósito a Término (CDT):** Proceso desmaterializado vía web, app o WhatsApp para captación de recursos e inversión.
-4. **Procesamiento de Transferencias y Pagos Inmediatos Interoperables (Bre-B):** Registro de Llaves, enrutamiento, liquidación y notificación de transferencias 24/7 bajo ISO 20022.
-5. **Gestión de Convenios con Pagadurías Institucionales:** Administración y conciliación de libranzas con entidades públicas, fondos de pensiones y empresas privadas.
-
----
-
-## V. Expectativas Frente a la Solución
-
-- Disponer de un marco estructurado de Arquitectura Empresarial (MRAE v3.0 MinTIC) que sincronice la estrategia de negocio con las inversiones en tecnología.
-- Lograr una arquitectura desacoplada basada en Microservicios y APIs RESTful que facilite la conexión con aliados estratégicos y el Banco de la República.
-- Garantizar la continuidad operativa 24/7/365 con un SLA de disponibilidad del 99.99% sin ventanas de mantenimiento que interrumpan el servicio.
-- Asegurar la trazabilidad e inmutabilidad de los registros transaccionales para auditorías de la Superintendencia Financiera.
+## V. Expectativas frente a la solución
+- Identificar qué brechas cerrar primero para originar libranza en menos de 15 minutos sin depender de la madurez digital de cada pagaduría.
+- Recibir una arquitectura que permita crecer en municipios y productos sin rehacer el Core Bancario.
+- Contar con un diagnóstico de riesgos y de cumplimiento (SFC, SIC, MRAE) trazable hasta un plan por fases.
 
 **Restricciones:**
-- **Regulatoria Obligatoria:** Cumplimiento estricto de la Circular Externa 008 de 2023 de la SFC, Ley 527 de 1999 (validez de firma electrónica y mensajes de datos), Ley 1581 de 2012 (Habeas Data) y reglamentación Bre-B del Banco de la República.
-- **Operativa:** El proceso de transformación debe convivir con la operación diaria de los 250.000 clientes actuales sin suspender los canales transaccionales.
-- **Topológica:** Las soluciones deben desplegarse en un esquema de Nube Híbrida Multi-Región que asegure soberanía de datos y contingencia activa-activa.
+- Ban100 **no es sujeto obligado directo** del MRAE v3.0 ni reporta el subíndice de Arquitectura en el FURAG; la operación B2G está sujeta a los plazos MRAE de sus contrapartes (40–47 meses en los Grupos Territoriales 3 a 5).
+- Ventanas de mantenimiento programadas de máximo 30 minutos nocturnos (por ejemplo, domingos de 10:00 p. m. a 10:30 p. m.).
+- Toda decisión debe respetar la supervisión de la SFC (Circular Básica Contable y Financiera 100 de 1995, Circular Externa 008 de 2023, SARLAFT) y el reconocimiento pasivo autorizado (sin pruebas activas sobre sistemas reales).
+
+## VI. Persona de contacto
+- Nombre del contacto: Dato reservado / No disponible en fuentes públicas verificadas (Canal institucional: Relación con Inversionistas y Defensoría del Consumidor Financiero Ban100 S.A.)
+- Correo electrónico / teléfono: Dato reservado / No disponible en fuentes públicas verificadas (Canal institucional: Relación con Inversionistas y Defensoría del Consumidor Financiero Ban100 S.A.)
+- Rol o vínculo con la solución: patrocinio de la Presidencia Ejecutiva sobre los objetivos estratégicos (stakeholder de la capa de Motivación).
 
 ---
 
-## VI. Persona de Contacto
+## Anexo A — Caracterización societaria, financiera y regulatoria
 
-- **Nombre del contacto:** Comité de Transformación Digital y Arquitectura Empresarial Ban100 (Patrocinador: Presidencia Ejecutiva / Vicepresidencia de TI y Operaciones).
-- **Correo electrónico / teléfono:** contacto.arquitectura@ban100.com.co / PBX (601) 307-8060.
-- **Rol o vínculo con la solución:** Dirección Estratégica y Gobierno de TI para la implementación de la hoja de ruta de transformación digital institucional.
+### A.1 Evolución histórica y naturaleza jurídica
+| Hito | Fecha | Detalle |
+|---|---|---|
+| Constitución | 8 de febrero de 2008 (inscrita el 19 de febrero de 2008) | **Banco ProCredit Colombia S.A.**, filial de *ProCredit Holding AG & Co KGaA* |
+| Fusión inversa | 3 de enero de 2020 | Adquisición y fusión con **Credifinanciera S.A. Compañía de Financiamiento**; nace **Banco Credifinanciera S.A.** |
+| Cambio de identidad | 2 de febrero de 2023 | Razón social **Ban100 S.A.** (reformas estatutarias inscritas en mayo y junio de 2023) |
+
+Naturaleza jurídica: sociedad anónima de derecho privado; establecimiento bancario comercial vigilado por la SFC; emisor de valores en el RNVE / SIMEV. Revisoría Fiscal externa: **EY Audit S.A.S.**
+
+### A.2 Composición accionaria (100 % privada)
+| Accionista | Participación | Acciones |
+|---|---:|---:|
+| Finanza Inversiones S.A.S. | **94,50 %** | 168.152.187 |
+| Inversiones y Consultoría Tributaria S.A.S. | 3,50 % | 6.226.740 |
+| Alciento S.A.S. / Direcciones de Negocio S.A.S. | 1,00 % | 1.779.384 |
+| Asesorías Financieras y Corporativas | 1,00 % | 1.779.384 |
+| Asistencia de Comercio S.A.S. | 0,00 % | 1.106 |
+
+Respaldo internacional de fondos de capital privado en mercados emergentes como *Gramercy* (activos bajo administración entre USD 5.300 millones y USD 5.800 millones) y fondeadores de impacto como *ResponsAbility Investments AG*.
+
+### A.3 Magnitud patrimonial, financiera y mercado de capitales
+| Indicador | Valor |
+|---|---|
+| Patrimonio base de liquidación SFC | COP $227.768 millones |
+| Activos registrados | COP $2,82 billones |
+| Utilidad antes de impuestos (cierre 2024) | COP $10.448 millones |
+| Calificación de riesgo emisor | Largo plazo **AA-** · Corto plazo **BRC1+ / F1+** |
+| Titularizaciones de libranza (Sustainable Fitch) | **AAA con certificación ESG (Sostenible)**: COP $90.000 millones, COP $250.000 millones y COP $48.000 millones; dos programas aprobados por la SFC hasta COP $1 billón |
+
+### A.4 Huella comercial y portafolio
+| Indicador | Valor |
+|---|---|
+| Clientes de crédito | 202.235 (85 % estratos 1–3; 49 % mujeres / 51 % hombres) |
+| Cartera en municipios < 500.000 habitantes | 55 % |
+| Cobertura municipal | 77 % (2022) → 965 municipios (2024) → más de 1.000 (2025) = 90 % de 1.101 |
+| Peso de la libranza | 94 % de la colocación; 98,3 % de la libranza en pensionados y empleados de gobierno |
+| Créditos originados digitalmente (2024) | 95 % (100 % en solicitudes y aprobaciones de libranza) |
+| Reducción del uso de papel (2024) | 29 % (`PRI_09`, `MGGTI.LI.GI.03`) |
+| Capacitación (2024) | 94,7 % de cobertura (+8,4 pp vs. 2023); 5.853 horas; 91,3 % en la escuela de liderazgo; 82,2 % en categoría "sobresaliente" |
+
+Cinco líneas de producto (`MAE.LI.AIN.04`): Crédito de Libranza, Microcrédito, Crédito de Consumo, Cuentas de Ahorro y CDT.
+
+### A.5 Estatus regulatorio frente al Decreto 767 de 2022 y al MRAE v3.0
+Al contrastar el directorio SIGEP de la matriz oficial de plazos del MinTIC (`articles-204807_recurso_5.xlsx`) con las entidades vigiladas por la SFC, **Ban100 S.A. no es sujeto obligado directo**: no integra la Administración Pública (art. 39 de la Ley 489 de 1998) ni cumple funciones administrativas delegadas (art. 2.2.9.1.1.2 del Decreto 1078 de 2015, subrogado por el Decreto 767 del 16 de mayo de 2022). En contraste, el *Banco Agrario de Colombia S.A.* (SIGEP 6193), la *Financiera de Desarrollo Nacional* (SIGEP 1321) y *Fiducoldex S.A.* (SIGEP 6389) son sujetos obligados del Clúster 3 del Orden Nacional (10–12 meses al 40 %, 17–20 al 70 % y 23–27 al 100 %).
+
+Los **tres vectores de convergencia** con el MRAE v3.0:
+1. **Grupo de Interés y PNID:** el parágrafo del art. 2.2.9.1.2.1 del Decreto 1078 de 2015 incluye al sector privado como Grupo de Interés de la Política de Gobierno Digital; `PRI_04` y el Plan Nacional de Infraestructura de Datos promueven la interoperabilidad público-privada.
+2. **Dependencia operativa B2G por libranza:** convenios en SECOP II con entidades territoriales (contratos `CO1.PCCNTR.6460767`, periodo 2024–2026, y `CO1.PCCNTR.4097470`, periodo 2022–2024, con la Gobernación del Caquetá, RUP `719325524`).
+3. **Homologación técnica frente a la SFC:** el MRAE integra TOGAF, CMMI, GAO, Gartner ITScore, PMI OPM3, ITIL e ISO/IEC 27001 (vía MSPI), útiles como marco de auditoría para la Circular Básica Contable y Financiera 100 de 1995, la Circular Externa 008 de 2023, SARLAFT y riesgo operativo.
+
+### A.6 Estructura del MRAE v3.0 y diagnóstico de madurez
+| Pilar | Lineamientos | Peso del esfuerzo | Horas (Opt. / Pes.) |
+|---|---:|---:|---|
+| MAE — Modelo de Arquitectura Empresarial | 29 | 34,03 % | 772 h / 1.953,84 h |
+| MGGTI — Modelo de Gestión y Gobierno de TI | 63 | 58,10 % | 1.320 h / 3.332,20 h |
+| MGPTI — Modelo de Gestión de Proyectos de TI | 14 | 7,87 % | 179 h / 448,0 h |
+| **Total** | **106** | 100 % | 2.271 h / 5.734 h |
+
+Instrumento de madurez (`articles-204807_recurso_4.xlsx`, **300 ítems**): MAE 60 elementos (GAO + CMMI) → **Nivel 3 (Gestionado / Etapa 4 GAO) en transición a Nivel 4**; MGGTI 202 criterios sobre 70 elementos (Gartner ITScore + CMMI) → **Nivel 4 (Diferenciador / Manejado)** con atributos en Nivel 5; MGPTI 38 elementos (PMI OPM3 + CMMI) → **Nivel 4 (Gestionado / Manejado)**.
 
 ---
 
 _Este documento hace parte de la entrega del Taller 0 del curso AREM (Arquitectura Empresarial) - Universidad de La Sabana._
-

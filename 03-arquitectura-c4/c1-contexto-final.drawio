@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
+  <diagram id="c1" name="C4 Nivel 1 — Contexto Plataforma Digital Ban100">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title_6" value="&lt;b&gt;C4 Nivel 1 — Diagrama de Contexto: Plataforma Digital de Libranza y Banca Inclusiva Ban100&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1500" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="sys" value="&lt;b&gt;Plataforma Digital de Libranza y Banca Inclusiva Ban100&lt;/b&gt;&lt;br&gt;[Sistema de software]&lt;br&gt;Originación 100 % digital de libranza, microcrédito, ahorro y CDT; recaudo B2G" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#08427b;strokeColor=#052e56;fontColor=#ffffff;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="1540" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1" value="&lt;b&gt;Analista de Operaciones y Pagadurías&lt;/b&gt;&lt;br&gt;[Persona]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="70" width="300" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2" value="&lt;b&gt;Pensionado / Empleado Público&lt;/b&gt;&lt;br&gt;[Persona]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="70" width="300" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3" value="&lt;b&gt;Microempresario / Ahorrador CDT&lt;/b&gt;&lt;br&gt;[Persona]" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="70" width="300" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="x1" value="&lt;b&gt;Pagadurías Públicas Nacionales y Territoriales&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="40" y="650" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="x2" value="&lt;b&gt;Truora (Biometría y Firma)&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="355" y="650" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="x3" value="&lt;b&gt;Centrales de Riesgo TransUnion/DataCrédito&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="670" y="650" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="x4" value="&lt;b&gt;SFC / RNVE-SIMEV&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="985" y="650" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="x5" value="&lt;b&gt;Bre-B (Banco de la República)&lt;/b&gt;&lt;br&gt;[Sistema externo]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8a8a8a;strokeColor=#5c5c5c;fontColor=#ffffff;fontSize=11;shape=process;size=0.03;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="650" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend_6" value="Leyenda: persona (azul) · sistema en alcance (azul oscuro, caja única) · sistema externo (gris #8a8a8a)" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="40" y="800" width="1200" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_p1" value="concilia convenios y descuentos de nómina" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.1753;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="p1" target="sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_p2" value="solicita libranza (selfie, documento, firma)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.4935;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="p2" target="sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_p3" value="solicita microcrédito y abre CDT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.8117;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="p3" target="sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_x1" value="visa cupo y aplica descuento de nómina/mesada" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.0909;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="sys" target="x1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_x2" value="valida identidad y firma electrónica" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.2955;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="sys" target="x2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_x3" value="entrega historial crediticio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="sys" target="x3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_x4" value="recibe reportes regulatorios y emisiones" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.7045;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="sys" target="x4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_x5" value="liquida pagos inmediatos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;endArrow=open;endSize=10;exitX=0.9091;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="sys" target="x5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
