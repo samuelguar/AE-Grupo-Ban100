@@ -1,0 +1,210 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="paso2" name="Paso 2 — Capas sueltas">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1120" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="tit" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontSize=16;fontStyle=1;fontColor=#333333;" value="FarmApp — Tablero de Integración de Vistas · Paso 2: elementos ubicados por capa" vertex="1">
+          <mxGeometry x="40" y="8" width="1520" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontSize=12;fontColor=#666666;" value="Inventario completo de las 5 vistas. Todavía sin conectar, según la metodología de la guía." vertex="1">
+          <mxGeometry x="40" y="32" width="1520" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#FFFFEE;strokeColor=#CCCC00;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="1. Vista de Negocio" vertex="1">
+          <mxGeometry x="40" y="60" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="2. Vista de Aplicaciones" vertex="1">
+          <mxGeometry x="40" y="250" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="3. Vista de Información" vertex="1">
+          <mxGeometry x="40" y="440" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2FFF2;strokeColor=#339933;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="4. Vista de Infraestructura" vertex="1">
+          <mxGeometry x="40" y="630" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2F2FF;strokeColor=#6666CC;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="5. Vista de Seguridad" vertex="1">
+          <mxGeometry x="40" y="820" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="B1" parent="band_1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=13;" value="«Business Process»&lt;br&gt;&lt;b&gt;Compra Online&lt;/b&gt;" vertex="1">
+          <mxGeometry x="180" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="B2" parent="band_1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=13;" value="«Business Process»&lt;br&gt;&lt;b&gt;Prescripción&lt;/b&gt;" vertex="1">
+          <mxGeometry x="620" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="B3" parent="band_1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=13;" value="«Business Process»&lt;br&gt;&lt;b&gt;Despacho&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1020" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A1" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Application Component»&lt;br&gt;&lt;b&gt;App Móvil&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A2" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Application Component»&lt;br&gt;&lt;b&gt;Plataforma E-commerce&lt;/b&gt;" vertex="1">
+          <mxGeometry x="400" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A3" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Application Component»&lt;br&gt;&lt;b&gt;Sistema POS&lt;/b&gt;" vertex="1">
+          <mxGeometry x="740" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A4" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Application Component»&lt;br&gt;&lt;b&gt;CRM&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1080" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I1" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Producto&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I2" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Cliente&lt;/b&gt;" vertex="1">
+          <mxGeometry x="400" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I3" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Pedido&lt;/b&gt;" vertex="1">
+          <mxGeometry x="740" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I4" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Descuento&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1080" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="T1" parent="band_4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=13;" value="«Node»&lt;br&gt;&lt;b&gt;Servidores Regionales&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="T2" parent="band_4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=13;" value="«Node»&lt;br&gt;&lt;b&gt;Nube Híbrida&lt;/b&gt;" vertex="1">
+          <mxGeometry x="500" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="T3" parent="band_4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=13;" value="«Node»&lt;br&gt;&lt;b&gt;Base de Datos Replicada&lt;/b&gt;" vertex="1">
+          <mxGeometry x="940" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="S1" parent="band_5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=13;" value="«Requirement»&lt;br&gt;&lt;b&gt;Control de acceso por rol&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="S2" parent="band_5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=13;" value="«Requirement»&lt;br&gt;&lt;b&gt;Cifrado de datos personales&lt;/b&gt;" vertex="1">
+          <mxGeometry x="500" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="S3" parent="band_5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=13;" value="«Requirement»&lt;br&gt;&lt;b&gt;Monitoreo de fraude&lt;/b&gt;" vertex="1">
+          <mxGeometry x="940" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="paso3" name="Paso 3 — Hilo Compra Online">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1120" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="tit" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontSize=16;fontStyle=1;fontColor=#333333;" value="FarmApp — Tablero de Integración de Vistas · Paso 3: hilo de negocio trazado de punta a punta" vertex="1">
+          <mxGeometry x="40" y="8" width="1520" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;fontSize=12;fontColor=#666666;" value="Proceso Compra Online conectado por las 5 capas. Relaciones ArchiMate: realizado por · accede a · asignado a · protege." vertex="1">
+          <mxGeometry x="40" y="32" width="1520" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#FFFFEE;strokeColor=#CCCC00;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="1. Vista de Negocio" vertex="1">
+          <mxGeometry x="40" y="60" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="2. Vista de Aplicaciones" vertex="1">
+          <mxGeometry x="40" y="250" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="3. Vista de Información" vertex="1">
+          <mxGeometry x="40" y="440" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2FFF2;strokeColor=#339933;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="4. Vista de Infraestructura" vertex="1">
+          <mxGeometry x="40" y="630" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2F2FF;strokeColor=#6666CC;verticalAlign=top;align=left;spacingLeft=10;fontSize=15;fontStyle=1;fontColor=#555555;" value="5. Vista de Seguridad" vertex="1">
+          <mxGeometry x="40" y="820" width="1520" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="B1" parent="band_1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFF99;strokeColor=#B8B800;fontSize=13;" value="«Business Process»&lt;br&gt;&lt;b&gt;Compra Online&lt;/b&gt;" vertex="1">
+          <mxGeometry x="180" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="B2" parent="band_1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=13;fontColor=#999999;dashed=1;" value="«Business Process»&lt;br&gt;&lt;b&gt;Prescripción&lt;/b&gt;" vertex="1">
+          <mxGeometry x="620" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="B3" parent="band_1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=13;fontColor=#999999;dashed=1;" value="«Business Process»&lt;br&gt;&lt;b&gt;Despacho&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1020" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A1" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Application Component»&lt;br&gt;&lt;b&gt;App Móvil&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A2" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Application Component»&lt;br&gt;&lt;b&gt;Plataforma E-commerce&lt;/b&gt;" vertex="1">
+          <mxGeometry x="400" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A3" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=13;fontColor=#999999;dashed=1;" value="«Application Component»&lt;br&gt;&lt;b&gt;Sistema POS&lt;/b&gt;" vertex="1">
+          <mxGeometry x="740" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="A4" parent="band_2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=13;fontColor=#999999;dashed=1;" value="«Application Component»&lt;br&gt;&lt;b&gt;CRM&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1080" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I1" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Producto&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I2" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Cliente&lt;/b&gt;" vertex="1">
+          <mxGeometry x="400" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I3" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Pedido&lt;/b&gt;" vertex="1">
+          <mxGeometry x="740" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="I4" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Descuento&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1080" y="50" width="260" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="T1" parent="band_4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=13;fontColor=#999999;dashed=1;" value="«Node»&lt;br&gt;&lt;b&gt;Servidores Regionales&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="T2" parent="band_4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=13;" value="«Node»&lt;br&gt;&lt;b&gt;Nube Híbrida&lt;/b&gt;" vertex="1">
+          <mxGeometry x="500" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="T3" parent="band_4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;strokeColor=#339933;fontSize=13;" value="«Node»&lt;br&gt;&lt;b&gt;Base de Datos Replicada&lt;/b&gt;" vertex="1">
+          <mxGeometry x="940" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="S1" parent="band_5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BBBBBB;fontSize=13;fontColor=#999999;dashed=1;" value="«Requirement»&lt;br&gt;&lt;b&gt;Control de acceso por rol&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="S2" parent="band_5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=13;" value="«Requirement»&lt;br&gt;&lt;b&gt;Cifrado de datos personales&lt;/b&gt;" vertex="1">
+          <mxGeometry x="500" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="S3" parent="band_5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=13;" value="«Requirement»&lt;br&gt;&lt;b&gt;Monitoreo de fraude&lt;/b&gt;" vertex="1">
+          <mxGeometry x="940" y="50" width="300" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="e0" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="realizado por" edge="1" source="B1" target="A2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="realizado por" edge="1" source="B1" target="A1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="accede a" edge="1" source="A2" target="I1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="accede a" edge="1" source="A2" target="I2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="accede a" edge="1" source="A2" target="I3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="accede a" edge="1" source="A2" target="I4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="asignado a" edge="1" source="A2" target="T2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="asignado a" edge="1" source="A1" target="T2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="asignado a" edge="1" source="T2" target="T3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="almacenado en" edge="1" source="I1" target="T3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="almacenado en" edge="1" source="I2" target="T3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="almacenado en" edge="1" source="I3" target="T3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endSize=10;strokeColor=#666666;fontColor=#555555;" value="almacenado en" edge="1" source="I4" target="T3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=open;endSize=10;strokeColor=#6666CC;fontColor=#6666CC;" value="protege" edge="1" source="A2" target="S2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=open;endSize=10;strokeColor=#6666CC;fontColor=#6666CC;" value="protege" edge="1" source="A2" target="S3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="leyenda" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CCCCCC;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;" value="&lt;b&gt;Hilo trazado: Compra Online&lt;/b&gt;&lt;br&gt;Los elementos en gris pertenecen a otros hilos de negocio (Prescripción y Despacho) y se trazan por separado,&lt;br&gt;según el Paso 3 de la guía: un proceso de negocio a la vez." vertex="1">
+          <mxGeometry x="40" y="1000" width="1520" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

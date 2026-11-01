@@ -49,20 +49,20 @@
                 <mxCell id="band_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F0F8FF;strokeColor=#3366CC;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontColor=#1F4799;fontSize=13;" value="3. Vista de Información" vertex="1">
                     <mxGeometry height="140" width="1980" x="40" y="490" as="geometry"/>
                 </mxCell>
-                <mxCell id="I2" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Solicitud de Libranza&lt;/b&gt;" vertex="1">
-                    <mxGeometry height="60" width="150" x="300" y="50" as="geometry"/>
+                <mxCell id="I2" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Solicitud de Libranza&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;SOLICITUD_LIBRANZA · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="300" y="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="I1" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Cliente 360 (MDM)&lt;/b&gt;" vertex="1">
-                    <mxGeometry height="60" width="150" x="580" y="50" as="geometry"/>
+                <mxCell id="I1" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Cliente 360 (MDM)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;CLIENTE · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="580" y="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="I3" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Pagaré Digital&lt;/b&gt;" vertex="1">
-                    <mxGeometry height="60" width="150" x="860" y="50" as="geometry"/>
+                <mxCell id="I3" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Pagaré Digital&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;PAGARE_DIGITAL · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="860" y="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="I5" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Convenio SECOP II&lt;/b&gt;" vertex="1">
-                    <mxGeometry height="60" width="150" x="1420" y="50" as="geometry"/>
+                <mxCell id="I5" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Convenio SECOP II&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;CONVENIO_SECOP · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="1420" y="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="I4" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Descuento de Nómina&lt;/b&gt;" vertex="1">
-                    <mxGeometry height="60" width="150" x="1700" y="50" as="geometry"/>
+                <mxCell id="I4" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Descuento de Nómina&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;DESCUENTO_NOMINA · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="1700" y="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="band_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2FFF2;strokeColor=#339933;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontColor=#1F6B1F;fontSize=13;" value="4. Vista de Infraestructura" vertex="1">
                     <mxGeometry height="160" width="1980" x="40" y="690" as="geometry"/>
@@ -253,6 +253,15 @@
                     <mxGeometry relative="1" x="-0.5714" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="I6" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Crédito de Libranza&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;CREDITO_LIBRANZA · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="1140" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="v_acc6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=none;fontSize=13;exitX=0.7000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" value="accede a" edge="1" source="A5" target="I6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="v_inf6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;endSize=10;fontSize=13;exitX=0.7000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" value="aloja el dato" edge="1" source="T2" target="I6">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

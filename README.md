@@ -40,6 +40,7 @@ Todo el análisis que sustenta esta propuesta está documentado carpeta por carp
 | [`06-normatividad/`](./06-normatividad/) | Cumplimiento legal y normativo (15 criterios, 6 brechas) |
 | [`07-opportunities-solutions/`](./07-oportunidades-soluciones/) | La solución propuesta y las brechas que cierra |
 | [`08-integracion-vistas/`](./08-integracion-vistas/) | Cómo se conecta todo lo anterior en una sola arquitectura (0 elementos huérfanos) |
+| [`clase/`](./clase/) | Trabajo en clase sobre el caso base FarmApp: tablero de las 5 capas y notas de la sesión |
 
 ## Contacto
 
