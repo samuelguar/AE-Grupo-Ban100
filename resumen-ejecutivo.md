@@ -2,7 +2,7 @@
 
 **Para:** Presidencia Ejecutiva y Junta Directiva de Ban100 S.A. (Bancien S.A.)
 **De:** Ban100 — Grupo de Arquitectura Empresarial (Santiago Barrera Rueda, Krish Purmessur Moros, Samuel Guerrero Arcos)
-**Fecha:** 31 de octubre de 2026
+**Fecha:** 14 de noviembre de 2026
 
 ## 1. El problema
 
@@ -49,6 +49,11 @@ Ban100 **no es sujeto obligado directo** del Decreto 767 de 2022 ni reporta en e
 ## 7. Dónde profundizar
 
 - [README del repositorio](README.md)
-- [Mejora de arquitectura y matriz de brechas](07-opportunities-solutions/mejora-arquitectura.md)
+- [Mejora de arquitectura y matriz de brechas](07-oportunidades-soluciones/mejora-arquitectura.md)
 - [Tablero integrado y verificación de 0 huérfanos](08-integracion-vistas/informe.md)
 - [Checklist normativo](06-normatividad/informe.md)
+- [Matriz de riesgos arquitectónicos (7 dominios)](09-presentacion-final/matriz-riesgos.xlsx)
+- [Plan de implementación y gestión del cambio](09-presentacion-final/plan-implementacion.md)
+- [Plan de gobernanza, principios y métricas](09-presentacion-final/plan-gobernanza.md)
+- [Procedimiento de actualización y registro de decisiones (ADR)](09-presentacion-final/procedimiento-cambios.md)
+- [Vistas ArchiMate finales de Motivación y Migración](09-presentacion-final/vistas-finales/)
