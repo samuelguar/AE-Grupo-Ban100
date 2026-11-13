@@ -26,13 +26,16 @@
         <mxCell id="t_CONVENIO_SECOP" value="&lt;b style='font-size:13px'&gt;CONVENIO_SECOP&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_convenio&lt;/u&gt;&lt;br&gt;num_contrato_secop_ii&lt;br&gt;codigo_rup_719325524&lt;br&gt;fecha_inicio&lt;br&gt;fecha_fin&lt;br&gt;estado_convenio&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_pagaduria&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1240" y="430" width="400" height="185" as="geometry"/>
         </mxCell>
-        <mxCell id="t_TITULARIZACION_ESG" value="&lt;b style='font-size:13px'&gt;TITULARIZACION_ESG&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_emision_rnve&lt;/u&gt;&lt;br&gt;serie_bono&lt;br&gt;monto_emision_cop&lt;br&gt;calificacion_fitch_aaa&lt;br&gt;sello_esg&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; num_operacion_core&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="60" y="790" width="400" height="166" as="geometry"/>
+                <mxCell id="t_CESION_CREDITO" value="&lt;b style='font-size:13px'&gt;CESION_CREDITO&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK, FK&lt;/b&gt; id_emision_rnve&lt;/u&gt;&lt;br&gt;&lt;u&gt;&lt;b&gt;PK, FK&lt;/b&gt; num_operacion_core&lt;/u&gt;&lt;br&gt;fecha_cesion&lt;br&gt;valor_cedido_cop&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="790" width="400" height="148" as="geometry"/>
+        </mxCell>
+<mxCell id="t_TITULARIZACION_ESG" value="&lt;b style='font-size:13px'&gt;TITULARIZACION_ESG&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_emision_rnve&lt;/u&gt;&lt;br&gt;serie_bono&lt;br&gt;monto_emision_cop&lt;br&gt;calificacion_fitch_aaa&lt;br&gt;sello_esg&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1060" width="400" height="148" as="geometry"/>
         </mxCell>
         <mxCell id="t_DESCUENTO_NOMINA" value="&lt;b style='font-size:13px'&gt;DESCUENTO_NOMINA&lt;/b&gt;&lt;hr size='1'&gt;&lt;u&gt;&lt;b&gt;PK&lt;/b&gt; id_recaudo&lt;/u&gt;&lt;br&gt;periodo_nomina&lt;br&gt;valor_descontado&lt;br&gt;canal_conciliacion_ws_archivo&lt;br&gt;estado_conciliacion&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; num_operacion_core&lt;/i&gt;&lt;br&gt;&lt;i&gt;&lt;b&gt;FK&lt;/b&gt; id_convenio&lt;/i&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;fillColor=#fffbe6;strokeColor=#b8860b;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="650" y="790" width="400" height="185" as="geometry"/>
         </mxCell>
-        <mxCell id="note_1" value="Leyenda: &lt;u&gt;PK&lt;/u&gt; clave primaria · &lt;i&gt;FK&lt;/i&gt; clave foránea · TITULARIZACION_ESG es la entidad asociativa que resuelve la relación N:N entre créditos y series de emisión." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="note_1" value="Leyenda: &lt;u&gt;PK&lt;/u&gt; clave primaria · &lt;i&gt;FK&lt;/i&gt; clave foránea · CESION_CREDITO es la entidad asociativa (PK compuesta) que resuelve la relación N:N entre créditos y emisiones." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=11;fontColor=#555555;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1240" y="1010" width="400" height="90" as="geometry"/>
         </mxCell>
         <mxCell id="r1" value="radica (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3722;entryDx=0;entryDy=0;fontFamily=Helvetica;" edge="1" parent="1" source="t_CLIENTE" target="t_SOLICITUD_LIBRANZA">
@@ -73,7 +76,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="r8" value="se cede a (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.1500;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" edge="1" parent="1" source="t_CREDITO_LIBRANZA" target="t_TITULARIZACION_ESG">
+        <mxCell id="r8" value="se cede mediante (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.1500;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" edge="1" parent="1" source="t_CREDITO_LIBRANZA" target="t_CESION_CREDITO">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="0" y="-11.5" as="offset"/>
             <Array as="points">
@@ -81,6 +84,9 @@
               <mxPoint x="260" y="665"/>
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="r9" value="agrupa (1:N)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=ERmandOne;startFill=0;endArrow=ERmany;endFill=0;startSize=12;endSize=12;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;fontFamily=Helvetica;" edge="1" parent="1" source="t_TITULARIZACION_ESG" target="t_CESION_CREDITO">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>

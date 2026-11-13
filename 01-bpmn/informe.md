@@ -19,15 +19,15 @@ Se siguieron los cinco pasos de la guía del taller:
 1. **Actores y carriles.** Cuatro carriles (`swimlane`): *Pensionado / Empleado Público (Estratos 1-3)*; *Canales Digitales Ban100 (Sucursal Virtual / App / Ban-I Bot)*; *Motor de Originación, Scoring y Biometría (μS + Truora + Core)*; *Pagaduría Pública (Nacional G1-G2 / Territorial G1-G5)*.
 2. **Evento de inicio y eventos de fin.** Exactamente un inicio (*Solicita crédito de libranza*, verde `#d5e8d4`) y tres fines (rojo `#f8cecc`, borde grueso): *Crédito desembolsado y libranza radicada*, *Solicitud rechazada por identidad/riesgo* y *Solicitud desistida / sin cupo en pagaduría*.
 3. **Actividades en verbo de acción.** Doce tareas (recibir, autorizar, validar, calcular, consultar, visar, consolidar, presentar, firmar, desembolsar, registrar, notificar).
-4. **Gateways con pregunta explícita.** Tres compuertas exclusivas (naranja `#ffe6cc`) con salidas `Sí`/`No` o con la condición nombrada.
+4. **Gateways con pregunta explícita.** Cuatro compuertas exclusivas (naranja `#ffe6cc`) con salidas `Sí`/`No` o con la condición nombrada.
 5. **Conexión y validación.** Cada flujo de secuencia lleva etiqueta con el dato o hito que transporta; no hay elementos flotantes y el diagrama se lee de izquierda a derecha.
 
 Las decisiones de modelado se validaron contra la Ficha del Taller 0 (síntoma: *retraso de 3 a 5 días en la validación de cupos y la visación de libranzas con pagadurías territoriales de baja madurez digital*).
 
 ## Análisis del modelo propuesto
-- **Estructura.** El hilo principal recorre los cuatro carriles: solicitud del cliente → simulación en el canal → consentimiento y biometría → validación con Truora y SARLAFT → scoring y Cliente 360 → visación en pagaduría → oferta y firma electrónica → desembolso, radicación y descuento de nómina/mesada.
+- **Estructura.** El hilo principal recorre los cuatro carriles: solicitud del cliente → simulación en el canal → consentimiento y biometría → validación con Truora y SARLAFT → scoring y Cliente 360 → visación en pagaduría → decisión de cupo → oferta y firma electrónica → desembolso, radicación y descuento de nómina/mesada.
 - **Cómo representa las necesidades del cliente.** La compuerta *¿Pagaduría tiene interoperabilidad API/X-Road (G1-G2) o requiere vía asíncrona (G3-G5)?* convierte la asimetría tecnológica de 850–880 municipios en una decisión explícita del proceso, que es el origen de la propuesta de integración de dos velocidades del Taller 7.
-- **Supuestos.** (a) La validación biométrica y la firma se ejecutan con Truora; (b) la consulta de listas SARLAFT ocurre antes del scoring; (c) los grupos MRAE de cada pagaduría se conocen por convenio (`grupo_mrae_t1_t5` en el ERD); (d) ambas vías de visación convergen en la consolidación del cupo.
+- **Supuestos.** (a) La validación biométrica y la firma se ejecutan con Truora; (b) la consulta de listas SARLAFT ocurre antes del scoring; (c) los grupos MRAE de cada pagaduría se conocen por convenio (`grupo_mrae_t1_t5` en el ERD); (d) ambas vías de visación convergen en la consolidación del cupo; (e) la oferta solo se presenta y el pagaré solo se firma cuando la pagaduría ya aprobó el cupo, de modo que la última compuerta solo confirma que el cliente firmó.
 
 ## Diagrama final entregado
 [Ver diagrama en draw.io](./modelo-final.drawio)
@@ -43,7 +43,8 @@ Las decisiones de modelado se validaron contra la Ficha del Taller 0 (síntoma: 
 | Solicita crédito de libranza | Evento de inicio | Disparador del proceso | Cliente |
 | ¿Supera validación biométrica facial y listas SARLAFT? | Gateway exclusivo | Decide continuar o rechazar por identidad/riesgo | Cumplimiento |
 | ¿Pagaduría tiene interoperabilidad API/X-Road (G1-G2) o requiere vía asíncrona (G3-G5)? | Gateway exclusivo | Selecciona la vía de visación | Convenios B2G |
-| ¿Cupo de descuento nómina/mesada aprobado y pagaré firmado digitalmente? | Gateway exclusivo | Decide desembolso o desistimiento | Operaciones |
+| ¿Pagaduría aprobó el cupo de descuento? | Gateway exclusivo | Decide si se presenta la oferta o se notifica la falta de cupo antes de comprometer al cliente | Convenios B2G |
+| ¿Pagaré firmado digitalmente? | Gateway exclusivo | Decide desembolso o desistimiento del cliente | Operaciones |
 | Crédito desembolsado y libranza radicada | Evento de fin | Éxito del proceso | Operaciones |
 | Solicitud rechazada por identidad/riesgo | Evento de fin | Rechazo por biometría, SARLAFT o riesgo | Cumplimiento |
 | Solicitud desistida / sin cupo en pagaduría | Evento de fin | Sin cupo o sin firma | Canales |

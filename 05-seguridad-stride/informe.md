@@ -46,25 +46,27 @@ Se modelaron las amenazas del flujo **Originación Digital y Desembolso de Libra
 | T1 | Spoofing | P1 / F1 — suplantación biométrica del pensionado | Crítico |
 | T2 | Tampering | P3 / F3 — alteración de monto, plazo o cuota | Alto |
 | T3 | Repudiation | D2 / F4 — repudio de la firma del pagaré | Alto |
-| T4 | Information Disclosure | D1 / F5 — exposición de PII en Cliente 360 | Crítico |
+| T4 | Information Disclosure | D1 / F5 — exposición de PII en Cliente 360 | Alto |
 | T5 | Denial of Service | P2 / F2 — saturación del API Gateway y del bot | Alto |
-| T6 | Elevation of Privilege | P4 / F8 — escalamiento de privilegios en el Core | Crítico |
+| T6 | Elevation of Privilege | P4 / F8 — escalamiento de privilegios en el Core | Medio |
 | T7 | Information Disclosure | P1 / F1 — prompt injection y fuga de PII al LLM | Alto |
-| T8 | Tampering | E3 / F6 — archivo de visación falsificado (pagadurías G3–G5) | Alto |
+| T8 | Tampering | E3 / F6 — archivo de visación falsificado (pagadurías G3–G5) | Crítico |
 
 El detalle completo (descripción, escenario de ataque, impacto, probabilidad, controles existentes, mitigación, responsable y estado) está en las **12 columnas obligatorias** de la hoja `Plantilla_STRIDE`.
 
 ### Priorización
+Nivel = impacto (Bajo 1 · Medio 2 · Alto 3 · Crítico 4) × probabilidad (Baja 1 · Media 2 · Alta 3), con la misma escala de `matriz-riesgos.xlsx`: **Crítico** ≥ 8, **Alto** 4–7 y **Medio** < 4. Las ocho amenazas tienen impacto Alto, así que la probabilidad define el nivel; a igual nivel se ordena por ID.
+
 | Prioridad | ID | Tipo STRIDE | Componente / Activo | Nivel de Riesgo |
 |---|---|---|---|---|
 | 1 | T1 | Spoofing | Canales Digitales y Ban-I Bot (P1) | Crítico |
-| 2 | T4 | Information Disclosure | Cliente 360 (D1) | Crítico |
-| 3 | T6 | Elevation of Privilege | Core Bancario (P4) | Crítico |
-| 4 | T7 | Information Disclosure | Ban-I Bot (P1) | Alto |
-| 5 | T8 | Tampering | Pagaduría Pública (E3) | Alto |
-| 6 | T2 | Tampering | μS Originación y Scoring (P3) | Alto |
-| 7 | T3 | Repudiation | Pagaré Digital (D2) | Alto |
-| 8 | T5 | Denial of Service | API Gateway (P2) | Alto |
+| 2 | T8 | Tampering | Pagaduría Pública (E3) | Crítico |
+| 3 | T2 | Tampering | μS Originación y Scoring (P3) | Alto |
+| 4 | T3 | Repudiation | Pagaré Digital (D2) | Alto |
+| 5 | T4 | Information Disclosure | Cliente 360 (D1) | Alto |
+| 6 | T5 | Denial of Service | API Gateway (P2) | Alto |
+| 7 | T7 | Information Disclosure | Ban-I Bot (P1) | Alto |
+| 8 | T6 | Elevation of Privilege | Core Bancario (P4) | Medio |
 
 ### Reto práctico (OWASP Juice Shop) vinculado a la tabla
 | Reto | Categoría STRIDE | ¿Qué control faltaba? | Mitigación real que lo hubiera evitado |
@@ -91,7 +93,7 @@ STRIDE (Shostack, 2014), Zero Trust (NIST SP 800-207), OWASP Top 10 y riesgos de
 ### Resumen:
 STRIDE clasifica amenazas por violación de una propiedad de seguridad (autenticidad, integridad, no repudio, confidencialidad, disponibilidad y autorización). Se aplicó sobre cada elemento del DFD y se priorizó por impacto × probabilidad. Los principios Zero Trust de NIST SP 800-207 (no confiar por ubicación de red, mínimo privilegio, verificación continua) orientan las mitigaciones de T2, T4 y T6.
 
-**Riesgos agénticos (MITRE ATLAS y patrón de sistemas agénticos).** STRIDE no cubre bien: alucinación, inyección de prompt (*LLM Prompt Injection*), autonomía sin supervisión, costo descontrolado, fuga de PII por el contexto y falta de explicabilidad. T7 documenta el caso crítico (fuga de PII hacia el proveedor de LLM); los seis riesgos se mitigan con seis *Requirements* en la vista [`vista-sistema-agentico-ban-i-bot.drawio`](../../archimate-transversal/vista-sistema-agentico-ban-i-bot.drawio).
+**Riesgos agénticos (MITRE ATLAS y patrón de sistemas agénticos).** STRIDE no cubre bien: alucinación, inyección de prompt (*LLM Prompt Injection*), autonomía sin supervisión, costo descontrolado, fuga de PII por el contexto y falta de explicabilidad. T7 documenta el caso crítico (fuga de PII hacia el proveedor de LLM); los seis riesgos se mitigan con seis *Requirements* en la vista del patrón agéntico de [`Archimate.md`](../Archimate.md#3-patrón-de-sistemas-agénticos--ban-i-bot-libranza-to-be).
 
 ### Homologación normativa y MRAE v3.0
 - **Circular Externa 008 de 2023 (SFC):** monitoreo continuo (SOC 24/7), gestión de incidentes, seguridad en la nube y continuidad.

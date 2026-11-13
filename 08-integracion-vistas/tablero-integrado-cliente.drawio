@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="tablero" name="Tablero Integrado de las 5 Vistas Ban100">
-        <mxGraphModel dx="812" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2160" pageHeight="1180" math="0" shadow="0">
+        <mxGraphModel dx="1197" dy="1062" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2160" pageHeight="1180" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -63,6 +63,9 @@
                 </mxCell>
                 <mxCell id="I4" parent="band_3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Descuento de Nómina&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;DESCUENTO_NOMINA · T2&lt;/font&gt;" vertex="1">
                     <mxGeometry height="72" width="150" x="1700" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="I6" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Crédito de Libranza&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;CREDITO_LIBRANZA · T2&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="72" width="150" x="1140" y="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="band_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2FFF2;strokeColor=#339933;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontColor=#1F6B1F;fontSize=13;" value="4. Vista de Infraestructura" vertex="1">
                     <mxGeometry height="160" width="1980" x="40" y="690" as="geometry"/>
@@ -173,7 +176,12 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="v_asg3" edge="1" parent="1" source="T1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=oval;endFill=1;endSize=8;fontSize=13;exitX=0.8500;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="A7" value="aloja">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1350" y="739.72"/>
+                            <mxPoint x="1350" y="410.41"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="v_asg4" edge="1" parent="1" source="T2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=oval;endFill=1;endSize=8;fontSize=13;exitX=0.6750;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.6750;entryY=1.0000;entryDx=0;entryDy=0;" target="A5" value="aloja">
                     <mxGeometry relative="1" x="0.3939" as="geometry">
@@ -183,6 +191,22 @@
                 <mxCell id="v_bus" edge="1" parent="1" source="T4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endSize=10;fontSize=13;exitX=0.6750;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.6750;entryY=1.0000;entryDx=0;entryDy=0;" target="A4" value="alimenta eventos">
                     <mxGeometry relative="1" x="-0.5758" y="-8" as="geometry">
                         <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="v_bus_a3" edge="1" parent="1" source="T4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endSize=10;fontSize=13;exitX=0.8750;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="A3" value="sirve a (eventos de crédito)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1670" y="500"/>
+                            <mxPoint x="740" y="500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="v_bus_core" edge="1" parent="1" source="T4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endSize=10;fontSize=13;exitX=0.9500;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.1000;entryY=1.0000;entryDx=0;entryDy=0;" target="A5" value="sirve a (CDC &lt; 500 ms)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1688" y="470"/>
+                            <mxPoint x="1764" y="470"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="v_inf0" edge="1" parent="1" source="T1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;endSize=10;fontSize=13;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="I2" value="aloja el dato">
@@ -254,14 +278,23 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="I6" parent="band_3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#99CCFF;strokeColor=#3366CC;fontSize=13;" value="«Data Object»&lt;br&gt;&lt;b&gt;Crédito de Libranza&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot; color=&quot;#555555&quot;&gt;CREDITO_LIBRANZA · T2&lt;/font&gt;" vertex="1">
-                    <mxGeometry height="72" width="150" x="1140" y="50" as="geometry"/>
+                <mxCell id="v_acc6" edge="1" parent="1" source="A5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=none;fontSize=13;exitX=0.7000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" target="I6" value="accede a">
+                    <mxGeometry relative="1" x="-0.06" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="1908" y="450"/>
+                            <mxPoint x="1255" y="450"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="v_acc6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=none;fontSize=13;exitX=0.7000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" value="accede a" edge="1" source="A5" target="I6">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="v_inf6" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;endSize=10;fontSize=13;exitX=0.7000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" value="aloja el dato" edge="1" source="T2" target="I6">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="v_inf6" edge="1" parent="1" source="T2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;endSize=10;fontSize=13;exitX=0.7000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" target="I6" value="aloja el dato">
+                    <mxGeometry relative="1" x="0.3521" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="1908" y="710"/>
+                            <mxPoint x="1255" y="710"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>

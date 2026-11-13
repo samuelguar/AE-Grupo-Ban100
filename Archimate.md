@@ -5,8 +5,8 @@ Documento único del módulo transversal ArchiMate (informe, vistas y referencia
 | Entregable | Archivo |
 |---|---|
 | Informe técnico | [Sección 5](#5-informe-técnico) |
-| Vista ArchiMate de originación (draw.io) | [`entrega/vista-archimate-ban100.drawio`](./vista-archimate-ban100.drawio) |
-| Patrón agéntico Ban-I Bot (draw.io) | [`entrega/vista-sistema-agentico-ban-i-bot.drawio`](./vista-sistema-agentico-ban-i-bot.drawio) |
+| Vista ArchiMate de originación (draw.io) | [`08-integracion-vistas/tablero-integrado-cliente.drawio`](./08-integracion-vistas/tablero-integrado-cliente.drawio) |
+| Patrón agéntico Ban-I Bot (draw.io) | [`07-oportunidades-soluciones/to-be-aplicaciones-final.drawio`](./07-oportunidades-soluciones/to-be-aplicaciones-final.drawio) |
 | Referencias | [Sección 6](#6-referencias) |
 
 ## 1. Viewpoint
@@ -202,8 +202,8 @@ Los 14 elementos de la vista tienen al menos una relación (13 relaciones en el 
 
 ### 5.5 Diagramas
 
-- [Vista ArchiMate de originación de libranza](./vista-archimate-ban100.drawio)
-- [Patrón de sistemas agénticos aplicado a Ban-I Bot Libranza](./vista-sistema-agentico-ban-i-bot.drawio)
+- [Vista ArchiMate de originación de libranza](./08-integracion-vistas/tablero-integrado-cliente.drawio)
+- [Patrón de sistemas agénticos aplicado a Ban-I Bot Libranza](./07-oportunidades-soluciones/to-be-aplicaciones-final.drawio)
 
 Código de colores: lila (Motivación), amarillo (Negocio), azul (Aplicación), verde (Tecnología); servicios externos con borde punteado.
 

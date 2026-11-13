@@ -77,7 +77,7 @@ El proceso del Taller 1 se mantiene, con un cambio de fondo en la compuerta *¿P
 | Guardrails DLP + Orquestador con HITL | G6 | T7 (Taller 5), checklist 7 |
 
 ### 3.3 Controles de seguridad integrados
-Del Taller 5 se integran: **T1** liveness certificado y OTP (idea 10); **T4** DLP y control de acceso por atributos sobre Cliente 360; **T5** Gateway Activo-Activo y límites de tasa; **T6** cuentas de servicio de mínimo privilegio con doble autorización de desembolsos; **T7** filtro DLP, separación de instrucciones y entrada, y Human-in-the-Loop; **T8** firma digital de los archivos de pagaduría y portal de autogestión con autenticación fuerte. El agente se modela con el patrón de sistemas agénticos: [Ver vista del sistema agéntico](../../archimate-transversal/vista-sistema-agentico-ban-i-bot.drawio).
+Del Taller 5 se integran: **T1** liveness certificado y OTP (idea 10); **T4** DLP y control de acceso por atributos sobre Cliente 360; **T5** Gateway Activo-Activo y límites de tasa; **T6** cuentas de servicio de mínimo privilegio con doble autorización de desembolsos; **T7** filtro DLP, separación de instrucciones y entrada, y Human-in-the-Loop; **T8** firma digital de los archivos de pagaduría y portal de autogestión con autenticación fuerte. El agente se modela con el patrón de sistemas agénticos: [Ver vista del sistema agéntico](../Archimate.md#3-patrón-de-sistemas-agénticos--ban-i-bot-libranza-to-be).
 
 ---
 

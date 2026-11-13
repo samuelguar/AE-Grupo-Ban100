@@ -27,7 +27,7 @@ Se integraron las vistas de los Talleres 1 a 7 en un único tablero de **cinco c
 ### Narrativa de coherencia (el porqué de cada conexión)
 - **Negocio ← Aplicaciones (*sirve a*).** Cada proceso depende de componentes concretos porque en el Taller 1 el carril de *Canales Digitales* y el de *Motor de Originación* son quienes ejecutan las tareas del pensionado y de la pagaduría. *Truora* sirve a la Originación porque sin biometría y firma la compuerta de identidad del BPMN no puede resolverse; el *Adaptador B2G* y el *Portal Web de Autogestión* sirven a *Pagaduría Pública* y al *Recaudo* porque el Taller 4 mostró que 850–880 municipios (Grupos MRAE 3–5) no tienen API.
 - **Aplicaciones → Información (*accede a*).** *μS Originación* accede a *Cliente 360 (MDM)* porque el scoring consolida el perfil del cliente (Taller 2); el *Adaptador* y el *Portal* acceden a *Convenio SECOP II* porque el cupo se valida contra el convenio; el *Core* accede a *Crédito de Libranza* porque es donde queda instrumentada la operación una vez aprobada, y a *Descuento de Nómina* porque concilia el recaudo por periodo contra esa misma operación —la relación `num_operacion_core` que el Taller 2 definió como clave foránea entre ambas entidades; *Truora* se vincula con el *Pagaré Digital* porque su firma electrónica es la evidencia de no repudio (Ley 527 de 1999).
-- **Infraestructura → Aplicaciones (*aloja*).** El *Borde Dual-Stack IPv6/IPv4 y WAF* aloja los canales y el gateway; la *Nube Pública (Kubernetes)* aloja μS Originación y el Portal; el *Centro de Datos On-Premise* aloja el Core. El *Bus de Eventos y CDC* sirve al Adaptador porque desacopla la originación del Core (riesgo R2 del Taller 4).
+- **Infraestructura → Aplicaciones (*aloja*).** El *Borde Dual-Stack IPv6/IPv4 y WAF* aloja los canales y el gateway; la *Nube Pública (Kubernetes)* aloja μS Originación y el Portal; el *Centro de Datos On-Premise* aloja el Core. El *Bus de Eventos y CDC* sirve a *μS Originación y Scoring* (recibe los eventos de crédito) y al *Core Bancario* (sincronización CDC < 500 ms) porque desacopla la originación del Core (riesgo R2 del Taller 4); además alimenta al Adaptador con los eventos de visación.
 - **Seguridad → Infraestructura (*satisface*).** Cada requisito se realiza en un elemento tecnológico: CE 008/2023 y MSPI en el borde (Taller 6, ítem 4–5); Interoperabilidad MRAE e IPv6 en el borde (`MGGTI.LI.ST.14`); Guardrails DLP y Human-in-the-Loop y la Ley 1581/527 en la nube (T4, T7 y T3 del Taller 5); continuidad y BCP/DRP en el bus; control de acceso en el Core (T6). El *SOC 24/7* monitorea la nube pública.
 - **Decisión transversal.** La seguridad no es una capa aparte sin conexiones: cada requisito proviene de una amenaza T1–T8 o de un parcial del checklist y cada uno está anclado a un elemento de infraestructura concreto.
 
@@ -42,11 +42,11 @@ Cada elemento debe tener al menos una conexión hacia arriba y una hacia abajo, 
 | Recaudo B2G y Descuento de Nómina/Mesada | Negocio | — (capa más alta) | ✅ Adaptador B2G de Dos Velocidades, Core Bancario |
 | Canales Digitales y Ban-I Bot | Aplicaciones | ✅ Pensionado / Empleado Público | ✅ Borde Dual-Stack IPv6/IPv4 y WAF |
 | API Gateway (Activo-Activo) 🆕 | Aplicaciones | ✅ Originación Digital de Crédito de Libranza (< 15 min) | ✅ Solicitud de Libranza, Borde Dual-Stack IPv6/IPv4 y WAF |
-| μS Originación y Scoring | Aplicaciones | ✅ Originación Digital de Crédito de Libranza (< 15 min) | ✅ Cliente 360 (MDM), Nube Pública (Kubernetes) |
+| μS Originación y Scoring | Aplicaciones | ✅ Originación Digital de Crédito de Libranza (< 15 min) | ✅ Cliente 360 (MDM), Nube Pública (Kubernetes), Bus de Eventos y CDC (< 500 ms) |
 | Truora Biometría y Firma (externo) | Aplicaciones | ✅ Originación Digital de Crédito de Libranza (< 15 min) | ✅ Pagaré Digital |
 | Portal Web de Autogestión de Pagadurías 🆕 | Aplicaciones | ✅ Pagaduría Pública (G1–G5) | ✅ Convenio SECOP II, Nube Pública (Kubernetes) |
 | Adaptador B2G de Dos Velocidades 🆕 | Aplicaciones | ✅ Recaudo B2G y Descuento de Nómina/Mesada | ✅ Convenio SECOP II, Bus de Eventos y CDC (< 500 ms) |
-| Core Bancario | Aplicaciones | ✅ Recaudo B2G y Descuento de Nómina/Mesada | ✅ Crédito de Libranza, Descuento de Nómina, Centro de Datos On-Premise |
+| Core Bancario | Aplicaciones | ✅ Recaudo B2G y Descuento de Nómina/Mesada | ✅ Crédito de Libranza, Descuento de Nómina, Centro de Datos On-Premise, Bus de Eventos y CDC (< 500 ms) |
 | Solicitud de Libranza | Información | ✅ API Gateway (Activo-Activo) | ✅ Nube Pública (Kubernetes) |
 | Cliente 360 (MDM) | Información | ✅ μS Originación y Scoring | ✅ Centro de Datos On-Premise |
 | Pagaré Digital | Información | ✅ Truora Biometría y Firma (externo) | ✅ Nube Pública (Kubernetes) |
@@ -55,7 +55,7 @@ Cada elemento debe tener al menos una conexión hacia arriba y una hacia abajo, 
 | Descuento de Nómina | Información | ✅ Core Bancario | ✅ Centro de Datos On-Premise |
 | Borde Dual-Stack IPv6/IPv4 y WAF 🆕 | Infraestructura | ✅ Canales Digitales y Ban-I Bot, API Gateway (Activo-Activo) | ✅ Cumplir CE 008/2023 SFC y MSPI, Interoperabilidad MRAE v3.0 e IPv6 (MGGTI.LI.ST.14) |
 | Nube Pública (Kubernetes) | Infraestructura | ✅ μS Originación y Scoring, Portal Web de Autogestión de Pagadurías, Solicitud de Libranza, Pagaré Digital, Convenio SECOP II | ✅ Guardrails DLP y Human-in-the-Loop, Ley 1581 (revocatoria) y Ley 527 (no repudio), SOC 24/7 (Monitoreo y Ciberseguridad) |
-| Bus de Eventos y CDC (< 500 ms) 🆕 | Infraestructura | ✅ Adaptador B2G de Dos Velocidades | ✅ Continuidad y recuperación del Core (BCP/DRP) |
+| Bus de Eventos y CDC (< 500 ms) 🆕 | Infraestructura | ✅ Adaptador B2G de Dos Velocidades, μS Originación y Scoring, Core Bancario | ✅ Continuidad y recuperación del Core (BCP/DRP) |
 | Centro de Datos On-Premise | Infraestructura | ✅ Core Bancario, Cliente 360 (MDM), Crédito de Libranza, Descuento de Nómina | ✅ Control de acceso y segregación de funciones (ISO/IEC 27001:2022) |
 | Cumplir CE 008/2023 SFC y MSPI | Seguridad y Cumplimiento | ✅ Borde Dual-Stack IPv6/IPv4 y WAF | — (capa más baja) |
 | Ley 1581 (revocatoria) y Ley 527 (no repudio) | Seguridad y Cumplimiento | ✅ Nube Pública (Kubernetes) | — (capa más baja) |

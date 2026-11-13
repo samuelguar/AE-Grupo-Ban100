@@ -1,112 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" agent="AREM-Equipo-Ban100" version="24.0.0">
-  <diagram id="motivacion-final" name="Vista ArchiMate Motivacion Ban100 (Taller 9)">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="960" math="0" shadow="0">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <mxCell id="title" value="&lt;b&gt;Vista ArchiMate 3.2 — Capa de Motivación (Ban100 S.A.) · Objetivos → Principios → Requerimientos&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=17;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="1440" height="36" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="band_mot" value="MOTIVACIÓN" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2F2FF;strokeColor=#6666CC;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontColor=#3A3A99;" vertex="1" parent="1">
-          <mxGeometry x="40" y="56" width="1440" height="810" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="s1" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Presidencia Ejecutiva y Junta Directiva Ban100&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="30" y="50" width="300" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="s2" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Superintendencia Financiera (SFC), SIC e inversionistas ESG&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="360" y="50" width="300" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="s3" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Pensionados y empleados públicos en 1.000+ municipios&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="690" y="50" width="300" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="drv" value="«Driver»&lt;br&gt;&lt;b&gt;Asimetría tecnológica de 850–880 pagadurías de Grupos MRAE 3 a 5 (40 a 47 meses de rezago)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="1020" y="50" width="380" height="80" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="g1" value="«Goal»&lt;br&gt;&lt;b&gt;O1 · Cobertura territorial&lt;/b&gt;&lt;br&gt;Inclusión financiera en 1.000+ municipios (90 % del país) con 10 oficinas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="30" y="190" width="320" height="95" as="geometry"/>
-        </mxCell>
-        <mxCell id="g2" value="«Goal»&lt;br&gt;&lt;b&gt;O2 · Calidad de cartera&lt;/b&gt;&lt;br&gt;Mantener la calificación AAA ESG en titularizaciones de hasta COP $1 billón" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="380" y="190" width="320" height="95" as="geometry"/>
-        </mxCell>
-        <mxCell id="g3" value="«Goal»&lt;br&gt;&lt;b&gt;O3 · Velocidad competitiva&lt;/b&gt;&lt;br&gt;Originar libranza en menos de 15 minutos (hoy 3 a 5 días)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="730" y="190" width="320" height="95" as="geometry"/>
-        </mxCell>
-        <mxCell id="g4" value="«Goal»&lt;br&gt;&lt;b&gt;O4 · Cumplimiento normativo&lt;/b&gt;&lt;br&gt;SFC (CE 008/2023), SIC (Ley 1581) y homologación MRAE v3.0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" vertex="1" parent="band_mot">
-          <mxGeometry x="1080" y="190" width="320" height="95" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="p1" value="«Principle»&lt;br&gt;&lt;b&gt;P1 · Desacople asimétrico de la contraparte&lt;/b&gt;&lt;br&gt;&lt;i&gt;La velocidad de Ban100 no depende de la madurez digital de un tercero&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="30" y="345" width="255" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="p2" value="«Principle»&lt;br&gt;&lt;b&gt;P2 · El Core no se cambia, se desacopla&lt;/b&gt;&lt;br&gt;&lt;i&gt;Se elimina la dependencia síncrona, no el sistema heredado&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="310" y="345" width="255" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="p3" value="«Principle»&lt;br&gt;&lt;b&gt;P3 · Dato personal mínimo y supervisado&lt;/b&gt;&lt;br&gt;&lt;i&gt;Ningún componente accede a más PII de la que su tarea exige&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="590" y="345" width="255" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="p4" value="«Principle»&lt;br&gt;&lt;b&gt;P4 · Cumplir antes de escalar&lt;/b&gt;&lt;br&gt;&lt;i&gt;Una brecha normativa abierta bloquea el despliegue de su fase&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="870" y="345" width="255" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="p5" value="«Principle»&lt;br&gt;&lt;b&gt;P5 · Trazabilidad como activo de cartera&lt;/b&gt;&lt;br&gt;&lt;i&gt;Toda operación debe ser reconstruible de punta a punta&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="1150" y="345" width="250" height="115" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="r1" value="«Requirement»&lt;br&gt;&lt;b&gt;Adaptador B2G de Dos Velocidades&lt;/b&gt;&lt;br&gt;API/X-Road para G1–G2 · RPA/ETL y Portal de Autogestión para G3–G5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="30" y="520" width="215" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="r2" value="«Requirement»&lt;br&gt;&lt;b&gt;Bus de Eventos CDC (&amp;lt; 500 ms)&lt;/b&gt;&lt;br&gt;Con Circuit Breaker y BCP/DRP automatizado hacia el Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="265" y="520" width="215" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="r3" value="«Requirement»&lt;br&gt;&lt;b&gt;Guardrails DLP y Human-in-the-Loop&lt;/b&gt;&lt;br&gt;Sobre el Orquestador Agéntico Ban-I Bot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="500" y="520" width="215" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="r4" value="«Requirement»&lt;br&gt;&lt;b&gt;Revocatoria y supresión automatizada&lt;/b&gt;&lt;br&gt;Ley 1581 art. 8, con propagación a Cliente 360 y proveedores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="735" y="520" width="215" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="r5" value="«Requirement»&lt;br&gt;&lt;b&gt;Borde Dual-Stack IPv6/IPv4&lt;/b&gt;&lt;br&gt;Y API Gateway Activo-Activo (MGGTI.LI.ST.14)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="970" y="520" width="215" height="115" as="geometry"/>
-        </mxCell>
-        <mxCell id="r6" value="«Requirement»&lt;br&gt;&lt;b&gt;Trazabilidad por solicitud y conciliación&lt;/b&gt;&lt;br&gt;Cliente 360 (MDM) y repositorio de AE con métricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" vertex="1" parent="band_mot">
-          <mxGeometry x="1205" y="520" width="195" height="115" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="c1" value="«Constraint»&lt;br&gt;&lt;b&gt;No se reemplaza el Core Bancario transaccional&lt;/b&gt; (fuera del alcance declarado en el Taller 0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=10;dashed=1;" vertex="1" parent="band_mot">
-          <mxGeometry x="265" y="690" width="300" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="c2" value="«Constraint»&lt;br&gt;&lt;b&gt;Ban100 no es sujeto obligado del Decreto 767 de 2022&lt;/b&gt;: el MRAE se usa como marco homologable, no como obligación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=10;dashed=1;" vertex="1" parent="band_mot">
-          <mxGeometry x="870" y="690" width="320" height="80" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e_s1g1" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;" edge="1" parent="band_mot" source="s1" target="g1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_s1g3" value="define" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="s1" target="g3"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_s2g2" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;" edge="1" parent="band_mot" source="s2" target="g2"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_s2g4" value="exige" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="s2" target="g4"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_s3g1" value="se beneficia" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="s3" target="g1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_drvg3" value="presiona" style="endArrow=open;html=1;endSize=8;dashed=1;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="drv" target="g3"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="e_p1g1" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" edge="1" parent="band_mot" source="p1" target="g1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_p1g3" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" edge="1" parent="band_mot" source="p1" target="g3"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_p2g3" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" edge="1" parent="band_mot" source="p2" target="g3"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_p3g4" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" edge="1" parent="band_mot" source="p3" target="g4"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_p4g4" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" edge="1" parent="band_mot" source="p4" target="g4"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_p5g2" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" edge="1" parent="band_mot" source="p5" target="g2"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="e_r1p1" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="r1" target="p1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_r2p2" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="r2" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_r3p3" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="r3" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_r4p4" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="r4" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_r5p4" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="r5" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_r6p5" value="realiza" style="endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" edge="1" parent="band_mot" source="r6" target="p5"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-        <mxCell id="e_c1p2" value="restringe" style="endArrow=open;html=1;endSize=8;dashed=1;strokeColor=#D79B00;fontSize=9;" edge="1" parent="band_mot" source="c1" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="e_c2p4" value="restringe" style="endArrow=open;html=1;endSize=8;dashed=1;strokeColor=#D79B00;fontSize=9;" edge="1" parent="band_mot" source="c2" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
-
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="motivacion-final" name="Vista ArchiMate Motivacion Ban100 (Taller 9)">
+        <mxGraphModel dx="694" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="960" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;labelBackgroundColor=none;fontSize=17;fontColor=#333333;" value="&lt;b&gt;Vista ArchiMate 3.2 — Capa de Motivación (Ban100 S.A.) · Objetivos → Principios → Requerimientos&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="36" width="1440" x="40" y="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="band_mot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;container=1;collapsible=0;fillColor=#F2F2FF;strokeColor=#6666CC;verticalAlign=top;align=left;spacingLeft=10;fontStyle=1;fontColor=#3A3A99;" value="MOTIVACIÓN" vertex="1">
+                    <mxGeometry height="810" width="1440" x="40" y="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Presidencia Ejecutiva y Junta Directiva Ban100&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="80" width="300" x="30" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Superintendencia Financiera (SFC), SIC e inversionistas ESG&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="80" width="300" x="360" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Stakeholder»&lt;br&gt;&lt;b&gt;Pensionados y empleados públicos en 1.000+ municipios&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="80" width="300" x="690" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="drv" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Driver»&lt;br&gt;&lt;b&gt;Asimetría tecnológica de 850–880 pagadurías de Grupos MRAE 3 a 5 (40 a 47 meses de rezago)&lt;/b&gt;" vertex="1">
+                    <mxGeometry height="80" width="380" x="1020" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="g1" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Goal»&lt;br&gt;&lt;b&gt;O1 · Cobertura territorial&lt;/b&gt;&lt;br&gt;Inclusión financiera en 1.000+ municipios (90 % del país) con 10 oficinas" vertex="1">
+                    <mxGeometry height="95" width="320" x="30" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="g2" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Goal»&lt;br&gt;&lt;b&gt;O2 · Calidad de cartera&lt;/b&gt;&lt;br&gt;Mantener la calificación AAA ESG en titularizaciones de hasta COP $1 billón" vertex="1">
+                    <mxGeometry height="95" width="320" x="380" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="g3" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Goal»&lt;br&gt;&lt;b&gt;O3 · Velocidad competitiva&lt;/b&gt;&lt;br&gt;Originar libranza en menos de 15 minutos (hoy 3 a 5 días)" vertex="1">
+                    <mxGeometry height="95" width="320" x="730" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="g4" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCCCFF;strokeColor=#6666CC;fontSize=11;" value="«Goal»&lt;br&gt;&lt;b&gt;O4 · Cumplimiento normativo&lt;/b&gt;&lt;br&gt;SFC (CE 008/2023), SIC (Ley 1581) y homologación MRAE v3.0" vertex="1">
+                    <mxGeometry height="95" width="320" x="1080" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" value="«Principle»&lt;br&gt;&lt;b&gt;P1 · Desacople asimétrico de la contraparte&lt;/b&gt;&lt;br&gt;&lt;i&gt;La velocidad de Ban100 no depende de la madurez digital de un tercero&lt;/i&gt;" vertex="1">
+                    <mxGeometry height="115" width="255" x="30" y="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" value="«Principle»&lt;br&gt;&lt;b&gt;P2 · El Core no se cambia, se desacopla&lt;/b&gt;&lt;br&gt;&lt;i&gt;Se elimina la dependencia síncrona, no el sistema heredado&lt;/i&gt;" vertex="1">
+                    <mxGeometry height="115" width="255" x="310" y="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" value="«Principle»&lt;br&gt;&lt;b&gt;P3 · Dato personal mínimo y supervisado&lt;/b&gt;&lt;br&gt;&lt;i&gt;Ningún componente accede a más PII de la que su tarea exige&lt;/i&gt;" vertex="1">
+                    <mxGeometry height="115" width="255" x="590" y="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" value="«Principle»&lt;br&gt;&lt;b&gt;P4 · Cumplir antes de escalar&lt;/b&gt;&lt;br&gt;&lt;i&gt;Una brecha normativa abierta bloquea el despliegue de su fase&lt;/i&gt;" vertex="1">
+                    <mxGeometry height="115" width="255" x="870" y="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="p5" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3B3FF;strokeColor=#4B4BA8;fontSize=10;" value="«Principle»&lt;br&gt;&lt;b&gt;P5 · Trazabilidad como activo de cartera&lt;/b&gt;&lt;br&gt;&lt;i&gt;Toda operación debe ser reconstruible de punta a punta&lt;/i&gt;" vertex="1">
+                    <mxGeometry height="115" width="250" x="1150" y="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="r1" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" value="«Requirement»&lt;br&gt;&lt;b&gt;Adaptador B2G de Dos Velocidades&lt;/b&gt;&lt;br&gt;API/X-Road para G1–G2 · RPA/ETL y Portal de Autogestión para G3–G5" vertex="1">
+                    <mxGeometry height="115" width="215" x="30" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" value="«Requirement»&lt;br&gt;&lt;b&gt;Bus de Eventos CDC (&amp;lt; 500 ms)&lt;/b&gt;&lt;br&gt;Con Circuit Breaker y BCP/DRP automatizado hacia el Core" vertex="1">
+                    <mxGeometry height="115" width="215" x="265" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="r3" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" value="«Requirement»&lt;br&gt;&lt;b&gt;Guardrails DLP y Human-in-the-Loop&lt;/b&gt;&lt;br&gt;Sobre el Orquestador Agéntico Ban-I Bot" vertex="1">
+                    <mxGeometry height="115" width="215" x="500" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="r4" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" value="«Requirement»&lt;br&gt;&lt;b&gt;Revocatoria y supresión automatizada&lt;/b&gt;&lt;br&gt;Ley 1581 art. 8, con propagación a Cliente 360 y proveedores" vertex="1">
+                    <mxGeometry height="115" width="215" x="735" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="r5" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" value="«Requirement»&lt;br&gt;&lt;b&gt;Borde Dual-Stack IPv6/IPv4&lt;/b&gt;&lt;br&gt;Y API Gateway Activo-Activo (MGGTI.LI.ST.14)" vertex="1">
+                    <mxGeometry height="115" width="215" x="970" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="r6" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1E1FF;strokeColor=#6666CC;fontSize=10;" value="«Requirement»&lt;br&gt;&lt;b&gt;Trazabilidad por solicitud y conciliación&lt;/b&gt;&lt;br&gt;Cliente 360 (MDM) y repositorio de AE con métricas" vertex="1">
+                    <mxGeometry height="115" width="195" x="1205" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="c1" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=10;dashed=1;" value="«Constraint»&lt;br&gt;&lt;b&gt;No se reemplaza el Core Bancario transaccional&lt;/b&gt; (fuera del alcance declarado en el Taller 0)" vertex="1">
+                    <mxGeometry height="80" width="300" x="265" y="690" as="geometry"/>
+                </mxCell>
+                <mxCell id="c2" parent="band_mot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=10;dashed=1;" value="«Constraint»&lt;br&gt;&lt;b&gt;Ban100 no es sujeto obligado del Decreto 767 de 2022&lt;/b&gt;: el MRAE se usa como marco homologable, no como obligación" vertex="1">
+                    <mxGeometry height="80" width="320" x="870" y="690" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s1g1" edge="1" parent="band_mot" source="s1" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;" target="g1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s1g3" edge="1" parent="band_mot" source="s1" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;fontSize=9;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="g3" value="define">
+                    <mxGeometry relative="1" x="0.4239" y="-1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s2g2" edge="1" parent="band_mot" source="s2" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="g2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s2g4" edge="1" parent="band_mot" source="s2" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;fontSize=9;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="g4" value="exige">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="730" y="154"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s3g1" edge="1" parent="band_mot" source="s3" style="endArrow=open;html=1;endSize=8;strokeColor=#6666CC;fontSize=9;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="g1" value="se beneficia">
+                    <mxGeometry relative="1" x="0.5144" y="-1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_drvg3" edge="1" parent="band_mot" source="drv" style="endArrow=open;html=1;endSize=8;dashed=1;strokeColor=#6666CC;fontSize=9;" target="g3" value="presiona">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_p1g1" edge="1" parent="band_mot" source="p1" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" target="g1" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_p1g3" edge="1" parent="band_mot" source="p1" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;entryX=0.023;entryY=0.964;entryDx=0;entryDy=0;exitX=0.91;exitY=0.026;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" target="g3" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_p2g3" edge="1" parent="band_mot" source="p2" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="g3" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_p3g4" edge="1" parent="band_mot" source="p3" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" target="g4" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_p4g4" edge="1" parent="band_mot" source="p4" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;" target="g4" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_p5g2" edge="1" parent="band_mot" source="p5" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#4B4BA8;fontSize=9;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.731;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;" target="g2" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_r1p1" edge="1" parent="band_mot" source="r1" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" target="p1" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_r2p2" edge="1" parent="band_mot" source="r2" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" target="p2" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_r3p3" edge="1" parent="band_mot" source="r3" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" target="p3" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_r4p4" edge="1" parent="band_mot" source="r4" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" target="p4" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_r5p4" edge="1" parent="band_mot" source="r5" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" target="p4" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_r6p5" edge="1" parent="band_mot" source="r6" style="dashed=1;endArrow=block;endFill=0;html=1;endSize=10;strokeColor=#6666CC;fontSize=9;" target="p5" value="realiza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_c1p2" edge="1" parent="band_mot" source="c1" style="endArrow=open;html=1;endSize=8;dashed=1;strokeColor=#D79B00;fontSize=9;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="p2" value="restringe">
+                    <mxGeometry relative="1" x="0.6183" y="-2" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_c2p4" edge="1" parent="band_mot" source="c2" style="endArrow=open;html=1;endSize=8;dashed=1;strokeColor=#D79B00;fontSize=9;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.386;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="p4" value="restringe">
+                    <mxGeometry relative="1" x="-0.7754" y="2" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
