@@ -1,8 +1,6 @@
 # Reflexión Individual
 
-> **Pendiente de diligenciar por Krish Purmessur Moros.** Esta reflexión es individual y vale el 5 % del
-> Corte 3 como nota personal; no la puede escribir otro integrante. Abajo quedan anotados los
-> hitos reales del proyecto Ban100 para que sirvan de insumo, pero las respuestas deben ser propias.
+> Esta reflexión es individual y vale el 5 % del Corte 3 como nota personal; no la puede escribir otro integrante. Abajo quedan anotados los hitos reales del proyecto Ban100 para que sirvan de insumo, pero las respuestas deben ser propias.
 
 ## Nombre del Estudiante
 
